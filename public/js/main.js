@@ -34,10 +34,12 @@ function initializeWebsite() {
     setupNavigation();
     loadFeaturedBrokers();
     loadRecentReviews();
+    loadBrokersForDropdown();
     setupContactForm();
     setupSmoothScrolling();
     setupMobileMenu();
     setupEventListeners();
+    setupFAQ();
 }
 
 // Setup event listeners for buttons
@@ -588,3 +590,249 @@ function setupSearch() {
 
 // Initialize search when DOM is ready
 document.addEventListener('DOMContentLoaded', setupSearch);
+
+// Load brokers for dropdown menu
+async function loadBrokersForDropdown() {
+    try {
+        // Wait a bit to ensure DOM is fully ready
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
+        const response = await fetch('/api/brokers?limit=50');
+        const data = await response.json();
+        
+        if (data.brokers && data.brokers.length > 0) {
+            populateBrokerDropdowns(data.brokers);
+        } else {
+            // Fallback if no brokers returned
+            addFallbackBrokers();
+        }
+    } catch (error) {
+        console.error('Error loading brokers for dropdown:', error);
+        // Fallback: add common brokers manually if API fails
+        addFallbackBrokers();
+    }
+}
+
+// Populate broker dropdowns with broker list
+function populateBrokerDropdowns(brokers) {
+    const brokerDropdowns = document.querySelectorAll('.nav-dropdown .dropdown-menu');
+    
+    if (brokerDropdowns.length === 0) {
+        // Retry after a short delay if dropdowns aren't ready yet
+        setTimeout(() => {
+            const retryDropdowns = document.querySelectorAll('.nav-dropdown .dropdown-menu');
+            if (retryDropdowns.length > 0) {
+                populateBrokerDropdowns(brokers);
+            } else {
+                addFallbackBrokers();
+            }
+        }, 500);
+        return;
+    }
+    
+    brokerDropdowns.forEach(dropdown => {
+        // Check if this is the brokers dropdown (has "Todos los Brokers" link)
+        const allBrokersLink = dropdown.querySelector('a[href="/brokers"]');
+        if (allBrokersLink) {
+            // Clear existing broker links and dividers (keep "Todos los Brokers")
+            const existingBrokerLinks = dropdown.querySelectorAll('a[href^="/broker/"]');
+            const existingDividers = dropdown.querySelectorAll('.dropdown-divider');
+            existingBrokerLinks.forEach(link => link.remove());
+            existingDividers.forEach(divider => divider.remove());
+            
+            // Add separator if there are brokers
+            if (brokers.length > 0) {
+                const divider = document.createElement('div');
+                divider.className = 'dropdown-divider';
+                divider.style.cssText = 'height: 1px; margin: 8px 0; background: #e9ecef;';
+                allBrokersLink.after(divider);
+                
+                // Add each broker as a dropdown item (sorted by name)
+                const sortedBrokers = [...brokers].sort((a, b) => a.name.localeCompare(b.name));
+                sortedBrokers.forEach(broker => {
+                    const brokerLink = document.createElement('a');
+                    brokerLink.href = `/broker/${broker.slug}`;
+                    brokerLink.className = 'dropdown-item broker-dropdown-item';
+                    brokerLink.setAttribute('aria-label', `Ver detalles de ${broker.name}`);
+                    
+                    // Create logo container
+                    const logoContainer = document.createElement('span');
+                    logoContainer.className = 'broker-logo-small';
+                    
+                    // Always show icon first as fallback
+                    const icon = getBrokerIcon(broker);
+                    logoContainer.innerHTML = `<i class="${icon}"></i>`;
+                    
+                    // Try to get logo URL (from database or generated)
+                    const logoUrl = getBrokerLogoUrl(broker);
+                    
+                    if (logoUrl) {
+                        // Try to load logo and replace icon if successful
+                        const logoImg = document.createElement('img');
+                        logoImg.src = logoUrl;
+                        logoImg.alt = `${broker.name} logo`;
+                        logoImg.style.width = '100%';
+                        logoImg.style.height = '100%';
+                        logoImg.style.objectFit = 'contain';
+                        logoImg.style.padding = '4px';
+                        logoImg.style.display = 'none'; // Hidden until loaded
+                        logoImg.loading = 'lazy';
+                        
+                        // Show logo when loaded successfully
+                        logoImg.onload = function() {
+                            logoContainer.innerHTML = ''; // Clear icon
+                            logoContainer.appendChild(this);
+                            this.style.display = 'block';
+                        };
+                        
+                        // Keep icon if logo fails to load
+                        logoImg.onerror = function() {
+                            // Icon is already displayed, just keep it
+                            this.remove();
+                        };
+                        
+                        // Add image to container (will replace icon on load)
+                        logoContainer.appendChild(logoImg);
+                    }
+                    
+                    // Create name span
+                    const nameSpan = document.createElement('span');
+                    nameSpan.className = 'broker-name-text';
+                    nameSpan.textContent = broker.name;
+                    
+                    brokerLink.appendChild(logoContainer);
+                    brokerLink.appendChild(nameSpan);
+                    dropdown.appendChild(brokerLink);
+                });
+            }
+        }
+    });
+}
+
+// Make logo functions globally accessible
+window.getBrokerLogoUrl = getBrokerLogoUrl;
+window.getBrokerIcon = getBrokerIcon;
+
+// Get broker logo URL (with fallback to common logo sources)
+function getBrokerLogoUrl(broker) {
+    // If logo exists in database, use it
+    if (broker.logo && broker.logo.trim() !== '') {
+        if (broker.logo.startsWith('http://') || broker.logo.startsWith('https://')) {
+            return broker.logo;
+        } else if (broker.logo.startsWith('/')) {
+            return broker.logo;
+        } else {
+            return `/images/brokers/${broker.logo}`;
+        }
+    }
+    
+    // Broker logo URLs - using reliable CDN sources
+    const logoCdnMap = {
+        'libertex': 'https://logo.clearbit.com/libertex.com',
+        'xm-group': 'https://logo.clearbit.com/xm.com',
+        'xm': 'https://logo.clearbit.com/xm.com',
+        'etoro': 'https://logo.clearbit.com/etoro.com',
+        'plus500': 'https://logo.clearbit.com/plus500.com',
+        'avatrade': 'https://logo.clearbit.com/avatrade.com',
+        'ig-markets': 'https://logo.clearbit.com/ig.com',
+        'ig': 'https://logo.clearbit.com/ig.com'
+    };
+    
+    const slug = broker.slug ? broker.slug.toLowerCase() : '';
+    if (logoCdnMap[slug]) {
+        return logoCdnMap[slug];
+    }
+    
+    // Try to generate from website domain using clearbit as fallback
+    if (broker.website) {
+        try {
+            const url = new URL(broker.website);
+            // Try clearbit as last resort
+            return `https://logo.clearbit.com/${url.hostname}`;
+        } catch (e) {
+            // Invalid URL, return null
+        }
+    }
+    
+    return null;
+}
+
+// Get broker icon based on name or category
+function getBrokerIcon(broker) {
+    const iconMap = {
+        'libertex': 'fas fa-chart-line',
+        'xm-group': 'fas fa-exchange-alt',
+        'xm': 'fas fa-exchange-alt',
+        'etoro': 'fab fa-bitcoin',
+        'plus500': 'fas fa-chart-bar',
+        'avatrade': 'fas fa-globe',
+        'ig-markets': 'fas fa-building',
+        'ig': 'fas fa-building'
+    };
+    
+    // Check by slug first
+    const slug = broker.slug ? broker.slug.toLowerCase() : '';
+    if (iconMap[slug]) {
+        return iconMap[slug];
+    }
+    
+    // Check by name
+    const name = broker.name ? broker.name.toLowerCase() : '';
+    for (const [key, icon] of Object.entries(iconMap)) {
+        if (name.includes(key)) {
+            return icon;
+        }
+    }
+    
+    // Check by category
+    if (broker.category === 'crypto') {
+        return 'fab fa-bitcoin';
+    } else if (broker.category === 'forex') {
+        return 'fas fa-exchange-alt';
+    } else if (broker.category === 'stocks') {
+        return 'fas fa-chart-line';
+    } else if (broker.category === 'cfd') {
+        return 'fas fa-chart-bar';
+    } else if (broker.category === 'commodities') {
+        return 'fas fa-coins';
+    }
+    
+    // Default icon
+    return 'fas fa-building';
+}
+
+// Fallback function to add common brokers if API fails
+function addFallbackBrokers() {
+    const fallbackBrokers = [
+        { name: 'Libertex', slug: 'libertex', category: 'forex' },
+        { name: 'XM Group', slug: 'xm-group', category: 'forex' },
+        { name: 'eToro', slug: 'etoro', category: 'crypto' },
+        { name: 'Plus500', slug: 'plus500', category: 'cfd' },
+        { name: 'AvaTrade', slug: 'avatrade', category: 'forex' },
+        { name: 'IG Markets', slug: 'ig-markets', category: 'stocks' }
+    ];
+    
+    populateBrokerDropdowns(fallbackBrokers);
+}
+
+// Setup FAQ accordion functionality
+function setupFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (!question) return;
+        
+        question.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+}

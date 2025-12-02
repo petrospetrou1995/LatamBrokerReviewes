@@ -19,7 +19,7 @@ app.use(helmet({
             defaultSrc: ["'self'"],
             styleSrc: ["'self'", "'unsafe-inline'", "https:"],
             scriptSrc: ["'self'"],
-            imgSrc: ["'self'", "data:", "https:", "https://i.ytimg.com", "https://i1.ytimg.com", "https://i2.ytimg.com", "https://i3.ytimg.com", "https://i4.ytimg.com"],
+            imgSrc: ["'self'", "data:", "https:", "https://i.ytimg.com", "https://i1.ytimg.com", "https://i2.ytimg.com", "https://i3.ytimg.com", "https://i4.ytimg.com", "https://logo.clearbit.com"],
             fontSrc: ["'self'", "https:", "data:"],
             connectSrc: ["'self'"],
             frameSrc: ["'self'", "https://www.youtube.com", "https://www.youtube-nocookie.com"],
@@ -31,12 +31,25 @@ app.use(helmet({
 }));
 app.use(cors());
 
-// Rate limiting
+// Rate limiting - more lenient for development
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
+  max: 500, // limit each IP to 500 requests per windowMs (increased for development)
+  message: 'Too many requests from this IP, please try again later.',
+  standardHeaders: true,
+  legacyHeaders: false,
+  skip: (req) => {
+    // Skip rate limiting for static files and in development
+    return req.path.startsWith('/css/') || 
+           req.path.startsWith('/js/') || 
+           req.path.startsWith('/images/') ||
+           req.path.startsWith('/uploads/') ||
+           process.env.NODE_ENV === 'development';
+  }
 });
-app.use(limiter);
+
+// Apply rate limiting only to API routes
+app.use('/api/', limiter);
 
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
@@ -125,6 +138,16 @@ app.get('/commodities-trading', (req, res) => {
 
 app.get('/education-training', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'education-training.html'));
+});
+
+// Serve blog page
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'blog.html'));
+});
+
+// Serve individual blog post page
+app.get('/blog/:slug', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'blog-post.html'));
 });
 
 // Main routes

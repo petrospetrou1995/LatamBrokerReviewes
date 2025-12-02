@@ -228,6 +228,75 @@ const languages = {
             location: 'América Latina'
         },
         
+        // Guides Section
+        guides: {
+            title: 'Guías de Trading para Latinoamérica',
+            subtitle: 'Recursos educativos y guías completas para traders de todos los niveles',
+            readMore: 'Leer Más',
+            forex: {
+                title: 'Guía de Forex Trading',
+                description: 'Aprende sobre el mercado de divisas más grande del mundo. Estrategias, análisis técnico y brokers recomendados para Forex en Latinoamérica.'
+            },
+            stocks: {
+                title: 'Guía de Trading de Acciones',
+                description: 'Descubre cómo invertir en acciones en mercados latinoamericanos e internacionales. Análisis fundamental y brokers especializados.'
+            },
+            crypto: {
+                title: 'Guía de Criptomonedas',
+                description: 'Todo sobre trading de Bitcoin, Ethereum y altcoins. Estrategias, análisis de mercado y brokers de criptomonedas confiables.'
+            },
+            education: {
+                title: 'Educación y Capacitación',
+                description: 'Recursos educativos completos, cursos, estrategias y herramientas para mejorar tus habilidades de trading.'
+            }
+        },
+        
+        // FAQ Section
+        faq: {
+            title: 'Preguntas Frecuentes',
+            subtitle: 'Respuestas a las preguntas más comunes sobre brokers y trading en Latinoamérica',
+            q1: {
+                question: '¿Cómo elijo el mejor broker para trading en Latinoamérica?',
+                answer: 'Para elegir el mejor broker, considera factores como regulación, spreads y comisiones, métodos de pago locales, soporte en español/portugués, plataformas de trading disponibles, y reseñas de otros traders latinoamericanos. Nuestra plataforma te ayuda a comparar estos aspectos.'
+            },
+            q2: {
+                question: '¿Es seguro operar con brokers internacionales desde Latinoamérica?',
+                answer: 'Sí, siempre que elijas brokers regulados por autoridades reconocidas como CySEC, FCA, ASIC o reguladores locales. Verifica que el broker tenga licencia válida, seguros de protección de fondos, y políticas claras de retiro de fondos.'
+            },
+            q3: {
+                question: '¿Qué métodos de pago aceptan los brokers para traders latinoamericanos?',
+                answer: 'La mayoría de brokers aceptan tarjetas de crédito/débito, transferencias bancarias, y métodos locales como PagoEfectivo, AstroPay, o billeteras digitales. Algunos también aceptan criptomonedas. Revisa las opciones de pago específicas de cada broker en nuestras reseñas.'
+            },
+            q4: {
+                question: '¿Cuál es la diferencia entre un broker ECN y un broker Market Maker?',
+                answer: 'Los brokers ECN conectan directamente con múltiples proveedores de liquidez, ofreciendo spreads más ajustados pero con comisiones. Los Market Makers crean su propio mercado, ofreciendo spreads fijos sin comisiones pero con posible conflicto de intereses. Ambos pueden ser confiables si están regulados.'
+            },
+            q5: {
+                question: '¿Necesito experiencia previa para empezar a operar?',
+                answer: 'No necesitas experiencia previa, pero es altamente recomendable educarte primero. La mayoría de brokers ofrecen cuentas demo gratuitas para practicar. También puedes acceder a nuestros recursos educativos y guías para aprender los fundamentos antes de operar con dinero real.'
+            },
+            q6: {
+                question: '¿Cómo verifico que un broker está regulado?',
+                answer: 'Verifica el número de licencia en el sitio web oficial del regulador (CySEC, FCA, ASIC, etc.). El broker debe mostrar claramente su información de regulación. También puedes consultar nuestras reseñas donde incluimos detalles sobre la regulación de cada broker.'
+            },
+            q7: {
+                question: '¿Qué es el spread y cómo afecta mis operaciones?',
+                answer: 'El spread es la diferencia entre el precio de compra (bid) y venta (ask). Es el costo de abrir una operación. Spreads más bajos significan menores costos. Los spreads varían según el instrumento, broker, y condiciones de mercado. Compara spreads entre brokers antes de elegir.'
+            },
+            q8: {
+                question: '¿Puedo operar desde mi país latinoamericano con cualquier broker?',
+                answer: 'La mayoría de brokers internacionales aceptan clientes de Latinoamérica, pero algunos países tienen restricciones específicas. Verifica las políticas de aceptación de clientes del broker y las regulaciones locales de tu país. Algunos brokers pueden requerir documentación adicional según tu ubicación.'
+            },
+            q9: {
+                question: '¿Qué es una cuenta demo y por qué debería usarla?',
+                answer: 'Una cuenta demo te permite practicar trading con dinero virtual sin riesgo real. Es esencial para familiarizarte con la plataforma, probar estrategias, y desarrollar confianza antes de operar con dinero real. La mayoría de brokers ofrecen cuentas demo gratuitas e ilimitadas.'
+            },
+            q10: {
+                question: '¿Cómo puedo retirar mis ganancias de un broker?',
+                answer: 'Los brokers generalmente permiten retiros usando los mismos métodos de depósito. Procesos comunes incluyen transferencias bancarias, tarjetas, y métodos de pago electrónicos. Los tiempos de procesamiento varían (1-5 días hábiles típicamente). Verifica las políticas de retiro y posibles comisiones antes de depositar.'
+            }
+        },
+        
         // Footer
         footer: {
             title: 'LatamBrokerReviews',
@@ -340,6 +409,26 @@ const languages = {
                     title: 'Psicología del Trading',
                     description: 'Mantén la calma y no dejes que las emociones guíen tus decisiones de trading.'
                 }
+            },
+            faq: {
+                title: 'Preguntas Frecuentes sobre Forex Trading',
+                subtitle: 'Respuestas a las preguntas más comunes sobre trading de divisas',
+                q1: {
+                    question: '¿Qué es el mercado Forex y cómo funciona?',
+                    answer: 'El mercado Forex (Foreign Exchange) es el mercado financiero más grande del mundo donde se intercambian divisas. Funciona las 24 horas del día, 5 días a la semana, permitiendo a los traders comprar y vender pares de divisas basándose en las fluctuaciones de sus valores.'
+                },
+                q2: {
+                    question: '¿Cuáles son los mejores pares de divisas para principiantes?',
+                    answer: 'Los pares principales como EUR/USD, GBP/USD y USD/JPY son ideales para principiantes debido a su alta liquidez, spreads ajustados y abundante información disponible. Estos pares tienen menos volatilidad extrema comparados con pares exóticos.'
+                },
+                q3: {
+                    question: '¿Cuánto capital necesito para empezar a operar Forex?',
+                    answer: 'Muchos brokers ofrecen cuentas micro o cent con depósitos mínimos desde $10-100. Sin embargo, se recomienda comenzar con al menos $500-1000 para tener suficiente margen y gestionar el riesgo adecuadamente. Siempre opera con capital que puedas permitirte perder.'
+                },
+                q4: {
+                    question: '¿Qué es el apalancamiento y cómo funciona?',
+                    answer: 'El apalancamiento permite operar con más capital del que tienes depositado. Por ejemplo, con apalancamiento 1:100, puedes controlar $10,000 con solo $100. Aunque aumenta las ganancias potenciales, también aumenta el riesgo. Usa el apalancamiento con precaución y nunca más del necesario.'
+                }
             }
         },
         
@@ -432,6 +521,26 @@ const languages = {
                 diversification: {
                     title: 'Diversificación',
                     description: 'No pongas todos tus huevos en una canasta. Diversifica entre diferentes criptomonedas.'
+                }
+            },
+            faq: {
+                title: 'Preguntas Frecuentes sobre Crypto Trading',
+                subtitle: 'Respuestas a las preguntas más comunes sobre trading de criptomonedas',
+                q1: {
+                    question: '¿Es legal operar con criptomonedas en Latinoamérica?',
+                    answer: 'La legalidad varía por país. En la mayoría de países latinoamericanos, el trading de criptomonedas es legal pero está sujeto a regulaciones. Algunos países requieren que los exchanges estén registrados. Verifica las regulaciones específicas de tu país antes de operar.'
+                },
+                q2: {
+                    question: '¿Qué criptomonedas son las mejores para principiantes?',
+                    answer: 'Bitcoin (BTC) y Ethereum (ETH) son ideales para principiantes debido a su alta liquidez, amplia aceptación y abundante información disponible. Evita altcoins muy nuevas o con baja capitalización de mercado hasta que tengas más experiencia.'
+                },
+                q3: {
+                    question: '¿Debo almacenar mis criptomonedas en el exchange o en un wallet?',
+                    answer: 'Para trading activo, mantener criptos en el exchange es conveniente. Sin embargo, para almacenamiento a largo plazo o grandes cantidades, usa un wallet hardware o software con tus propias claves privadas. La regla general: "Not your keys, not your crypto".'
+                },
+                q4: {
+                    question: '¿Qué es el staking y cómo funciona?',
+                    answer: 'El staking es el proceso de mantener criptomonedas en un wallet para apoyar las operaciones de una blockchain y recibir recompensas. Es similar a ganar intereses. Muchos exchanges ofrecen staking con diferentes tasas de retorno según la criptomoneda.'
                 }
             }
         },
@@ -543,6 +652,26 @@ const languages = {
                     description: 'El mercado más grande de Asia, hogar de empresas como Toyota, Sony y Nintendo.',
                     marketCap: 'Capitalización: $6T',
                     hours: 'Horario: 9:00-15:00 JST'
+                }
+            },
+            faq: {
+                title: 'Preguntas Frecuentes sobre Trading de Acciones',
+                subtitle: 'Respuestas a las preguntas más comunes sobre inversión en acciones',
+                q1: {
+                    question: '¿Cómo empiezo a invertir en acciones desde Latinoamérica?',
+                    answer: 'Para empezar, elige un broker que ofrezca acceso a mercados internacionales, completa el proceso de verificación KYC, deposita fondos usando métodos de pago locales, y comienza con una cuenta demo para familiarizarte con la plataforma antes de operar con dinero real.'
+                },
+                q2: {
+                    question: '¿Qué diferencia hay entre acciones y CFDs de acciones?',
+                    answer: 'Las acciones reales te dan propiedad parcial de la empresa y derecho a dividendos. Los CFDs son contratos derivados que replican el precio de las acciones pero con apalancamiento y sin propiedad real. Los CFDs son más flexibles pero conllevan mayor riesgo debido al apalancamiento.'
+                },
+                q3: {
+                    question: '¿Qué mercados de acciones puedo acceder desde Latinoamérica?',
+                    answer: 'La mayoría de brokers internacionales ofrecen acceso a NYSE, NASDAQ, LSE, y otros mercados europeos y asiáticos. Algunos también ofrecen acceso a mercados latinoamericanos como B3 (Brasil), BMV (México), y BVC (Colombia). Verifica qué mercados ofrece cada broker antes de registrarte.'
+                },
+                q4: {
+                    question: '¿Necesito pagar impuestos sobre ganancias de acciones?',
+                    answer: 'Sí, las ganancias de capital generalmente están sujetas a impuestos en la mayoría de países latinoamericanos. Las tasas y regulaciones varían por país. Consulta con un contador local para entender tus obligaciones fiscales específicas. Algunos brokers proporcionan reportes fiscales para facilitar la declaración.'
                 }
             }
         },
@@ -680,6 +809,26 @@ const languages = {
                     title: 'Noticias',
                     description: 'Mantente informado sobre eventos económicos que pueden afectar los mercados.'
                 }
+            },
+            faq: {
+                title: 'Preguntas Frecuentes sobre CFD Trading',
+                subtitle: 'Respuestas a las preguntas más comunes sobre contratos por diferencia',
+                q1: {
+                    question: '¿Qué es un CFD y cómo funciona?',
+                    answer: 'Un CFD (Contrato por Diferencia) es un derivado financiero que te permite especular sobre el movimiento de precios de un activo sin poseerlo realmente. Ganas si el precio se mueve a tu favor y pierdes si se mueve en contra. Los CFDs permiten operar con apalancamiento, lo que amplifica tanto ganancias como pérdidas.'
+                },
+                q2: {
+                    question: '¿Cuáles son los riesgos de operar con CFDs?',
+                    answer: 'Los principales riesgos incluyen pérdidas que pueden exceder tu depósito inicial debido al apalancamiento, volatilidad del mercado, costos de financiamiento overnight, y el riesgo de margin call si tu cuenta cae por debajo del margen requerido. Es crucial usar stop loss y gestionar el riesgo adecuadamente.'
+                },
+                q3: {
+                    question: '¿Qué activos puedo operar con CFDs?',
+                    answer: 'Puedes operar CFDs sobre una amplia gama de activos incluyendo acciones, índices, Forex, commodities, criptomonedas, ETFs y bonos. La disponibilidad varía según el broker. Algunos brokers ofrecen miles de instrumentos CFD diferentes.'
+                },
+                q4: {
+                    question: '¿Cuánto apalancamiento debo usar?',
+                    answer: 'El apalancamiento adecuado depende de tu experiencia y tolerancia al riesgo. Los principiantes deberían usar apalancamiento bajo (1:5 a 1:10), mientras que traders experimentados pueden usar más. Recuerda: más apalancamiento significa más riesgo. Nunca uses el máximo disponible sin experiencia.'
+                }
             }
         },
         
@@ -815,6 +964,26 @@ const languages = {
                 diversification: {
                     title: 'Diversificación',
                     description: 'No concentres todo en una sola commodity. Diversifica entre metales, energía y agrícolas.'
+                }
+            },
+            faq: {
+                title: 'Preguntas Frecuentes sobre Commodities Trading',
+                subtitle: 'Respuestas a las preguntas más comunes sobre trading de materias primas',
+                q1: {
+                    question: '¿Qué commodities son los mejores para principiantes?',
+                    answer: 'El oro y la plata son ideales para principiantes debido a su alta liquidez, información abundante y su papel como refugio seguro. El petróleo crudo también es popular pero más volátil. Evita commodities agrícolas muy específicas hasta tener más experiencia.'
+                },
+                q2: {
+                    question: '¿Qué factores afectan los precios de las commodities?',
+                    answer: 'Los precios de commodities están influenciados por oferta y demanda, eventos geopolíticos, condiciones climáticas (especialmente para agrícolas), fortaleza del dólar, crecimiento económico global, inventarios, y políticas gubernamentales. Las noticias sobre estos factores pueden causar movimientos significativos.'
+                },
+                q3: {
+                    question: '¿Es mejor operar commodities físicos o CFDs?',
+                    answer: 'Para la mayoría de traders, los CFDs son más prácticos ya que no requieren almacenamiento físico, tienen menores costos de entrada, y permiten apalancamiento. El trading físico es más adecuado para inversores institucionales o aquellos que realmente necesitan el activo físico.'
+                },
+                q4: {
+                    question: '¿Cómo puedo usar las commodities como protección contra la inflación?',
+                    answer: 'El oro y otros metales preciosos tradicionalmente mantienen su valor durante períodos inflacionarios. Incluir commodities en tu portafolio puede ayudar a diversificar y proteger contra la pérdida de poder adquisitivo. Sin embargo, esto funciona mejor como estrategia a largo plazo.'
                 }
             }
         },
@@ -1037,6 +1206,26 @@ const languages = {
                 keepLearning: {
                     title: 'Sigue Aprendiendo',
                     description: 'Los mercados evolucionan constantemente. Mantente actualizado con las últimas tendencias y técnicas.'
+                }
+            },
+            faq: {
+                title: 'Preguntas Frecuentes sobre Educación en Trading',
+                subtitle: 'Respuestas a las preguntas más comunes sobre aprender trading',
+                q1: {
+                    question: '¿Cuánto tiempo toma aprender trading?',
+                    answer: 'El tiempo varía según dedicación y objetivos. Los fundamentos básicos pueden aprenderse en 1-3 meses con estudio constante. Sin embargo, desarrollar habilidades consistentes y rentables generalmente toma 1-2 años de práctica continua. El aprendizaje nunca termina en trading.'
+                },
+                q2: {
+                    question: '¿Qué recursos educativos son los mejores para principiantes?',
+                    answer: 'Combina múltiples recursos: cursos online estructurados, libros de trading reconocidos, webinars gratuitos de brokers, cuentas demo para práctica, comunidades de traders, y análisis de mercado diarios. La combinación de teoría y práctica es clave.'
+                },
+                q3: {
+                    question: '¿Debo pagar por cursos de trading o hay recursos gratuitos suficientes?',
+                    answer: 'Hay excelentes recursos gratuitos disponibles: academias de brokers, YouTube, blogs educativos, y webinars. Los cursos pagos pueden ser valiosos si ofrecen estructura, mentoría, o contenido avanzado específico. Empieza con recursos gratuitos y considera cursos pagos solo si realmente añaden valor.'
+                },
+                q4: {
+                    question: '¿Cómo sé si estoy listo para operar con dinero real?',
+                    answer: 'Estás listo cuando: has demostrado rentabilidad consistente en cuenta demo durante al menos 2-3 meses, entiendes gestión de riesgo, tienes un plan de trading escrito, controlas tus emociones, y operas con capital que puedes permitirte perder. Nunca operes con dinero que necesitas para gastos esenciales.'
                 }
             }
         },
@@ -1287,6 +1476,75 @@ const languages = {
             location: 'Latin America'
         },
         
+        // Guides Section
+        guides: {
+            title: 'Trading Guides for Latin America',
+            subtitle: 'Educational resources and comprehensive guides for traders of all levels',
+            readMore: 'Read More',
+            forex: {
+                title: 'Forex Trading Guide',
+                description: 'Learn about the world\'s largest currency market. Strategies, technical analysis and recommended brokers for Forex in Latin America.'
+            },
+            stocks: {
+                title: 'Stocks Trading Guide',
+                description: 'Discover how to invest in stocks in Latin American and international markets. Fundamental analysis and specialized brokers.'
+            },
+            crypto: {
+                title: 'Cryptocurrency Guide',
+                description: 'Everything about Bitcoin, Ethereum and altcoin trading. Strategies, market analysis and reliable cryptocurrency brokers.'
+            },
+            education: {
+                title: 'Education and Training',
+                description: 'Complete educational resources, courses, strategies and tools to improve your trading skills.'
+            }
+        },
+        
+        // FAQ Section
+        faq: {
+            title: 'Frequently Asked Questions',
+            subtitle: 'Answers to the most common questions about brokers and trading in Latin America',
+            q1: {
+                question: 'How do I choose the best broker for trading in Latin America?',
+                answer: 'To choose the best broker, consider factors such as regulation, spreads and commissions, local payment methods, Spanish/Portuguese support, available trading platforms, and reviews from other Latin American traders. Our platform helps you compare these aspects.'
+            },
+            q2: {
+                question: 'Is it safe to trade with international brokers from Latin America?',
+                answer: 'Yes, as long as you choose brokers regulated by recognized authorities such as CySEC, FCA, ASIC or local regulators. Verify that the broker has a valid license, fund protection insurance, and clear withdrawal policies.'
+            },
+            q3: {
+                question: 'What payment methods do brokers accept for Latin American traders?',
+                answer: 'Most brokers accept credit/debit cards, bank transfers, and local methods such as PagoEfectivo, AstroPay, or digital wallets. Some also accept cryptocurrencies. Check the specific payment options for each broker in our reviews.'
+            },
+            q4: {
+                question: 'What is the difference between an ECN broker and a Market Maker broker?',
+                answer: 'ECN brokers connect directly with multiple liquidity providers, offering tighter spreads but with commissions. Market Makers create their own market, offering fixed spreads without commissions but with possible conflict of interest. Both can be reliable if regulated.'
+            },
+            q5: {
+                question: 'Do I need previous experience to start trading?',
+                answer: 'You don\'t need previous experience, but it\'s highly recommended to educate yourself first. Most brokers offer free demo accounts to practice. You can also access our educational resources and guides to learn the basics before trading with real money.'
+            },
+            q6: {
+                question: 'How do I verify that a broker is regulated?',
+                answer: 'Verify the license number on the official website of the regulator (CySEC, FCA, ASIC, etc.). The broker must clearly display its regulation information. You can also check our reviews where we include details about each broker\'s regulation.'
+            },
+            q7: {
+                question: 'What is the spread and how does it affect my trades?',
+                answer: 'The spread is the difference between the buy (bid) and sell (ask) price. It\'s the cost of opening a trade. Lower spreads mean lower costs. Spreads vary by instrument, broker, and market conditions. Compare spreads between brokers before choosing.'
+            },
+            q8: {
+                question: 'Can I trade from my Latin American country with any broker?',
+                answer: 'Most international brokers accept clients from Latin America, but some countries have specific restrictions. Check the broker\'s client acceptance policies and your country\'s local regulations. Some brokers may require additional documentation depending on your location.'
+            },
+            q9: {
+                question: 'What is a demo account and why should I use it?',
+                answer: 'A demo account allows you to practice trading with virtual money without real risk. It\'s essential for familiarizing yourself with the platform, testing strategies, and building confidence before trading with real money. Most brokers offer free and unlimited demo accounts.'
+            },
+            q10: {
+                question: 'How can I withdraw my profits from a broker?',
+                answer: 'Brokers generally allow withdrawals using the same deposit methods. Common processes include bank transfers, cards, and electronic payment methods. Processing times vary (typically 1-5 business days). Check withdrawal policies and possible fees before depositing.'
+            }
+        },
+        
         // Footer
         footer: {
             title: 'LatamBrokerReviews',
@@ -1399,6 +1657,26 @@ const languages = {
                     title: 'Trading Psychology',
                     description: 'Stay calm and don\'t let emotions guide your trading decisions.'
                 }
+            },
+            faq: {
+                title: 'Frequently Asked Questions about Forex Trading',
+                subtitle: 'Answers to the most common questions about currency trading',
+                q1: {
+                    question: 'What is the Forex market and how does it work?',
+                    answer: 'The Forex (Foreign Exchange) market is the world\'s largest financial market where currencies are exchanged. It operates 24 hours a day, 5 days a week, allowing traders to buy and sell currency pairs based on fluctuations in their values.'
+                },
+                q2: {
+                    question: 'What are the best currency pairs for beginners?',
+                    answer: 'Major pairs like EUR/USD, GBP/USD and USD/JPY are ideal for beginners due to their high liquidity, tight spreads and abundant available information. These pairs have less extreme volatility compared to exotic pairs.'
+                },
+                q3: {
+                    question: 'How much capital do I need to start trading Forex?',
+                    answer: 'Many brokers offer micro or cent accounts with minimum deposits from $10-100. However, it\'s recommended to start with at least $500-1000 to have sufficient margin and manage risk properly. Always trade with capital you can afford to lose.'
+                },
+                q4: {
+                    question: 'What is leverage and how does it work?',
+                    answer: 'Leverage allows you to trade with more capital than you have deposited. For example, with 1:100 leverage, you can control $10,000 with just $100. While it increases potential profits, it also increases risk. Use leverage with caution and never more than necessary.'
+                }
             }
         },
         
@@ -1492,6 +1770,26 @@ const languages = {
                     title: 'Diversification',
                     description: 'Don\'t put all your eggs in one basket. Diversify between different cryptocurrencies.'
                 }
+            },
+            faq: {
+                title: 'Frequently Asked Questions about Crypto Trading',
+                subtitle: 'Answers to the most common questions about cryptocurrency trading',
+                q1: {
+                    question: 'Is it legal to trade cryptocurrencies in Latin America?',
+                    answer: 'Legality varies by country. In most Latin American countries, cryptocurrency trading is legal but subject to regulations. Some countries require exchanges to be registered. Check your country\'s specific regulations before trading.'
+                },
+                q2: {
+                    question: 'What cryptocurrencies are best for beginners?',
+                    answer: 'Bitcoin (BTC) and Ethereum (ETH) are ideal for beginners due to their high liquidity, wide acceptance, and abundant available information. Avoid very new altcoins or those with low market cap until you have more experience.'
+                },
+                q3: {
+                    question: 'Should I store my cryptocurrencies on the exchange or in a wallet?',
+                    answer: 'For active trading, keeping crypto on the exchange is convenient. However, for long-term storage or large amounts, use a hardware or software wallet with your own private keys. The general rule: "Not your keys, not your crypto".'
+                },
+                q4: {
+                    question: 'What is staking and how does it work?',
+                    answer: 'Staking is the process of holding cryptocurrencies in a wallet to support blockchain operations and receive rewards. It\'s similar to earning interest. Many exchanges offer staking with different return rates depending on the cryptocurrency.'
+                }
             }
         },
         
@@ -1575,6 +1873,26 @@ const languages = {
                 diversification: {
                     title: 'Diversification',
                     description: 'Don\'t put all your eggs in one basket. Diversify across sectors and geographies.'
+                }
+            },
+            faq: {
+                title: 'Frequently Asked Questions about Stock Trading',
+                subtitle: 'Answers to the most common questions about stock investing',
+                q1: {
+                    question: 'How do I start investing in stocks from Latin America?',
+                    answer: 'To start, choose a broker that offers access to international markets, complete the KYC verification process, deposit funds using local payment methods, and begin with a demo account to familiarize yourself with the platform before trading with real money.'
+                },
+                q2: {
+                    question: 'What\'s the difference between stocks and stock CFDs?',
+                    answer: 'Real stocks give you partial ownership of the company and dividend rights. CFDs are derivative contracts that replicate stock prices but with leverage and without real ownership. CFDs are more flexible but carry higher risk due to leverage.'
+                },
+                q3: {
+                    question: 'What stock markets can I access from Latin America?',
+                    answer: 'Most international brokers offer access to NYSE, NASDAQ, LSE, and other European and Asian markets. Some also offer access to Latin American markets like B3 (Brazil), BMV (Mexico), and BVC (Colombia). Check what markets each broker offers before registering.'
+                },
+                q4: {
+                    question: 'Do I need to pay taxes on stock gains?',
+                    answer: 'Yes, capital gains are generally subject to taxes in most Latin American countries. Rates and regulations vary by country. Consult with a local accountant to understand your specific tax obligations. Some brokers provide tax reports to facilitate filing.'
                 }
             },
             majorMarkets: {
@@ -1739,6 +2057,26 @@ const languages = {
                     title: 'News',
                     description: 'Stay informed about economic events that can affect markets.'
                 }
+            },
+            faq: {
+                title: 'Frequently Asked Questions about CFD Trading',
+                subtitle: 'Answers to the most common questions about contracts for difference',
+                q1: {
+                    question: 'What is a CFD and how does it work?',
+                    answer: 'A CFD (Contract for Difference) is a financial derivative that allows you to speculate on the price movement of an asset without actually owning it. You profit if the price moves in your favor and lose if it moves against you. CFDs allow trading with leverage, which amplifies both gains and losses.'
+                },
+                q2: {
+                    question: 'What are the risks of trading CFDs?',
+                    answer: 'The main risks include losses that can exceed your initial deposit due to leverage, market volatility, overnight financing costs, and the risk of margin call if your account falls below the required margin. It\'s crucial to use stop loss and manage risk properly.'
+                },
+                q3: {
+                    question: 'What assets can I trade with CFDs?',
+                    answer: 'You can trade CFDs on a wide range of assets including stocks, indices, Forex, commodities, cryptocurrencies, ETFs and bonds. Availability varies by broker. Some brokers offer thousands of different CFD instruments.'
+                },
+                q4: {
+                    question: 'How much leverage should I use?',
+                    answer: 'Appropriate leverage depends on your experience and risk tolerance. Beginners should use low leverage (1:5 to 1:10), while experienced traders can use more. Remember: more leverage means more risk. Never use the maximum available without experience.'
+                }
             }
         },
         
@@ -1874,6 +2212,26 @@ const languages = {
                 diversification: {
                     title: 'Diversification',
                     description: 'Don\'t concentrate everything on a single commodity. Diversify between metals, energy and agricultural.'
+                }
+            },
+            faq: {
+                title: 'Frequently Asked Questions about Commodity Trading',
+                subtitle: 'Answers to the most common questions about commodity trading',
+                q1: {
+                    question: 'What commodities are best for beginners?',
+                    answer: 'Gold and silver are ideal for beginners due to their high liquidity, abundant information, and their role as safe havens. Crude oil is also popular but more volatile. Avoid very specific agricultural commodities until you have more experience.'
+                },
+                q2: {
+                    question: 'What factors affect commodity prices?',
+                    answer: 'Commodity prices are influenced by supply and demand, geopolitical events, weather conditions (especially for agricultural), dollar strength, global economic growth, inventories, and government policies. News about these factors can cause significant movements.'
+                },
+                q3: {
+                    question: 'Is it better to trade physical commodities or CFDs?',
+                    answer: 'For most traders, CFDs are more practical as they don\'t require physical storage, have lower entry costs, and allow leverage. Physical trading is more suitable for institutional investors or those who actually need the physical asset.'
+                },
+                q4: {
+                    question: 'How can I use commodities as protection against inflation?',
+                    answer: 'Gold and other precious metals traditionally maintain their value during inflationary periods. Including commodities in your portfolio can help diversify and protect against loss of purchasing power. However, this works better as a long-term strategy.'
                 }
             }
         },
@@ -2096,6 +2454,26 @@ const languages = {
                 keepLearning: {
                     title: 'Keep Learning',
                     description: 'Markets evolve constantly. Stay updated with the latest trends and techniques.'
+                }
+            },
+            faq: {
+                title: 'Frequently Asked Questions about Trading Education',
+                subtitle: 'Answers to the most common questions about learning trading',
+                q1: {
+                    question: 'How long does it take to learn trading?',
+                    answer: 'Time varies depending on dedication and goals. Basic fundamentals can be learned in 1-3 months with constant study. However, developing consistent and profitable skills generally takes 1-2 years of continuous practice. Learning never ends in trading.'
+                },
+                q2: {
+                    question: 'What educational resources are best for beginners?',
+                    answer: 'Combine multiple resources: structured online courses, recognized trading books, free broker webinars, demo accounts for practice, trader communities, and daily market analysis. The combination of theory and practice is key.'
+                },
+                q3: {
+                    question: 'Should I pay for trading courses or are free resources sufficient?',
+                    answer: 'There are excellent free resources available: broker academies, YouTube, educational blogs, and webinars. Paid courses can be valuable if they offer structure, mentorship, or specific advanced content. Start with free resources and consider paid courses only if they truly add value.'
+                },
+                q4: {
+                    question: 'How do I know if I\'m ready to trade with real money?',
+                    answer: 'You\'re ready when: you\'ve demonstrated consistent profitability in a demo account for at least 2-3 months, you understand risk management, you have a written trading plan, you control your emotions, and you trade with capital you can afford to lose. Never trade with money you need for essential expenses.'
                 }
             }
         },

@@ -65,6 +65,103 @@
         }
     }
 
+    // Update broker logo on detail page
+    function updateBrokerLogo(broker) {
+        const logoContainer = document.querySelector('.broker-logo');
+        if (!logoContainer) return;
+        
+        // Get logo URL using the global function or local fallback
+        const getLogoUrl = window.getBrokerLogoUrl || function(broker) {
+            if (broker.logo && broker.logo.trim() !== '') {
+                if (broker.logo.startsWith('http://') || broker.logo.startsWith('https://')) {
+                    return broker.logo;
+                } else if (broker.logo.startsWith('/')) {
+                    return broker.logo;
+                } else {
+                    return `/images/brokers/${broker.logo}`;
+                }
+            }
+            
+            // Logo mapping - using clearbit CDN
+            const logoMap = {
+                'libertex': 'https://logo.clearbit.com/libertex.com',
+                'xm-group': 'https://logo.clearbit.com/xm.com',
+                'xm': 'https://logo.clearbit.com/xm.com',
+                'etoro': 'https://logo.clearbit.com/etoro.com',
+                'plus500': 'https://logo.clearbit.com/plus500.com',
+                'avatrade': 'https://logo.clearbit.com/avatrade.com',
+                'ig-markets': 'https://logo.clearbit.com/ig.com',
+                'ig': 'https://logo.clearbit.com/ig.com'
+            };
+            
+            const slug = broker.slug ? broker.slug.toLowerCase() : '';
+            if (logoMap[slug]) {
+                return logoMap[slug];
+            }
+            
+            if (broker.website) {
+                try {
+                    const url = new URL(broker.website);
+                    return `https://logo.clearbit.com/${url.hostname}`;
+                } catch (e) {}
+            }
+            
+            return null;
+        };
+        
+        const getIcon = window.getBrokerIcon || function(broker) {
+            const iconMap = {
+                'libertex': 'fas fa-chart-line',
+                'xm-group': 'fas fa-exchange-alt',
+                'xm': 'fas fa-exchange-alt',
+                'etoro': 'fab fa-bitcoin',
+                'plus500': 'fas fa-chart-bar',
+                'avatrade': 'fas fa-globe',
+                'ig-markets': 'fas fa-building',
+                'ig': 'fas fa-building'
+            };
+            
+            const slug = broker.slug ? broker.slug.toLowerCase() : '';
+            if (iconMap[slug]) return iconMap[slug];
+            
+            if (broker.category === 'crypto') return 'fab fa-bitcoin';
+            if (broker.category === 'forex') return 'fas fa-exchange-alt';
+            if (broker.category === 'stocks') return 'fas fa-chart-line';
+            if (broker.category === 'cfd') return 'fas fa-chart-bar';
+            if (broker.category === 'commodities') return 'fas fa-coins';
+            return 'fas fa-building';
+        };
+        
+        // Clear existing content
+        logoContainer.innerHTML = '';
+        
+        // Try to load logo
+        const logoUrl = getLogoUrl(broker);
+        const icon = getIcon(broker);
+        
+        if (logoUrl) {
+            const logoImg = document.createElement('img');
+            logoImg.src = logoUrl;
+            logoImg.alt = `${broker.name} logo`;
+            logoImg.style.width = '100%';
+            logoImg.style.height = '100%';
+            logoImg.style.objectFit = 'contain';
+            logoImg.style.padding = '10px';
+            logoImg.style.backgroundColor = '#fff';
+            logoImg.style.borderRadius = '8px';
+            
+            logoImg.onerror = function() {
+                // Fallback to icon if logo fails
+                logoContainer.innerHTML = `<i class="${icon}"></i>`;
+            };
+            
+            logoContainer.appendChild(logoImg);
+        } else {
+            // Use icon
+            logoContainer.innerHTML = `<i class="${icon}"></i>`;
+        }
+    }
+
     // Display broker details
     function displayBrokerDetails() {
         if (!currentBroker) return;
@@ -75,6 +172,9 @@
         // Update page title
         document.getElementById('pageTitle').textContent = `${currentBroker.name} Reviews - LatamBrokerReviews`;
         document.getElementById('brokerName').textContent = currentBroker.name;
+        
+        // Update broker logo
+        updateBrokerLogo(currentBroker);
         
         // Update rating
         document.getElementById('brokerRating').textContent = currentBroker.rating.toFixed(1);
