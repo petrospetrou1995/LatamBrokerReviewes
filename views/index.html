@@ -65,6 +65,20 @@
     <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item">
+                        <span itemprop="name" data-translate="nav.home">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -90,6 +104,7 @@
                         <a href="/education-training" class="dropdown-item" data-translate="nav.education">Educación y Capacitación</a>
                         </div>
                     </li>
+                    <li><a href="/blog" class="nav-link" data-translate="nav.blog">Blog</a></li>
                     <li><a href="#reviews" class="nav-link" data-translate="nav.reviews">Reviews</a></li>
                     <li><a href="#about" class="nav-link" data-translate="nav.about">About</a></li>
                     <li><a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
@@ -150,6 +165,7 @@
 
             <div class="text-center">
                 <a href="/brokers" class="btn btn-outline" data-translate="brokers.viewAll">Ver Todos los Brokers</a>
+                <a href="/broker-comparison" class="btn btn-primary" style="margin-left: 15px;" data-translate="brokerComparison.compareBrokers">Comparar Brokers</a>
             </div>
         </div>
     </section>
@@ -242,29 +258,29 @@
     <!-- Market Overview Section -->
     <section class="content-section" style="padding: 80px 0; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; color: #333;">Mercados Financieros en Latinoamérica</h2>
-            <p class="section-subtitle" style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 50px;">Información completa sobre los principales mercados y oportunidades de inversión</p>
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; color: #333;" data-translate="marketOverview.title">Mercados Financieros en Latinoamérica</h2>
+            <p class="section-subtitle" style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 50px;" data-translate="marketOverview.subtitle">Información completa sobre los principales mercados y oportunidades de inversión</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
                 <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 15px;"><i class="fas fa-exchange-alt"></i> Mercado Forex</h3>
-                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">El mercado de divisas es el más grande del mundo con un volumen diario de más de $6.6 billones. Los traders latinoamericanos pueden acceder a este mercado las 24 horas del día, 5 días a la semana, operando pares de divisas principales como EUR/USD, GBP/USD y USD/JPY.</p>
-                    <p style="color: #666; line-height: 1.8;">Los brokers regulados ofrecen spreads competitivos, apalancamiento controlado y plataformas avanzadas como MetaTrader 4 y 5 para análisis técnico profesional.</p>
-                    <a href="/forex-trading" class="btn btn-outline" style="margin-top: 15px; display: inline-block;">Explorar Forex</a>
+                    <h3 style="color: #007bff; margin-bottom: 15px;"><i class="fas fa-exchange-alt"></i> <span data-translate="marketOverview.forex.title">Mercado Forex</span></h3>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;" data-translate="marketOverview.forex.description1">El mercado de divisas es el más grande del mundo con un volumen diario de más de $6.6 billones. Los traders latinoamericanos pueden acceder a este mercado las 24 horas del día, 5 días a la semana, operando pares de divisas principales como EUR/USD, GBP/USD y USD/JPY.</p>
+                    <p style="color: #666; line-height: 1.8;" data-translate="marketOverview.forex.description2">Los brokers regulados ofrecen spreads competitivos, apalancamiento controlado y plataformas avanzadas como MetaTrader 4 y 5 para análisis técnico profesional.</p>
+                    <a href="/forex-trading" class="btn btn-outline" style="margin-top: 15px; display: inline-block;" data-translate="marketOverview.forex.explore">Explorar Forex</a>
                 </div>
                 
                 <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 15px;"><i class="fab fa-bitcoin"></i> Criptomonedas</h3>
-                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">El mercado de criptomonedas ha experimentado un crecimiento exponencial en Latinoamérica. Bitcoin, Ethereum y otras altcoins ofrecen oportunidades de inversión con alta volatilidad y potencial de crecimiento.</p>
-                    <p style="color: #666; line-height: 1.8;">Los brokers especializados en crypto ofrecen acceso a más de 100 criptomonedas diferentes, trading con apalancamiento, y herramientas avanzadas para análisis técnico y fundamental.</p>
-                    <a href="/crypto-trading" class="btn btn-outline" style="margin-top: 15px; display: inline-block;">Explorar Crypto</a>
+                    <h3 style="color: #007bff; margin-bottom: 15px;"><i class="fab fa-bitcoin"></i> <span data-translate="marketOverview.crypto.title">Criptomonedas</span></h3>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;" data-translate="marketOverview.crypto.description1">El mercado de criptomonedas ha experimentado un crecimiento exponencial en Latinoamérica. Bitcoin, Ethereum y otras altcoins ofrecen oportunidades de inversión con alta volatilidad y potencial de crecimiento.</p>
+                    <p style="color: #666; line-height: 1.8;" data-translate="marketOverview.crypto.description2">Los brokers especializados en crypto ofrecen acceso a más de 100 criptomonedas diferentes, trading con apalancamiento, y herramientas avanzadas para análisis técnico y fundamental.</p>
+                    <a href="/crypto-trading" class="btn btn-outline" style="margin-top: 15px; display: inline-block;" data-translate="marketOverview.crypto.explore">Explorar Crypto</a>
                 </div>
                 
                 <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 15px;"><i class="fas fa-chart-line"></i> Acciones</h3>
-                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">El trading de acciones permite invertir en empresas líderes de mercados globales como NYSE, NASDAQ, y mercados europeos. Los traders latinoamericanos pueden acceder a miles de acciones internacionales.</p>
-                    <p style="color: #666; line-height: 1.8;">Los brokers modernos ofrecen acceso a acciones con comisiones competitivas, análisis fundamental y técnico integrado, y la posibilidad de recibir dividendos de las empresas en las que inviertes.</p>
-                    <a href="/stocks-trading" class="btn btn-outline" style="margin-top: 15px; display: inline-block;">Explorar Acciones</a>
+                    <h3 style="color: #007bff; margin-bottom: 15px;"><i class="fas fa-chart-line"></i> <span data-translate="marketOverview.stocks.title">Acciones</span></h3>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;" data-translate="marketOverview.stocks.description1">El trading de acciones permite invertir en empresas líderes de mercados globales como NYSE, NASDAQ, y mercados europeos. Los traders latinoamericanos pueden acceder a miles de acciones internacionales.</p>
+                    <p style="color: #666; line-height: 1.8;" data-translate="marketOverview.stocks.description2">Los brokers modernos ofrecen acceso a acciones con comisiones competitivas, análisis fundamental y técnico integrado, y la posibilidad de recibir dividendos de las empresas en las que inviertes.</p>
+                    <a href="/stocks-trading" class="btn btn-outline" style="margin-top: 15px; display: inline-block;" data-translate="marketOverview.stocks.explore">Explorar Acciones</a>
                 </div>
             </div>
         </div>
@@ -307,59 +323,59 @@
     <!-- Broker Comparison Section -->
     <section class="content-section" style="padding: 80px 0; background: #fff;">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; color: #333;">Comparación de Brokers</h2>
-            <p class="section-subtitle" style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 50px;">Compara las características principales de los mejores brokers para traders latinoamericanos</p>
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; color: #333;" data-translate="brokerComparison.title">Comparación de Brokers</h2>
+            <p class="section-subtitle" style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 50px;" data-translate="brokerComparison.subtitle">Compara las características principales de los mejores brokers para traders latinoamericanos</p>
             
             <div style="overflow-x: auto; margin-top: 40px;">
                 <table style="width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
                     <thead>
                         <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff;">
-                            <th style="padding: 15px; text-align: left;">Broker</th>
-                            <th style="padding: 15px; text-align: left;">Regulación</th>
-                            <th style="padding: 15px; text-align: left;">Spreads Forex</th>
-                            <th style="padding: 15px; text-align: left;">Apalancamiento</th>
-                            <th style="padding: 15px; text-align: left;">Depósito Mínimo</th>
-                            <th style="padding: 15px; text-align: left;">Plataformas</th>
+                            <th style="padding: 15px; text-align: left;" data-translate="brokerComparison.tableHeaders.broker">Broker</th>
+                            <th style="padding: 15px; text-align: left;" data-translate="brokerComparison.tableHeaders.regulation">Regulación</th>
+                            <th style="padding: 15px; text-align: left;" data-translate="brokerComparison.tableHeaders.spreads">Spreads Forex</th>
+                            <th style="padding: 15px; text-align: left;" data-translate="brokerComparison.tableHeaders.leverage">Apalancamiento</th>
+                            <th style="padding: 15px; text-align: left;" data-translate="brokerComparison.tableHeaders.minDeposit">Depósito Mínimo</th>
+                            <th style="padding: 15px; text-align: left;" data-translate="brokerComparison.tableHeaders.platforms">Plataformas</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr style="border-bottom: 1px solid #e9ecef;">
                             <td style="padding: 15px;"><strong>XM Group</strong></td>
                             <td style="padding: 15px; color: #666;">CySEC, ASIC, IFSC</td>
-                            <td style="padding: 15px; color: #666;">Desde 0.6 pips</td>
-                            <td style="padding: 15px; color: #666;">Hasta 1:888</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.from">Desde</span> 0.6 pips</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.upTo">Hasta</span> 1:888</td>
                             <td style="padding: 15px; color: #666;">$5</td>
                             <td style="padding: 15px; color: #666;">MT4, MT5, XM WebTrader</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #e9ecef; background: #f8f9fa;">
                             <td style="padding: 15px;"><strong>Libertex</strong></td>
                             <td style="padding: 15px; color: #666;">CySEC</td>
-                            <td style="padding: 15px; color: #666;">Desde 0.9 pips</td>
-                            <td style="padding: 15px; color: #666;">Hasta 1:30</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.from">Desde</span> 0.9 pips</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.upTo">Hasta</span> 1:30</td>
                             <td style="padding: 15px; color: #666;">$100</td>
-                            <td style="padding: 15px; color: #666;">Plataforma Propia, MT4</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.ownPlatform">Plataforma Propia</span>, MT4</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #e9ecef;">
                             <td style="padding: 15px;"><strong>IG Markets</strong></td>
                             <td style="padding: 15px; color: #666;">FCA, ASIC, MAS</td>
-                            <td style="padding: 15px; color: #666;">Desde 0.6 pips</td>
-                            <td style="padding: 15px; color: #666;">Hasta 1:200</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.from">Desde</span> 0.6 pips</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.upTo">Hasta</span> 1:200</td>
                             <td style="padding: 15px; color: #666;">$250</td>
                             <td style="padding: 15px; color: #666;">IG Platform, MT4</td>
                         </tr>
                         <tr style="background: #f8f9fa;">
                             <td style="padding: 15px;"><strong>eToro</strong></td>
                             <td style="padding: 15px; color: #666;">CySEC, FCA, ASIC</td>
-                            <td style="padding: 15px; color: #666;">Variable</td>
-                            <td style="padding: 15px; color: #666;">Hasta 1:30</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.variable">Variable</span></td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.upTo">Hasta</span> 1:30</td>
                             <td style="padding: 15px; color: #666;">$50</td>
-                            <td style="padding: 15px; color: #666;">Plataforma Propia</td>
+                            <td style="padding: 15px; color: #666;"><span data-translate="brokerComparison.tableTerms.ownPlatform">Plataforma Propia</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div style="text-align: center; margin-top: 30px;">
-                <a href="/brokers" class="btn btn-primary">Ver Comparación Completa</a>
+                <a href="/broker-comparison" class="btn btn-primary" data-translate="brokerComparison.viewFullComparison">Ver Comparación Completa</a>
             </div>
         </div>
     </section>
@@ -520,7 +536,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><i class="fas fa-chart-line"></i> LatamBrokerReviews</h3>
-                    <p>La plataforma líder en reseñas de brokers para América Latina.</p>
+                    <p data-translate="footer.description">La plataforma líder en reseñas de brokers para América Latina.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter"></i></a>

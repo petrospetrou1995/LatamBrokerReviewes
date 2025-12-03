@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">Broker Reviews - LatamBrokerReviews</title>
-    <meta name="description" content="Read detailed reviews and analysis of top brokers for Latin America traders.">
+    <title data-translate="blog.posts.forexGuide.title">Blog Post - LatamBrokerReviews</title>
+    <meta name="description" data-translate="blog.posts.forexGuide.description" content="Blog post description">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" data-translate="blog.posts.forexGuide.title" content="Blog Post Title">
+    <meta property="og:description" data-translate="blog.posts.forexGuide.description" content="Blog post description">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" data-translate="blog.posts.forexGuide.title" content="Blog Post Title">
+    <meta property="twitter:description" data-translate="blog.posts.forexGuide.description" content="Blog post description">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/brokers.css" rel="stylesheet">
-    <link href="/css/broker-detail.css" rel="stylesheet">
-    </head>
+    <link href="/css/category-pages.css" rel="stylesheet">
+</head>
 <body>
     <!-- Breadcrumb Navigation -->
     <nav class="breadcrumb-nav" aria-label="Breadcrumb">
         <div class="container">
-            <ol class="breadcrumb-list" id="brokerBreadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/" itemprop="item">
                         <span itemprop="name" data-translate="nav.home">Home</span>
@@ -23,13 +34,13 @@
                     <meta itemprop="position" content="1" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="/brokers" itemprop="item">
-                        <span itemprop="name" data-translate="nav.brokers">Brokers</span>
+                    <a href="/blog" itemprop="item">
+                        <span itemprop="name" data-translate="nav.blog">Blog</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name" id="brokerBreadcrumbName">Loading...</span>
+                    <span itemprop="name" id="postTitle">Blog Post</span>
                     <meta itemprop="position" content="3" />
                 </li>
             </ol>
@@ -63,7 +74,7 @@
                         <a href="/education-training" class="dropdown-item" data-translate="nav.education">Educación y Capacitación</a>
                     </div>
                 </li>
-                <li><a href="/blog" class="nav-link" data-translate="nav.blog">Blog</a></li>
+                <li><a href="/blog" class="nav-link active" data-translate="nav.blog">Blog</a></li>
                 <li><a href="/#reviews" class="nav-link" data-translate="nav.reviews">Reseñas</a></li>
                 <li><a href="/#about" class="nav-link" data-translate="nav.about">Acerca de</a></li>
                 <li><a href="/#contact" class="nav-link" data-translate="nav.contact">Contacto</a></li>
@@ -88,76 +99,34 @@
         </div>
     </nav>
 
-    <!-- Broker Header -->
-    <section class="broker-header-section">
-        <div class="container">
-            <div class="broker-header-content">
-                <div class="broker-logo">
-                    <i class="fas fa-building"></i>
-                </div>
-                <div class="broker-info">
-                    <h1 id="brokerName">Loading...</h1>
-                    <div class="broker-rating">
-                        <div class="stars" id="brokerStars"></div>
-                        <span class="rating-number" id="brokerRating">0.0</span>
-                        <span class="reviews-count" id="brokerReviewsCount">(0 reseñas)</span>
+    <!-- Blog Post Content -->
+    <section class="content-section" style="padding: 60px 0;">
+        <div class="container" style="max-width: 800px;">
+            <article>
+                <header style="margin-bottom: 40px;">
+                    <div style="margin-bottom: 20px;">
+                        <a href="/blog" style="color: #667eea; text-decoration: none; font-weight: 500;">
+                            <i class="fas fa-arrow-left"></i> <span data-translate="blog.backToBlog">Volver al Blog</span>
+                        </a>
                     </div>
-                    <div class="broker-category" id="brokerCategory">Categoría</div>
-                </div>
-                <div class="broker-actions">
-                    <a href="#" id="brokerWebsite" target="_blank" class="btn btn-primary">
-                        <i class="fas fa-external-link-alt"></i>
-                        <span data-translate="brokers.visitSite">Visitar Sitio</span>
-                    </a>
-                    <button type="button" class="btn btn-secondary" id="addToComparison">
-                        <i class="fas fa-balance-scale"></i>
-                        <span data-translate="brokers.view.compare">Comparar</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Broker Details -->
-    <section class="broker-details-section">
-        <div class="container">
-            <div class="broker-details-grid">
-                <div class="broker-description">
-                    <h2 data-translate="brokers.about">Acerca de</h2>
-                    <p id="brokerDescription">Loading...</p>
-                </div>
-                <div class="broker-features">
-                    <h2 data-translate="brokers.mainFeatures">Características principales</h2>
-                    <div class="features-list" id="brokerFeatures">
-                        <!-- Features will be loaded dynamically -->
+                    <div id="postImageContainer" style="margin-bottom: 30px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img id="postImage" src="" alt="" style="width: 100%; height: 400px; object-fit: cover; display: none;">
                     </div>
+                    <h1 id="postHeading" style="font-size: 2.5rem; margin-bottom: 20px; color: #333;">Loading...</h1>
+                    <div style="display: flex; gap: 20px; color: #666; font-size: 14px; margin-bottom: 30px;">
+                        <span><i class="fas fa-calendar"></i> <span id="postDate">15 Dic 2024</span></span>
+                        <span><i class="fas fa-tag"></i> <span id="postCategory" data-translate="blog.categories.forex">Forex</span></span>
+                    </div>
+                </header>
+                
+                <div id="postContent" style="line-height: 1.8; color: #444; font-size: 1.1rem;">
+                    <p>Loading content...</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Broker Stats -->
-    <section class="broker-stats-section">
-        <div class="container">
-            <h2 data-translate="brokers.stats">Estadísticas</h2>
-            <div class="stats-grid" id="brokerStats">
-                <!-- Stats will be loaded dynamically -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="broker-reviews-section">
-        <div class="container">
-            <h2 data-translate="brokers.reviews">Reseñas</h2>
-            <div class="reviews-grid" id="brokerReviewsGrid">
-                <!-- Reviews will be loaded dynamically -->
-            </div>
-            <div class="text-center">
-                <button type="button" class="btn btn-primary" id="loadMoreReviews">
-                    <span data-translate="reviews.loadMore">Cargar Más Reseñas</span>
-                </button>
-            </div>
+                
+                <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #e1e5e9;">
+                    <a href="/blog" class="btn btn-primary" style="display: inline-block;" data-translate="blog.backToBlog">Volver al Blog</a>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -166,7 +135,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3><i class="fas fa-chart-line"></i> LatamBrokerReviews</h3>
+                    <h3 data-translate="footer.title">LatamBrokerReviews</h3>
                     <p data-translate="footer.description">La plataforma líder en reseñas de brokers para traders de América Latina.</p>
                 </div>
                 <div class="footer-section">
@@ -174,8 +143,8 @@
                     <ul>
                         <li><a href="/" data-translate="nav.home">Inicio</a></li>
                         <li><a href="/brokers" data-translate="nav.brokers">Brokers</a></li>
-                        <li><a href="/reviews" data-translate="nav.reviews">Reseñas</a></li>
-                        <li><a href="/#about" data-translate="nav.about">Acerca de</a></li>
+                        <li><a href="/blog" data-translate="nav.blog">Blog</a></li>
+                        <li><a href="/#reviews" data-translate="nav.reviews">Reseñas</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -185,18 +154,21 @@
                         <li><a href="/stocks-trading" data-translate="nav.stocks">Acciones</a></li>
                         <li><a href="/crypto-trading" data-translate="nav.crypto">Criptomonedas</a></li>
                         <li><a href="/cfd-trading" data-translate="nav.cfds">CFDs</a></li>
+                        <li><a href="/commodities-trading" data-translate="nav.commodities">Commodities</a></li>
+                        <li><a href="/education-training" data-translate="nav.education">Educación</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LatamBrokerReviews. <span data-translate="footer.copyright">Todos los derechos reservados.</span></p>
+                <p data-translate="footer.copyright">Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="/js/languages.js"></script>
-    <script src="/js/main.js"></script>
     <script src="/js/language-switcher.js"></script>
-    <script src="/js/broker-detail.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/blog-post.js"></script>
 </body>
 </html>

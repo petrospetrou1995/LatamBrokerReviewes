@@ -142,13 +142,14 @@
         if (logoUrl) {
             const logoImg = document.createElement('img');
             logoImg.src = logoUrl;
-            logoImg.alt = `${broker.name} logo`;
+            logoImg.alt = `${broker.name} logo - ${broker.name} broker logo image for trading platform`;
             logoImg.style.width = '100%';
             logoImg.style.height = '100%';
             logoImg.style.objectFit = 'contain';
             logoImg.style.padding = '10px';
             logoImg.style.backgroundColor = '#fff';
             logoImg.style.borderRadius = '8px';
+            logoImg.loading = 'lazy';
             
             logoImg.onerror = function() {
                 // Fallback to icon if logo fails
@@ -172,6 +173,12 @@
         // Update page title
         document.getElementById('pageTitle').textContent = `${currentBroker.name} Reviews - LatamBrokerReviews`;
         document.getElementById('brokerName').textContent = currentBroker.name;
+        
+        // Update breadcrumb
+        const breadcrumbName = document.getElementById('brokerBreadcrumbName');
+        if (breadcrumbName) {
+            breadcrumbName.textContent = currentBroker.name;
+        }
         
         // Update broker logo
         updateBrokerLogo(currentBroker);

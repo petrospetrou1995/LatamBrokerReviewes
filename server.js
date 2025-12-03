@@ -145,6 +145,11 @@ app.get('/blog', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'blog.html'));
 });
 
+// Serve broker comparison page
+app.get('/broker-comparison', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'broker-comparison.html'));
+});
+
 // Serve individual blog post page
 app.get('/blog/:slug', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'blog-post.html'));
@@ -166,6 +171,70 @@ app.get('/login', (req, res) => {
 // Favicon route (prevent 404)
 app.get('/favicon.ico', (req, res) => {
   res.status(204).end();
+});
+
+// Robots.txt route
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
+});
+
+// Dynamic sitemap.xml generation
+app.get('/sitemap.xml', async (req, res) => {
+  try {
+    const Broker = require('./models/Broker');
+    const baseUrl = 'https://latambrokerreviews.com';
+    const currentDate = new Date().toISOString().split('T')[0];
+    
+    // Static pages
+    const staticPages = [
+      { url: '', priority: '1.0', changefreq: 'daily' },
+      { url: '/brokers', priority: '0.9', changefreq: 'daily' },
+      { url: '/reviews', priority: '0.9', changefreq: 'daily' },
+      { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+      { url: '/forex-trading', priority: '0.8', changefreq: 'weekly' },
+      { url: '/stocks-trading', priority: '0.8', changefreq: 'weekly' },
+      { url: '/crypto-trading', priority: '0.8', changefreq: 'weekly' },
+      { url: '/cfd-trading', priority: '0.8', changefreq: 'weekly' },
+      { url: '/commodities-trading', priority: '0.8', changefreq: 'weekly' },
+      { url: '/education-training', priority: '0.8', changefreq: 'weekly' },
+      { url: '/broker-comparison', priority: '0.9', changefreq: 'weekly' }
+    ];
+    
+    // Get all active brokers
+    const brokers = await Broker.find({ isActive: true }).select('slug updatedAt').lean();
+    
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    // Add static pages
+    staticPages.forEach(page => {
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${baseUrl}${page.url}</loc>\n`;
+      sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+      sitemap += `    <priority>${page.priority}</priority>\n`;
+      sitemap += '  </url>\n';
+    });
+    
+    // Add broker pages
+    brokers.forEach(broker => {
+      const lastmod = broker.updatedAt ? new Date(broker.updatedAt).toISOString().split('T')[0] : currentDate;
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${baseUrl}/broker/${broker.slug}</loc>\n`;
+      sitemap += `    <lastmod>${lastmod}</lastmod>\n`;
+      sitemap += '    <changefreq>weekly</changefreq>\n';
+      sitemap += '    <priority>0.7</priority>\n';
+      sitemap += '  </url>\n';
+    });
+    
+    sitemap += '</urlset>';
+    
+    res.set('Content-Type', 'text/xml');
+    res.send(sitemap);
+  } catch (error) {
+    console.error('Error generating sitemap:', error);
+    res.status(500).send('Error generating sitemap');
+  }
 });
 
 // Error handling middleware

@@ -16,6 +16,7 @@ const languages = {
             cfds: 'CFDs',
             commodities: 'Commodities',
             education: 'Educación y Capacitación',
+            blog: 'Blog',
             reviews: 'Reseñas',
             about: 'Acerca de',
             contact: 'Contacto',
@@ -226,6 +227,1629 @@ const languages = {
             locationLabel: 'Ubicación',
             phone: '+1 (555) 123-4567',
             location: 'América Latina'
+        },
+        
+        // Market Overview Section
+        marketOverview: {
+            title: 'Mercados Financieros en Latinoamérica',
+            subtitle: 'Información completa sobre los principales mercados y oportunidades de inversión',
+            forex: {
+                title: 'Mercado Forex',
+                description1: 'El mercado de divisas es el más grande del mundo con un volumen diario de más de $6.6 billones. Los traders latinoamericanos pueden acceder a este mercado las 24 horas del día, 5 días a la semana, operando pares de divisas principales como EUR/USD, GBP/USD y USD/JPY.',
+                description2: 'Los brokers regulados ofrecen spreads competitivos, apalancamiento controlado y plataformas avanzadas como MetaTrader 4 y 5 para análisis técnico profesional.',
+                explore: 'Explorar Forex'
+            },
+            crypto: {
+                title: 'Criptomonedas',
+                description1: 'El mercado de criptomonedas ha experimentado un crecimiento exponencial en Latinoamérica. Bitcoin, Ethereum y otras altcoins ofrecen oportunidades de inversión con alta volatilidad y potencial de crecimiento.',
+                description2: 'Los brokers especializados en crypto ofrecen acceso a más de 100 criptomonedas diferentes, trading con apalancamiento, y herramientas avanzadas para análisis técnico y fundamental.',
+                explore: 'Explorar Crypto'
+            },
+            stocks: {
+                title: 'Acciones',
+                description1: 'El trading de acciones permite invertir en empresas líderes de mercados globales como NYSE, NASDAQ, y mercados europeos. Los traders latinoamericanos pueden acceder a miles de acciones internacionales.',
+                description2: 'Los brokers modernos ofrecen acceso a acciones con comisiones competitivas, análisis fundamental y técnico integrado, y la posibilidad de recibir dividendos de las empresas en las que inviertes.',
+                explore: 'Explorar Acciones'
+            }
+        },
+        
+        // Broker Comparison Section
+        brokerComparison: {
+            title: 'Comparación de Brokers',
+            subtitle: 'Compara las características principales de los mejores brokers para traders latinoamericanos',
+            tableHeaders: {
+                broker: 'Broker',
+                regulation: 'Regulación',
+                spreads: 'Spreads Forex',
+                leverage: 'Apalancamiento',
+                minDeposit: 'Depósito Mínimo',
+                platforms: 'Plataformas'
+            },
+            tableTerms: {
+                from: 'Desde',
+                upTo: 'Hasta',
+                variable: 'Variable',
+                ownPlatform: 'Plataforma Propia'
+            },
+            viewFullComparison: 'Ver Comparación Completa',
+            compareBrokers: 'Comparar Brokers'
+        },
+        
+        // Blog Section
+        blog: {
+            pageTitle: 'Blog de Trading - LatamBrokerReviews',
+            pageDescription: 'Artículos, guías y análisis sobre trading, brokers e inversiones en Latinoamérica. Mantente actualizado con las últimas tendencias del mercado.',
+            hero: {
+                title: 'Blog de Trading',
+                subtitle: 'Artículos, guías y análisis sobre trading, brokers e inversiones en Latinoamérica. Mantente actualizado con las últimas tendencias del mercado.'
+            },
+            readMore: 'Leer Más',
+            backToBlog: 'Volver al Blog',
+            posts: {
+                forexGuide: {
+                    title: 'Guía Completa de Forex Trading para Principiantes',
+                    description: 'Aprende los fundamentos del trading de divisas, desde conceptos básicos hasta estrategias avanzadas para traders latinoamericanos.',
+                    category: 'Forex',
+                    content: {
+                        introduction: {
+                            title: 'Introducción al Mercado Forex',
+                            paragraphs: [
+                                'El mercado de divisas, conocido como Forex (Foreign Exchange), es el mercado financiero más grande del mundo, con un volumen diario de transacciones que supera los 6 billones de dólares. Para traders latinoamericanos, Forex ofrece oportunidades únicas de inversión y trading las 24 horas del día.',
+                                'Esta guía completa te llevará desde los conceptos básicos hasta estrategias avanzadas, ayudándote a entender cómo funciona el mercado Forex y cómo puedes comenzar a operar de manera efectiva.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. ¿Qué es el Mercado Forex?',
+                                paragraphs: [
+                                    'Forex es el mercado donde se compran y venden divisas. A diferencia de otros mercados financieros, Forex opera las 24 horas del día, cinco días a la semana, permitiendo a los traders de todo el mundo participar en cualquier momento.',
+                                    'El mercado Forex es descentralizado, lo que significa que no hay una ubicación física central. En su lugar, opera a través de una red global de bancos, instituciones financieras y brokers.'
+                                ],
+                                list: [
+                                    'Mercado más líquido del mundo: Facilita entradas y salidas rápidas',
+                                    'Horario extendido: Opera 24/5, ideal para traders de diferentes zonas horarias',
+                                    'Apalancamiento disponible: Permite operar con más capital del que tienes',
+                                    'Accesible: Puedes comenzar con capital relativamente bajo'
+                                ]
+                            },
+                            {
+                                title: '2. Conceptos Básicos de Forex',
+                                paragraphs: [
+                                    'Antes de comenzar a operar, es esencial entender los conceptos fundamentales del mercado Forex.'
+                                ],
+                                list: [
+                                    'Par de divisas: Siempre operas con pares (ej: EUR/USD, USD/MXN)',
+                                    'Spread: Diferencia entre precio de compra y venta',
+                                    'Pip: Unidad de medida para cambios de precio (0.0001 para la mayoría de pares)',
+                                    'Lote: Tamaño estándar de una operación (100,000 unidades)',
+                                    'Apalancamiento: Capacidad de operar con más capital del que tienes',
+                                    'Margin: Capital requerido para abrir una posición apalancada'
+                                ]
+                            },
+                            {
+                                title: '3. Principales Pares de Divisas',
+                                paragraphs: [
+                                    'Los pares de divisas se clasifican en tres categorías principales: majors, minors y exóticos.'
+                                ],
+                                list: [
+                                    'Majors: Pares más negociados (EUR/USD, GBP/USD, USD/JPY, USD/CHF, AUD/USD, USD/CAD, NZD/USD)',
+                                    'Minors: Pares que no incluyen USD (EUR/GBP, EUR/JPY, GBP/JPY)',
+                                    'Exóticos: Pares con divisas de economías emergentes (USD/MXN, USD/BRL, USD/ARS)',
+                                    'Para traders latinoamericanos, los pares exóticos como USD/MXN, USD/BRL y USD/ARS son especialmente relevantes'
+                                ]
+                            },
+                            {
+                                title: '4. Cómo Leer una Cotización de Forex',
+                                paragraphs: [
+                                    'Una cotización de Forex muestra dos precios: el precio de compra (bid) y el precio de venta (ask).'
+                                ],
+                                list: [
+                                    'Bid: Precio al que puedes vender la divisa base',
+                                    'Ask: Precio al que puedes comprar la divisa base',
+                                    'Spread: Diferencia entre bid y ask (coste de la operación)',
+                                    'Ejemplo: EUR/USD 1.0850/1.0852 significa que puedes comprar a 1.0852 y vender a 1.0850'
+                                ]
+                            },
+                            {
+                                title: '5. Factores que Afectan el Precio de las Divisas',
+                                paragraphs: [
+                                    'El precio de las divisas está influenciado por múltiples factores económicos y políticos.'
+                                ],
+                                list: [
+                                    'Tasas de interés: Diferencias entre países afectan el flujo de capital',
+                                    'Indicadores económicos: PIB, inflación, empleo, etc.',
+                                    'Estabilidad política: Eventos políticos pueden causar volatilidad',
+                                    'Comercio internacional: Balanzas comerciales entre países',
+                                    'Sentimiento del mercado: Percepción y expectativas de los inversores'
+                                ]
+                            },
+                            {
+                                title: '6. Estrategias Básicas de Forex Trading',
+                                paragraphs: [
+                                    'Existen varias estrategias que los principiantes pueden utilizar para comenzar en Forex.'
+                                ],
+                                list: [
+                                    'Trading de tendencia: Seguir la dirección del mercado',
+                                    'Trading de rango: Operar entre niveles de soporte y resistencia',
+                                    'Breakout trading: Entrar cuando el precio rompe niveles clave',
+                                    'Scalping: Operaciones de muy corto plazo',
+                                    'Swing trading: Mantener posiciones durante varios días'
+                                ]
+                            },
+                            {
+                                title: '7. Gestión de Riesgo en Forex',
+                                paragraphs: [
+                                    'La gestión de riesgo es crucial para el éxito a largo plazo en Forex.'
+                                ],
+                                list: [
+                                    'Nunca arriesgues más del 1-2% de tu capital por operación',
+                                    'Usa stop-loss en todas tus operaciones',
+                                    'Define tu take-profit antes de entrar',
+                                    'No operes con más del 5-10% de tu capital total en riesgo simultáneo',
+                                    'Mantén un diario de trading para aprender de tus errores'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'El mercado Forex ofrece oportunidades emocionantes para traders latinoamericanos, pero requiere educación, práctica y disciplina. Comienza con una cuenta demo, aprende los conceptos básicos, desarrolla una estrategia sólida y siempre gestiona tu riesgo adecuadamente.',
+                                'Recuerda que el éxito en Forex no se logra de la noche a la mañana. La paciencia, la educación continua y la disciplina son las claves para convertirse en un trader exitoso.'
+                            ]
+                        }
+                    }
+                },
+                cryptoFuture: {
+                    title: 'El Futuro de las Criptomonedas en Latinoamérica',
+                    description: 'Análisis de las tendencias regulatorias y oportunidades de inversión en criptomonedas para traders latinoamericanos.',
+                    category: 'Crypto',
+                    content: {
+                        introduction: {
+                            title: 'El Futuro de las Criptomonedas en Latinoamérica',
+                            paragraphs: [
+                                'Las criptomonedas están transformando el panorama financiero en Latinoamérica, ofreciendo nuevas oportunidades de inversión y acceso a servicios financieros para millones de personas. A medida que la adopción crece, los traders latinoamericanos necesitan entender las tendencias regulatorias y las oportunidades que presenta este mercado emergente.',
+                                'En este artículo, exploraremos el estado actual y futuro de las criptomonedas en la región, analizando regulaciones, adopción, y las mejores estrategias para traders latinoamericanos.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Estado Actual de las Criptomonedas en Latinoamérica',
+                                paragraphs: [
+                                    'Latinoamérica se ha convertido en una de las regiones con mayor adopción de criptomonedas a nivel mundial. Países como El Salvador, Argentina, Brasil y México están liderando la adopción.'
+                                ],
+                                list: [
+                                    'El Salvador: Primer país en adoptar Bitcoin como moneda de curso legal',
+                                    'Argentina: Alto uso de criptomonedas como protección contra la inflación',
+                                    'Brasil: Regulación clara y creciente adopción institucional',
+                                    'México: Marco regulatorio en desarrollo con enfoque en protección al consumidor',
+                                    'Colombia: Mercado activo con regulaciones progresivas'
+                                ]
+                            },
+                            {
+                                title: '2. Tendencias Regulatorias',
+                                paragraphs: [
+                                    'Los gobiernos latinoamericanos están desarrollando marcos regulatorios para las criptomonedas, buscando equilibrio entre innovación y protección al consumidor.'
+                                ],
+                                list: [
+                                    'Regulación proactiva: Países como Brasil y México están estableciendo marcos claros',
+                                    'Enfoque en protección: Regulaciones enfocadas en prevenir fraude y proteger inversores',
+                                    'Adopción institucional: Bancos y empresas están integrando servicios de criptomonedas',
+                                    'Impuestos: Clarificación sobre tratamiento fiscal de ganancias en criptomonedas',
+                                    'Licencias: Requisitos para exchanges y plataformas de trading'
+                                ]
+                            },
+                            {
+                                title: '3. Oportunidades de Inversión',
+                                paragraphs: [
+                                    'Para traders latinoamericanos, las criptomonedas ofrecen múltiples oportunidades de inversión y trading.'
+                                ],
+                                list: [
+                                    'Trading activo: Alta volatilidad ofrece oportunidades de ganancias a corto plazo',
+                                    'Inversión a largo plazo: Bitcoin y Ethereum como reserva de valor',
+                                    'DeFi: Acceso a servicios financieros descentralizados',
+                                    'Staking: Generar ingresos pasivos con criptomonedas',
+                                    'NFTs: Mercado emergente de tokens no fungibles'
+                                ]
+                            },
+                            {
+                                title: '4. Desafíos y Riesgos',
+                                paragraphs: [
+                                    'A pesar de las oportunidades, existen desafíos importantes que los traders deben considerar.'
+                                ],
+                                list: [
+                                    'Volatilidad extrema: Precios pueden cambiar drásticamente en corto tiempo',
+                                    'Regulación cambiante: Las leyes pueden cambiar rápidamente',
+                                    'Seguridad: Riesgo de hackeos y fraudes',
+                                    'Liquidez: Algunas criptomonedas tienen baja liquidez',
+                                    'Adopción limitada: No todas las criptomonedas tienen uso real'
+                                ]
+                            },
+                            {
+                                title: '5. Mejores Prácticas para Traders',
+                                paragraphs: [
+                                    'Para tener éxito en el trading de criptomonedas en Latinoamérica, sigue estas mejores prácticas.'
+                                ],
+                                list: [
+                                    'Elige exchanges regulados: Prioriza plataformas con licencias y regulación',
+                                    'Diversifica: No pongas todo tu capital en una sola criptomoneda',
+                                    'Gestiona el riesgo: Usa stop-loss y nunca inviertas más de lo que puedes perder',
+                                    'Mantente informado: Sigue las noticias regulatorias y del mercado',
+                                    'Usa wallets seguros: Almacena criptomonedas en wallets con buena seguridad',
+                                    'Considera impuestos: Mantén registros para declaraciones fiscales'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'El futuro de las criptomonedas en Latinoamérica es prometedor, con creciente adopción y marcos regulatorios en desarrollo. Para traders latinoamericanos, esto representa oportunidades significativas, pero también requiere educación, gestión de riesgo adecuada y comprensión de las regulaciones locales.',
+                                'El éxito en el trading de criptomonedas requiere paciencia, disciplina y una comprensión profunda del mercado. Mantente actualizado con las tendencias regulatorias y del mercado, y siempre prioriza la seguridad y gestión de riesgo.'
+                            ]
+                        }
+                    }
+                },
+                commonMistakes: {
+                    title: '5 Errores Comunes que Debes Evitar al Empezar en Trading',
+                    description: 'Conoce los errores más frecuentes que cometen los principiantes y cómo evitarlos para tener un mejor inicio en el trading.',
+                    category: 'Educación',
+                    content: {
+                        introduction: {
+                            title: 'Errores Comunes en Trading',
+                            paragraphs: [
+                                'Comenzar en el mundo del trading puede ser emocionante, pero también está lleno de desafíos. Muchos principiantes cometen los mismos errores que pueden costarles tiempo, dinero y frustración. Conocer estos errores comunes te ayudará a evitarlos y tener un mejor inicio en tu carrera como trader.',
+                                'En este artículo, identificaremos los 5 errores más comunes que cometen los principiantes y te mostraremos cómo evitarlos para maximizar tus posibilidades de éxito.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. No Usar Stop Loss',
+                                paragraphs: [
+                                    'Uno de los errores más costosos es operar sin stop loss. Muchos principiantes piensan que pueden controlar sus pérdidas manualmente, pero las emociones y la esperanza pueden nublar el juicio.'
+                                ],
+                                list: [
+                                    'Problema: Las pérdidas pueden acumularse rápidamente sin límites',
+                                    'Solución: Siempre establece un stop loss antes de entrar en una operación',
+                                    'Beneficio: Protege tu capital y limita las pérdidas',
+                                    'Regla: Nunca arriesgues más del 1-2% de tu capital por operación'
+                                ]
+                            },
+                            {
+                                title: '2. Operar con Demasiado Apalancamiento',
+                                paragraphs: [
+                                    'El apalancamiento puede amplificar ganancias, pero también pérdidas. Los principiantes a menudo usan demasiado apalancamiento, lo que puede llevar a pérdidas devastadoras.'
+                                ],
+                                list: [
+                                    'Problema: Pérdidas excesivas que pueden liquidar tu cuenta',
+                                    'Solución: Usa apalancamiento conservador (1:10 a 1:30 para principiantes)',
+                                    'Beneficio: Mayor control y menor riesgo de liquidación',
+                                    'Regla: Comienza con apalancamiento bajo y aumenta gradualmente con experiencia'
+                                ]
+                            },
+                            {
+                                title: '3. No Tener un Plan de Trading',
+                                paragraphs: [
+                                    'Operar sin un plan es como navegar sin mapa. Muchos principiantes operan impulsivamente, siguiendo emociones en lugar de una estrategia definida.'
+                                ],
+                                list: [
+                                    'Problema: Decisiones impulsivas y falta de consistencia',
+                                    'Solución: Desarrolla un plan de trading con reglas claras de entrada y salida',
+                                    'Beneficio: Mayor disciplina y consistencia en tus operaciones',
+                                    'Componentes: Define cuándo entrar, cuándo salir, gestión de riesgo y objetivos'
+                                ]
+                            },
+                            {
+                                title: '4. Overtrading (Operar en Exceso)',
+                                paragraphs: [
+                                    'La ansiedad por operar constantemente lleva a muchos principiantes a hacer demasiadas operaciones, incluso cuando no hay oportunidades claras.'
+                                ],
+                                list: [
+                                    'Problema: Costos acumulados por spreads y comisiones, decisiones apresuradas',
+                                    'Solución: Sé selectivo y espera oportunidades de alta calidad',
+                                    'Beneficio: Mejor calidad de operaciones y menores costos',
+                                    'Regla: Calidad sobre cantidad - es mejor pocas operaciones buenas que muchas malas'
+                                ]
+                            },
+                            {
+                                title: '5. No Mantener un Diario de Trading',
+                                paragraphs: [
+                                    'Sin registro de tus operaciones, es imposible aprender de tus errores y mejorar. Muchos principiantes no documentan sus operaciones, perdiendo valiosas oportunidades de aprendizaje.'
+                                ],
+                                list: [
+                                    'Problema: Repites los mismos errores sin aprender',
+                                    'Solución: Registra cada operación con razones, resultados y emociones',
+                                    'Beneficio: Identificas patrones y mejoras continuamente',
+                                    'Elementos: Fecha, instrumento, razón de entrada/salida, resultado, lecciones aprendidas'
+                                ]
+                            },
+                            {
+                                title: 'Cómo Evitar Estos Errores',
+                                paragraphs: [
+                                    'Ahora que conoces los errores comunes, aquí están las estrategias para evitarlos:'
+                                ],
+                                list: [
+                                    'Educación continua: Nunca dejes de aprender sobre trading y mercados',
+                                    'Cuenta demo: Practica extensivamente antes de usar dinero real',
+                                    'Mentoría: Considera aprender de traders experimentados',
+                                    'Comunidad: Únete a grupos de traders para compartir experiencias',
+                                    'Paciencia: El éxito en trading toma tiempo, no esperes resultados inmediatos',
+                                    'Disciplina: Sigue tu plan de trading sin importar las emociones'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Evitar estos errores comunes puede marcar la diferencia entre el éxito y el fracaso en el trading. Recuerda que todos los traders cometen errores, pero los traders exitosos aprenden de ellos y los evitan en el futuro.',
+                                'La clave está en la educación, la práctica, la disciplina y la paciencia. Comienza con una cuenta demo, desarrolla un plan sólido, gestiona tu riesgo adecuadamente y mantén un diario de trading. Con tiempo y dedicación, puedes evitar estos errores comunes y construir una carrera exitosa en el trading.'
+                            ]
+                        }
+                    }
+                },
+                chooseBroker: {
+                    title: 'Cómo Elegir el Mejor Broker para Trading en 2024',
+                    description: 'Guía completa para evaluar brokers: regulación, spreads, comisiones, plataformas y métodos de pago para traders latinoamericanos.',
+                    category: 'Brokers',
+                    content: {
+                        introduction: {
+                            title: 'Cómo Elegir el Mejor Broker',
+                            paragraphs: [
+                                'Elegir el broker correcto es una de las decisiones más importantes que tomarás como trader. El broker adecuado puede facilitar tu éxito, mientras que uno inadecuado puede obstaculizar tu progreso y poner en riesgo tu capital.',
+                                'Esta guía completa te ayudará a evaluar brokers considerando todos los factores importantes: regulación, costos, plataformas, métodos de pago y más, específicamente para traders latinoamericanos.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Regulación y Seguridad',
+                                paragraphs: [
+                                    'La regulación es el factor más importante al elegir un broker. Un broker regulado ofrece protección a tus fondos y garantiza prácticas comerciales justas.'
+                                ],
+                                list: [
+                                    'Verifica la licencia: Busca brokers regulados por autoridades reconocidas (FCA, ASIC, CySEC, etc.)',
+                                    'Protección de fondos: Asegúrate de que tus fondos estén segregados',
+                                    'Compensación: Verifica si hay esquemas de compensación en caso de quiebra',
+                                    'Registro público: Confirma la información del broker en el sitio web del regulador',
+                                    'Evita brokers no regulados: Nunca operes con brokers sin licencia'
+                                ]
+                            },
+                            {
+                                title: '2. Spreads y Comisiones',
+                                paragraphs: [
+                                    'Los costos de trading pueden afectar significativamente tu rentabilidad. Compara spreads y comisiones entre diferentes brokers.'
+                                ],
+                                list: [
+                                    'Spreads competitivos: Busca spreads bajos en los instrumentos que operas',
+                                    'Comisiones claras: Verifica todas las comisiones (depósito, retiro, inactividad)',
+                                    'Modelo de precios: Entiende si el broker usa spreads fijos o variables',
+                                    'Comparación: Compara costos totales, no solo spreads',
+                                    'Ofertas promocionales: Ten cuidado con bonos que pueden tener condiciones restrictivas'
+                                ]
+                            },
+                            {
+                                title: '3. Plataformas de Trading',
+                                paragraphs: [
+                                    'La plataforma de trading es tu herramienta principal. Debe ser intuitiva, estable y ofrecer las funciones que necesitas.'
+                                ],
+                                list: [
+                                    'MetaTrader 4/5: Las plataformas más populares y confiables',
+                                    'Plataformas propias: Algunos brokers ofrecen plataformas personalizadas',
+                                    'Trading móvil: Verifica la calidad de las apps móviles',
+                                    'Herramientas: Asegúrate de tener acceso a gráficos, indicadores y análisis',
+                                    'Estabilidad: La plataforma debe ser estable sin caídas frecuentes'
+                                ]
+                            },
+                            {
+                                title: '4. Métodos de Pago',
+                                paragraphs: [
+                                    'Para traders latinoamericanos, los métodos de pago son cruciales. Verifica qué métodos acepta el broker y los costos asociados.'
+                                ],
+                                list: [
+                                    'Tarjetas de crédito/débito: Método más común y rápido',
+                                    'Transferencias bancarias: Pueden tener costos más altos',
+                                    'E-wallets: Skrill, Neteller, PayPal pueden ser convenientes',
+                                    'Métodos locales: Algunos brokers aceptan métodos específicos de Latinoamérica',
+                                    'Tiempos de procesamiento: Verifica cuánto tardan depósitos y retiros',
+                                    'Costos: Compara comisiones de depósito y retiro'
+                                ]
+                            },
+                            {
+                                title: '5. Instrumentos Disponibles',
+                                paragraphs: [
+                                    'Asegúrate de que el broker ofrezca los instrumentos financieros que quieres operar.'
+                                ],
+                                list: [
+                                    'Forex: Pares mayores, menores y exóticos',
+                                    'Acciones: Acceso a mercados globales',
+                                    'Criptomonedas: Si planeas operar crypto',
+                                    'CFDs: Índices, commodities, bonos',
+                                    'Variedad: Más instrumentos ofrecen más oportunidades'
+                                ]
+                            },
+                            {
+                                title: '6. Atención al Cliente',
+                                paragraphs: [
+                                    'Un buen soporte al cliente puede ser crucial cuando tienes problemas o preguntas.'
+                                ],
+                                list: [
+                                    'Disponibilidad: Soporte 24/7 es ideal',
+                                    'Idioma: Verifica si hay soporte en español',
+                                    'Canales: Chat, email, teléfono',
+                                    'Respuesta: Tiempo de respuesta y calidad del servicio',
+                                    'Recursos: Materiales educativos y webinars'
+                                ]
+                            },
+                            {
+                                title: '7. Cuenta Demo',
+                                paragraphs: [
+                                    'Una cuenta demo es esencial para probar el broker antes de invertir dinero real.'
+                                ],
+                                list: [
+                                    'Disponibilidad: Debe ofrecer cuenta demo gratuita',
+                                    'Condiciones realistas: La demo debe reflejar condiciones reales',
+                                    'Tiempo ilimitado: Sin límites de tiempo para practicar',
+                                    'Funcionalidad completa: Acceso a todas las funciones de la plataforma'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Elegir el broker correcto requiere investigación y comparación cuidadosa. Prioriza la regulación y seguridad, pero también considera costos, plataformas y métodos de pago que funcionen para ti como trader latinoamericano.',
+                                'Tómate tu tiempo para investigar, prueba cuentas demo de varios brokers, y elige el que mejor se adapte a tus necesidades y objetivos de trading. Recuerda que puedes cambiar de broker si no estás satisfecho, pero es mejor elegir bien desde el principio.'
+                            ]
+                        }
+                    }
+                },
+                security: {
+                    title: 'Seguridad en Trading: Cómo Proteger tu Capital',
+                    description: 'Consejos esenciales sobre seguridad, gestión de riesgo y protección de fondos al operar con brokers online.',
+                    category: 'Seguridad',
+                    content: {
+                        introduction: {
+                            title: 'Seguridad en Trading',
+                            paragraphs: [
+                                'La seguridad de tu capital es la prioridad número uno en el trading. Sin una protección adecuada, incluso las mejores estrategias pueden fallar. Este artículo cubre los aspectos esenciales de seguridad que todo trader debe conocer y aplicar.',
+                                'Desde la elección de brokers seguros hasta la gestión de riesgo y protección de cuentas, aprenderás cómo proteger tu capital en cada paso del proceso de trading.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Elegir un Broker Seguro',
+                                paragraphs: [
+                                    'El primer paso para proteger tu capital es elegir un broker regulado y confiable.'
+                                ],
+                                list: [
+                                    'Regulación: Solo opera con brokers regulados por autoridades reconocidas',
+                                    'Segregación de fondos: Tus fondos deben estar separados de los del broker',
+                                    'Historial: Investiga la reputación y años de operación del broker',
+                                    'Transparencia: El broker debe ser transparente sobre sus prácticas',
+                                    'Reseñas: Lee reseñas de otros traders antes de depositar'
+                                ]
+                            },
+                            {
+                                title: '2. Protección de Contraseñas',
+                                paragraphs: [
+                                    'Las contraseñas débiles son una de las principales vulnerabilidades de seguridad.'
+                                ],
+                                list: [
+                                    'Contraseñas fuertes: Usa combinaciones de letras, números y símbolos',
+                                    'Únicas: No reutilices contraseñas entre diferentes plataformas',
+                                    'Autenticación de dos factores: Activa 2FA siempre que sea posible',
+                                    'Gestor de contraseñas: Usa un gestor confiable para almacenar contraseñas',
+                                    'Cambio regular: Cambia contraseñas periódicamente'
+                                ]
+                            },
+                            {
+                                title: '3. Gestión de Riesgo',
+                                paragraphs: [
+                                    'La gestión de riesgo adecuada protege tu capital de pérdidas excesivas.'
+                                ],
+                                list: [
+                                    'Stop Loss: Siempre usa stop loss en todas tus operaciones',
+                                    'Tamaño de posición: Nunca arriesgues más del 1-2% por operación',
+                                    'Diversificación: No pongas todo tu capital en una sola operación',
+                                    'Límites diarios: Establece límites de pérdida diaria',
+                                    'Apalancamiento conservador: Usa apalancamiento moderado'
+                                ]
+                            },
+                            {
+                                title: '4. Protección contra Fraudes',
+                                paragraphs: [
+                                    'Los estafadores están siempre buscando nuevas formas de robar a traders.'
+                                ],
+                                list: [
+                                    'Phishing: Nunca hagas clic en enlaces sospechosos en emails',
+                                    'Brokers falsos: Verifica siempre la URL y licencia del broker',
+                                    'Ofertas demasiado buenas: Si suena demasiado bien, probablemente es fraude',
+                                    'Comunicación oficial: Solo confía en comunicación oficial del broker',
+                                    'Investigación: Investiga antes de depositar en cualquier plataforma'
+                                ]
+                            },
+                            {
+                                title: '5. Seguridad de Dispositivos',
+                                paragraphs: [
+                                    'Protege tus dispositivos para evitar acceso no autorizado a tus cuentas.'
+                                ],
+                                list: [
+                                    'Antivirus: Mantén software antivirus actualizado',
+                                    'Wi-Fi seguro: Evita operar en redes Wi-Fi públicas',
+                                    'Actualizaciones: Mantén sistemas operativos y apps actualizados',
+                                    'Cierre de sesión: Siempre cierra sesión cuando termines',
+                                    'Dispositivos personales: Solo opera desde tus propios dispositivos'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'La seguridad en trading es un proceso continuo que requiere atención constante. Al seguir estas prácticas de seguridad, protegerás tu capital y podrás operar con confianza.',
+                                'Recuerda que la seguridad no es negociable. Invierte tiempo en proteger tu cuenta y capital, y nunca comprometas la seguridad por conveniencia.'
+                            ]
+                        }
+                    }
+                },
+                goldTrading: {
+                    title: 'Trading de Oro: Guía Completa para Inversores',
+                    description: 'Todo lo que necesitas saber sobre invertir en oro: factores que afectan el precio, estrategias de trading y brokers especializados.',
+                    category: 'Commodities',
+                    content: {
+                        introduction: {
+                            title: 'Trading de Oro',
+                            paragraphs: [
+                                'El oro ha sido un activo de valor durante miles de años y sigue siendo una de las inversiones más populares para proteger capital y generar ganancias. Para traders latinoamericanos, el oro ofrece oportunidades únicas de trading.',
+                                'Esta guía completa cubre todo lo que necesitas saber sobre el trading de oro: factores que afectan el precio, estrategias efectivas, y cómo elegir los mejores brokers para operar este metal precioso.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. ¿Por Qué Operar Oro?',
+                                paragraphs: [
+                                    'El oro tiene características únicas que lo hacen atractivo para traders e inversores.'
+                                ],
+                                list: [
+                                    'Reserva de valor: Históricamente mantiene su valor durante crisis',
+                                    'Protección contra inflación: El oro tiende a subir cuando hay inflación',
+                                    'Diversificación: Ayuda a diversificar tu cartera',
+                                    'Liquidez: Mercado muy líquido con alta actividad',
+                                    'Volatilidad: Movimientos de precio ofrecen oportunidades de trading'
+                                ]
+                            },
+                            {
+                                title: '2. Factores que Afectan el Precio del Oro',
+                                paragraphs: [
+                                    'Entender qué mueve el precio del oro es esencial para el trading exitoso.'
+                                ],
+                                list: [
+                                    'Dólar estadounidense: Relación inversa con el USD',
+                                    'Inflación: Sube cuando aumenta la inflación',
+                                    'Tasas de interés: Baja cuando suben las tasas',
+                                    'Incertidumbre geopolítica: Sube durante crisis',
+                                    'Demanda y oferta: Producción minera y demanda industrial',
+                                    'Reservas de bancos centrales: Compras de bancos centrales afectan precio'
+                                ]
+                            },
+                            {
+                                title: '3. Estrategias de Trading de Oro',
+                                paragraphs: [
+                                    'Existen varias estrategias efectivas para operar oro.'
+                                ],
+                                list: [
+                                    'Trading de tendencia: Seguir la dirección del mercado',
+                                    'Trading de rango: Operar entre niveles de soporte y resistencia',
+                                    'Breakout trading: Entrar cuando el precio rompe niveles clave',
+                                    'Análisis fundamental: Basarse en factores macroeconómicos',
+                                    'Scalping: Operaciones de muy corto plazo aprovechando volatilidad'
+                                ]
+                            },
+                            {
+                                title: '4. Mejores Horarios para Operar Oro',
+                                paragraphs: [
+                                    'El oro tiene horarios específicos de mayor actividad y volatilidad.'
+                                ],
+                                list: [
+                                    'Sesión de Londres: Alta actividad entre 8:00-12:00 GMT',
+                                    'Sesión de Nueva York: Volatilidad alta entre 13:00-17:00 GMT',
+                                    'Sesión asiática: Menor actividad pero puede tener movimientos',
+                                    'Overlap Londres-Nueva York: Mayor liquidez y volatilidad',
+                                    'Noticias económicas: Alta volatilidad durante anuncios importantes'
+                                ]
+                            },
+                            {
+                                title: '5. Brokers para Trading de Oro',
+                                paragraphs: [
+                                    'Elegir el broker correcto es crucial para el trading de oro exitoso.'
+                                ],
+                                list: [
+                                    'Spreads competitivos: Busca spreads bajos en oro',
+                                    'Ejecución rápida: Importante para aprovechar movimientos rápidos',
+                                    'Plataforma estable: Debe manejar alta volatilidad sin problemas',
+                                    'Instrumentos: Acceso a XAU/USD y otros pares de oro',
+                                    'Regulación: Broker regulado y confiable'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'El trading de oro ofrece oportunidades excelentes para traders que entienden el mercado y aplican estrategias adecuadas. Con su alta liquidez y volatilidad, el oro puede ser una adición valiosa a tu cartera de trading.',
+                                'Recuerda gestionar tu riesgo adecuadamente, mantenerte informado sobre factores fundamentales, y elegir un broker confiable con spreads competitivos en oro.'
+                            ]
+                        }
+                    }
+                },
+                psychology: {
+                    title: 'Psicología del Trading: Control Emocional para Traders',
+                    description: 'Aprende a controlar las emociones, mantener la disciplina y desarrollar la mentalidad correcta para el trading exitoso.',
+                    category: 'Psicología',
+                    content: {
+                        introduction: {
+                            title: 'Psicología del Trading',
+                            paragraphs: [
+                                'La psicología del trading es tan importante como el análisis técnico o fundamental. Muchos traders tienen el conocimiento y las estrategias correctas, pero fallan debido a problemas psicológicos.',
+                                'Este artículo explora los aspectos psicológicos del trading, cómo las emociones afectan las decisiones, y cómo desarrollar la mentalidad correcta para el éxito a largo plazo.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Emociones Comunes en Trading',
+                                paragraphs: [
+                                    'Las emociones pueden ser tu mayor enemigo o aliado en el trading.'
+                                ],
+                                list: [
+                                    'Miedo: Miedo a perder puede paralizar o causar salidas prematuras',
+                                    'Codicia: Deseo de ganancias puede llevar a tomar riesgos excesivos',
+                                    'Esperanza: Mantener posiciones perdedoras esperando recuperación',
+                                    'Euforia: Exceso de confianza después de ganancias puede llevar a riesgos',
+                                    'Frustración: Puede llevar a operar de forma impulsiva'
+                                ]
+                            },
+                            {
+                                title: '2. Control Emocional',
+                                paragraphs: [
+                                    'Aprender a controlar las emociones es esencial para el trading exitoso.'
+                                ],
+                                list: [
+                                    'Plan de trading: Sigue tu plan sin importar las emociones',
+                                    'Stop loss: Automatiza salidas para evitar decisiones emocionales',
+                                    'Descansos: Toma descansos después de pérdidas o ganancias grandes',
+                                    'Meditación: Practica técnicas de relajación y mindfulness',
+                                    'Diario emocional: Registra tus emociones y cómo afectan tus decisiones'
+                                ]
+                            },
+                            {
+                                title: '3. Disciplina',
+                                paragraphs: [
+                                    'La disciplina es la base del trading exitoso.'
+                                ],
+                                list: [
+                                    'Rutina: Establece una rutina de trading consistente',
+                                    'Reglas: Define reglas claras y síguelas siempre',
+                                    'Paciencia: Espera oportunidades de alta calidad',
+                                    'Consistencia: Mantén consistencia en tu enfoque',
+                                    'Autocontrol: Desarrolla autocontrol para evitar decisiones impulsivas'
+                                ]
+                            },
+                            {
+                                title: '4. Mentalidad de Crecimiento',
+                                paragraphs: [
+                                    'Una mentalidad de crecimiento te ayuda a aprender y mejorar continuamente.'
+                                ],
+                                list: [
+                                    'Aprende de pérdidas: Cada pérdida es una oportunidad de aprendizaje',
+                                    'Mejora continua: Siempre busca formas de mejorar',
+                                    'Paciencia: Entiende que el éxito toma tiempo',
+                                    'Realismo: Ten expectativas realistas sobre ganancias',
+                                    'Persistencia: No te rindas después de pérdidas'
+                                ]
+                            },
+                            {
+                                title: '5. Gestión del Estrés',
+                                paragraphs: [
+                                    'El trading puede ser estresante; aprender a manejar el estrés es crucial.'
+                                ],
+                                list: [
+                                    'Ejercicio: El ejercicio regular reduce el estrés',
+                                    'Sueño: Duerme bien para mantener claridad mental',
+                                    'Límites: Establece límites de pérdida diaria',
+                                    'Hobbies: Mantén actividades fuera del trading',
+                                    'Apoyo: Busca apoyo de otros traders o profesionales'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'La psicología del trading es fundamental para el éxito a largo plazo. Desarrollar control emocional, disciplina y la mentalidad correcta requiere tiempo y práctica, pero es esencial para convertirse en un trader exitoso.',
+                                'Recuerda que todos los traders enfrentan desafíos psicológicos. La diferencia entre traders exitosos y no exitosos está en cómo manejan estos desafíos. Trabaja en tu psicología tanto como en tus estrategias de trading.'
+                            ]
+                        }
+                    }
+                },
+                analysisComparison: {
+                    title: 'Análisis Técnico vs Fundamental: ¿Cuál Elegir?',
+                    description: 'Comparación detallada entre análisis técnico y fundamental, cuándo usar cada uno y cómo combinarlos efectivamente.',
+                    category: 'Análisis',
+                    content: {
+                        introduction: {
+                            title: 'Análisis Técnico vs Fundamental',
+                            paragraphs: [
+                                'Dos enfoques principales dominan el análisis de mercados financieros: análisis técnico y análisis fundamental. Cada uno tiene sus fortalezas y debilidades, y entender cuándo usar cada uno es crucial para el éxito en trading.',
+                                'Este artículo compara ambos enfoques, explica sus diferencias, ventajas y desventajas, y te muestra cómo combinarlos efectivamente para tomar mejores decisiones de trading.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. ¿Qué es el Análisis Técnico?',
+                                paragraphs: [
+                                    'El análisis técnico se basa en el estudio de gráficos de precios y patrones históricos.'
+                                ],
+                                list: [
+                                    'Enfoque: Analiza movimientos de precio y volumen',
+                                    'Herramientas: Gráficos, indicadores técnicos, patrones',
+                                    'Horizonte: Generalmente para trading a corto y medio plazo',
+                                    'Principio: El precio refleja toda la información disponible',
+                                    'Ventaja: Puede identificar puntos de entrada y salida precisos'
+                                ]
+                            },
+                            {
+                                title: '2. ¿Qué es el Análisis Fundamental?',
+                                paragraphs: [
+                                    'El análisis fundamental estudia factores económicos y financieros que afectan el valor de un activo.'
+                                ],
+                                list: [
+                                    'Enfoque: Analiza factores económicos, financieros y macroeconómicos',
+                                    'Herramientas: Datos económicos, estados financieros, noticias',
+                                    'Horizonte: Generalmente para inversión a largo plazo',
+                                    'Principio: El precio se moverá hacia su valor intrínseco',
+                                    'Ventaja: Entiende el valor real y tendencias a largo plazo'
+                                ]
+                            },
+                            {
+                                title: '3. Ventajas y Desventajas',
+                                paragraphs: [
+                                    'Cada enfoque tiene sus propias ventajas y limitaciones.'
+                                ],
+                                list: [
+                                    'Técnico - Ventajas: Señales claras, aplicable a cualquier timeframe, objetivo',
+                                    'Técnico - Desventajas: Puede generar señales falsas, ignora fundamentos',
+                                    'Fundamental - Ventajas: Entiende valor real, bueno para largo plazo',
+                                    'Fundamental - Desventajas: Puede tardar en reflejarse en precio, subjetivo'
+                                ]
+                            },
+                            {
+                                title: '4. Cuándo Usar Cada Enfoque',
+                                paragraphs: [
+                                    'La elección del enfoque depende de tu estilo de trading y objetivos.'
+                                ],
+                                list: [
+                                    'Análisis técnico: Scalping, day trading, swing trading',
+                                    'Análisis fundamental: Position trading, inversión a largo plazo',
+                                    'Combinación: La mayoría de traders exitosos usan ambos',
+                                    'Mercado: Técnico para Forex, fundamental para acciones',
+                                    'Horizonte temporal: Técnico para corto plazo, fundamental para largo plazo'
+                                ]
+                            },
+                            {
+                                title: '5. Cómo Combinar Ambos Enfoques',
+                                paragraphs: [
+                                    'La combinación de análisis técnico y fundamental puede ser muy poderosa.'
+                                ],
+                                list: [
+                                    'Fundamental para dirección: Usa análisis fundamental para determinar tendencia general',
+                                    'Técnico para timing: Usa análisis técnico para encontrar puntos de entrada',
+                                    'Confirmación: Busca confirmación de ambos antes de operar',
+                                    'Noticias: Combina análisis técnico con calendario económico',
+                                    'Flexibilidad: Adapta tu enfoque según el mercado y condiciones'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Tanto el análisis técnico como el fundamental tienen su lugar en el trading. La clave está en entender cuándo usar cada uno y cómo combinarlos efectivamente.',
+                                'Los traders más exitosos no se limitan a un solo enfoque. En lugar de eso, usan análisis fundamental para entender el contexto del mercado y análisis técnico para encontrar los mejores puntos de entrada y salida. Experimenta con ambos enfoques y encuentra el equilibrio que funcione mejor para tu estilo de trading.'
+                            ]
+                        }
+                    }
+                },
+                cfdsGuide: {
+                    title: 'CFDs para Principiantes: Todo lo que Necesitas Saber',
+                    description: 'Guía completa sobre contratos por diferencia: qué son, cómo funcionan, ventajas, riesgos y mejores brokers de CFDs.',
+                    category: 'CFDs'
+                },
+                regulatedBrokers: {
+                    title: 'Brokers Regulados en Latinoamérica: Guía 2024',
+                    description: 'Lista completa de brokers regulados por país en Latinoamérica y qué buscar al verificar la regulación de un broker.',
+                    category: 'Regulación'
+                },
+                metatrader: {
+                    title: 'MetaTrader 4 vs MetaTrader 5: ¿Cuál Elegir?',
+                    description: 'Comparación detallada entre MT4 y MT5: diferencias, ventajas, desventajas y cuál plataforma es mejor para traders latinoamericanos.',
+                    category: 'Plataformas',
+                    content: {
+                        introduction: {
+                            title: 'MetaTrader 4 vs MetaTrader 5',
+                            paragraphs: [
+                                'MetaTrader es la plataforma de trading más popular del mundo, pero muchos traders se preguntan: ¿debo usar MT4 o MT5? Ambas plataformas tienen sus ventajas y desventajas.',
+                                'Esta comparación detallada te ayudará a entender las diferencias entre MT4 y MT5, y a elegir la plataforma que mejor se adapte a tus necesidades como trader latinoamericano.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. MetaTrader 4 (MT4)',
+                                paragraphs: [
+                                    'MT4 es la plataforma más establecida y ampliamente utilizada en el mundo del trading.'
+                                ],
+                                list: [
+                                    'Ventajas: Interfaz simple, miles de indicadores y EAs disponibles, muy estable',
+                                    'Desventajas: Solo 4 tipos de órdenes pendientes, limitado a Forex y CFDs',
+                                    'Ideal para: Traders de Forex, principiantes, quienes prefieren simplicidad',
+                                    'Lenguaje: MQL4 para programación de EAs',
+                                    'Gráficos: 9 timeframes disponibles'
+                                ]
+                            },
+                            {
+                                title: '2. MetaTrader 5 (MT5)',
+                                paragraphs: [
+                                    'MT5 es la versión más moderna con capacidades mejoradas.'
+                                ],
+                                list: [
+                                    'Ventajas: Más timeframes, más tipos de órdenes, acceso a acciones y futuros',
+                                    'Desventajas: Menos EAs disponibles, curva de aprendizaje más alta',
+                                    'Ideal para: Traders avanzados, trading de múltiples instrumentos',
+                                    'Lenguaje: MQL5 para programación',
+                                    'Gráficos: 21 timeframes disponibles'
+                                ]
+                            },
+                            {
+                                title: '3. Comparación Directa',
+                                paragraphs: [
+                                    'Aquí están las diferencias clave entre ambas plataformas.'
+                                ],
+                                list: [
+                                    'Instrumentos: MT4 (Forex/CFDs) vs MT5 (Forex, CFDs, Acciones, Futuros)',
+                                    'Órdenes pendientes: MT4 (4 tipos) vs MT5 (6 tipos)',
+                                    'Timeframes: MT4 (9) vs MT5 (21)',
+                                    'EAs disponibles: MT4 (miles) vs MT5 (menos pero creciendo)',
+                                    'Interfaz: MT4 (simple) vs MT5 (más moderna pero compleja)'
+                                ]
+                            },
+                            {
+                                title: '4. ¿Cuál Elegir?',
+                                paragraphs: [
+                                    'La elección depende de tus necesidades específicas.'
+                                ],
+                                list: [
+                                    'Elige MT4 si: Eres principiante, solo operas Forex, quieres simplicidad',
+                                    'Elige MT5 si: Operas múltiples instrumentos, necesitas más timeframes, eres avanzado',
+                                    'Recomendación: La mayoría de traders latinoamericanos comienzan con MT4',
+                                    'Migración: Puedes usar ambas plataformas simultáneamente'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Tanto MT4 como MT5 son excelentes plataformas. MT4 sigue siendo la opción más popular para traders de Forex, mientras que MT5 ofrece más capacidades para traders avanzados.',
+                                'Para la mayoría de traders latinoamericanos que comienzan, MT4 es la mejor opción debido a su simplicidad y la gran cantidad de recursos disponibles. A medida que ganes experiencia, puedes considerar migrar a MT5 si necesitas sus funciones adicionales.'
+                            ]
+                        }
+                    }
+                },
+                riskManagement: {
+                    title: 'Gestión de Riesgo en Trading: Guía Completa',
+                    description: 'Aprende a proteger tu capital con técnicas de gestión de riesgo: stop loss, take profit, tamaño de posición y estrategias de protección.',
+                    category: 'Educación',
+                    content: {
+                        introduction: {
+                            title: 'Gestión de Riesgo',
+                            paragraphs: [
+                                'La gestión de riesgo es el aspecto más importante del trading. Sin una gestión de riesgo adecuada, incluso las mejores estrategias pueden fallar. Esta guía completa te enseñará cómo proteger tu capital y gestionar el riesgo efectivamente.',
+                                'Aprenderás sobre stop loss, take profit, tamaño de posición, y otras técnicas esenciales para mantener tu capital seguro mientras operas.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Regla del 1-2%',
+                                paragraphs: [
+                                    'La regla más importante en gestión de riesgo es nunca arriesgar más del 1-2% de tu capital por operación.'
+                                ],
+                                list: [
+                                    'Cálculo: Si tienes $10,000, nunca arriesgues más de $100-$200 por operación',
+                                    'Protección: Esto protege tu capital de pérdidas devastadoras',
+                                    'Consistencia: Aplica esta regla a todas tus operaciones',
+                                    'Beneficio: Permite recuperarte de pérdidas sin afectar significativamente tu capital'
+                                ]
+                            },
+                            {
+                                title: '2. Stop Loss',
+                                paragraphs: [
+                                    'El stop loss es tu herramienta más importante para limitar pérdidas.'
+                                ],
+                                list: [
+                                    'Siempre usa stop loss: Nunca operes sin stop loss',
+                                    'Ubicación: Colócalo en un nivel lógico basado en análisis técnico',
+                                    'No lo muevas: Una vez colocado, no lo muevas en contra de ti',
+                                    'Trailing stop: Considera usar trailing stop para proteger ganancias',
+                                    'Automático: Usa stop loss automático, no manual'
+                                ]
+                            },
+                            {
+                                title: '3. Take Profit',
+                                paragraphs: [
+                                    'El take profit te ayuda a asegurar ganancias antes de que el mercado se revierta.'
+                                ],
+                                list: [
+                                    'Objetivos realistas: Establece objetivos basados en análisis, no en codicia',
+                                    'Ratio riesgo/beneficio: Busca al menos 1:2 (riesgo $100, beneficio $200)',
+                                    'Niveles múltiples: Considera tomar ganancias parciales en diferentes niveles',
+                                    'No codicia: No esperes ganancias ilimitadas'
+                                ]
+                            },
+                            {
+                                title: '4. Tamaño de Posición',
+                                paragraphs: [
+                                    'El tamaño de posición correcto es crucial para gestionar el riesgo.'
+                                ],
+                                list: [
+                                    'Calculadora: Usa una calculadora de tamaño de posición',
+                                    'Fórmula: Tamaño = (Capital × % Riesgo) / (Precio Entrada - Stop Loss)',
+                                    'Consistencia: Mantén tamaño de posición consistente',
+                                    'Ajuste: Ajusta según tu capital, no según confianza'
+                                ]
+                            },
+                            {
+                                title: '5. Diversificación',
+                                paragraphs: [
+                                    'No pongas todo tu capital en una sola operación o instrumento.'
+                                ],
+                                list: [
+                                    'Múltiples operaciones: Distribuye riesgo entre varias operaciones',
+                                    'Diferentes instrumentos: Opera diferentes pares o instrumentos',
+                                    'Límite: No tengas más del 5-10% de capital en riesgo simultáneo',
+                                    'Correlación: Evita operar instrumentos altamente correlacionados'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'La gestión de riesgo adecuada es lo que separa a los traders exitosos de los que fallan. Aplica estas técnicas consistentemente y protegerás tu capital mientras construyes tu carrera en el trading.',
+                                'Recuerda: El objetivo no es ganar mucho rápido, sino preservar tu capital y crecer de manera sostenible. La gestión de riesgo es tu mejor aliado en este proceso.'
+                            ]
+                        }
+                    }
+                },
+                paymentMethods: {
+                    title: 'Métodos de Pago para Traders Latinoamericanos',
+                    description: 'Guía completa sobre métodos de depósito y retiro disponibles para traders latinoamericanos: tarjetas, transferencias, e-wallets y métodos locales.',
+                    category: 'Brokers',
+                    content: {
+                        introduction: {
+                            title: 'Métodos de Pago para Traders',
+                            paragraphs: [
+                                'Para traders latinoamericanos, los métodos de pago son cruciales. Necesitas métodos confiables, rápidos y con costos razonables para depositar y retirar fondos de tu cuenta de trading.',
+                                'Esta guía cubre todos los métodos de pago disponibles, sus ventajas, desventajas, costos y tiempos de procesamiento específicos para traders latinoamericanos.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Tarjetas de Crédito/Débito',
+                                paragraphs: [
+                                    'Las tarjetas son el método más común y rápido para depositar fondos.'
+                                ],
+                                list: [
+                                    'Ventajas: Procesamiento instantáneo, ampliamente aceptado, seguro',
+                                    'Desventajas: Puede haber límites, algunos brokers cobran comisiones',
+                                    'Tiempo: Depósitos instantáneos, retiros 1-3 días hábiles',
+                                    'Costo: Generalmente sin comisión para depósitos',
+                                    'Disponibilidad: Disponible en la mayoría de brokers'
+                                ]
+                            },
+                            {
+                                title: '2. Transferencias Bancarias',
+                                paragraphs: [
+                                    'Las transferencias bancarias son ideales para grandes cantidades.'
+                                ],
+                                list: [
+                                    'Ventajas: Sin límites de cantidad, seguro, directo',
+                                    'Desventajas: Más lento, puede tener costos bancarios',
+                                    'Tiempo: 1-5 días hábiles para depósitos y retiros',
+                                    'Costo: Puede tener comisiones del banco y del broker',
+                                    'Uso: Ideal para depósitos grandes'
+                                ]
+                            },
+                            {
+                                title: '3. E-Wallets',
+                                paragraphs: [
+                                    'Los e-wallets como Skrill, Neteller y PayPal ofrecen velocidad y conveniencia.'
+                                ],
+                                list: [
+                                    'Ventajas: Rápido, conveniente, ampliamente aceptado',
+                                    'Desventajas: Puede tener comisiones, no todos los brokers aceptan',
+                                    'Tiempo: Depósitos instantáneos, retiros 24-48 horas',
+                                    'Costo: Puede tener comisiones de transacción',
+                                    'Popularidad: Skrill y Neteller son muy populares en trading'
+                                ]
+                            },
+                            {
+                                title: '4. Métodos Locales',
+                                paragraphs: [
+                                    'Algunos brokers ofrecen métodos específicos para países latinoamericanos.'
+                                ],
+                                list: [
+                                    'Ejemplos: PagoEfectivo (Perú), OXXO (México), Rapipago (Argentina)',
+                                    'Ventajas: Familiar para usuarios locales, puede ser más barato',
+                                    'Desventajas: Limitado a ciertos países, puede ser más lento',
+                                    'Disponibilidad: No todos los brokers ofrecen métodos locales',
+                                    'Verificación: Verifica qué métodos acepta tu broker'
+                                ]
+                            },
+                            {
+                                title: '5. Criptomonedas',
+                                paragraphs: [
+                                    'Algunos brokers ahora aceptan criptomonedas como método de pago.'
+                                ],
+                                list: [
+                                    'Ventajas: Rápido, bajo costo, sin intermediarios',
+                                    'Desventajas: Volatilidad, no todos los brokers aceptan',
+                                    'Tiempo: Generalmente rápido (minutos a horas)',
+                                    'Costo: Comisiones de red de blockchain',
+                                    'Popularidad: Creciente pero aún limitado'
+                                ]
+                            },
+                            {
+                                title: '6. Consejos para Elegir Método',
+                                paragraphs: [
+                                    'Considera estos factores al elegir tu método de pago.'
+                                ],
+                                list: [
+                                    'Velocidad: ¿Necesitas fondos rápidamente?',
+                                    'Costo: Compara comisiones entre métodos',
+                                    'Límites: Verifica límites mínimos y máximos',
+                                    'Disponibilidad: Confirma que tu broker acepta el método',
+                                    'Seguridad: Prioriza métodos seguros y regulados'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Elegir el método de pago correcto puede hacer una gran diferencia en tu experiencia de trading. Considera velocidad, costo y disponibilidad al elegir tu método.',
+                                'Para la mayoría de traders latinoamericanos, las tarjetas de crédito/débito o e-wallets como Skrill/Neteller ofrecen el mejor equilibrio entre velocidad, costo y conveniencia.'
+                            ]
+                        }
+                    }
+                },
+                demoAccount: {
+                    title: 'Cuentas Demo: Tu Mejor Aliado para Aprender Trading',
+                    description: 'Todo sobre cuentas demo gratuitas: cómo usarlas efectivamente, qué aprender, y cómo hacer la transición a trading real con confianza.',
+                    category: 'Educación',
+                    content: {
+                        introduction: {
+                            title: 'Cuentas Demo',
+                            paragraphs: [
+                                'Las cuentas demo son una de las herramientas más valiosas para aprender trading sin riesgo. Permiten practicar estrategias, familiarizarse con plataformas y desarrollar habilidades antes de invertir dinero real.',
+                                'Esta guía te enseñará cómo usar cuentas demo efectivamente, qué aprender de ellas, y cómo hacer la transición exitosa a trading real.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. ¿Qué es una Cuenta Demo?',
+                                paragraphs: [
+                                    'Una cuenta demo es una cuenta de práctica con dinero virtual que simula condiciones reales de trading.'
+                                ],
+                                list: [
+                                    'Dinero virtual: Operas con fondos simulados, no dinero real',
+                                    'Condiciones reales: Precios y spreads generalmente reflejan condiciones reales',
+                                    'Sin riesgo: No puedes perder dinero real',
+                                    'Gratuita: La mayoría de brokers ofrecen cuentas demo gratuitas',
+                                    'Ilimitada: Puedes usar la demo tanto tiempo como necesites'
+                                ]
+                            },
+                            {
+                                title: '2. Ventajas de las Cuentas Demo',
+                                paragraphs: [
+                                    'Las cuentas demo ofrecen múltiples beneficios para principiantes.'
+                                ],
+                                list: [
+                                    'Aprendizaje sin riesgo: Aprende sin miedo a perder dinero',
+                                    'Familiarización: Conoce la plataforma antes de operar con dinero real',
+                                    'Práctica de estrategias: Prueba diferentes estrategias sin costo',
+                                    'Desarrollo de habilidades: Desarrolla habilidades antes de operar real',
+                                    'Confianza: Construye confianza antes de usar dinero real'
+                                ]
+                            },
+                            {
+                                title: '3. Cómo Usar una Cuenta Demo Efectivamente',
+                                paragraphs: [
+                                    'Para maximizar el beneficio de una cuenta demo, úsala como si fuera real.'
+                                ],
+                                list: [
+                                    'Trátala como real: Opera como si fuera dinero real',
+                                    'Gestiona riesgo: Aplica gestión de riesgo adecuada',
+                                    'Mantén diario: Registra todas tus operaciones',
+                                    'Sé disciplinado: Sigue tu plan de trading',
+                                    'Aprende de errores: Analiza pérdidas y aprende de ellas'
+                                ]
+                            },
+                            {
+                                title: '4. Qué Aprender en la Demo',
+                                paragraphs: [
+                                    'Enfócate en aprender estos aspectos clave durante tu práctica.'
+                                ],
+                                list: [
+                                    'Plataforma: Familiarízate con todas las funciones',
+                                    'Análisis: Practica análisis técnico y fundamental',
+                                    'Gestión de riesgo: Aprende a usar stop loss y take profit',
+                                    'Psicología: Desarrolla control emocional',
+                                    'Estrategias: Prueba y refina diferentes estrategias'
+                                ]
+                            },
+                            {
+                                title: '5. Cuándo Pasar a Cuenta Real',
+                                paragraphs: [
+                                    'Saber cuándo hacer la transición es crucial para el éxito.'
+                                ],
+                                list: [
+                                    'Rentabilidad consistente: Debes ser rentable en demo durante al menos 3 meses',
+                                    'Disciplina: Debes seguir tu plan consistentemente',
+                                    'Confianza: Debes sentirte confiado en tus habilidades',
+                                    'Capital: Debes tener capital suficiente para operar real',
+                                    'Preparación mental: Debes estar preparado para pérdidas reales'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Las cuentas demo son esenciales para el éxito en trading. Úsalas extensivamente para aprender, practicar y desarrollar habilidades antes de operar con dinero real.',
+                                'No tengas prisa por pasar a cuenta real. Tómate el tiempo necesario en la demo para desarrollar habilidades sólidas. Cuando finalmente hagas la transición, estarás mucho mejor preparado para el éxito.'
+                            ]
+                        }
+                    }
+                },
+                tradingStrategies: {
+                    title: 'Estrategias de Trading para Principiantes',
+                    description: 'Descubre las mejores estrategias de trading para principiantes: scalping, day trading, swing trading y cómo elegir la adecuada para ti.',
+                    category: 'Análisis',
+                    content: {
+                        introduction: {
+                            title: 'Introducción',
+                            paragraphs: [
+                                'Si eres nuevo en el mundo del trading, probablemente te sientes abrumado por la cantidad de información y estrategias disponibles. Elegir la estrategia correcta es fundamental para tu éxito como trader, especialmente si operas desde Latinoamérica.',
+                                'En este artículo, exploraremos las principales estrategias de trading para principiantes, sus características, ventajas y desventajas, y cómo determinar cuál es la más adecuada para tu estilo de vida, capital disponible y objetivos financieros.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Scalping: Trading de Alta Frecuencia',
+                                paragraphs: [
+                                    'El scalping es una estrategia de trading de muy corto plazo donde los traders abren y cierran posiciones en minutos o incluso segundos. El objetivo es obtener pequeñas ganancias frecuentes aprovechando movimientos mínimos de precio.',
+                                    'Esta estrategia requiere mucha atención y tiempo frente a la pantalla, ya que necesitas monitorear el mercado constantemente durante las horas de mayor actividad.'
+                                ],
+                                list: [
+                                    'Ventajas: Múltiples oportunidades de trading durante el día, menor exposición al riesgo de mercado durante la noche',
+                                    'Desventajas: Requiere mucho tiempo y concentración, altos costos por spreads y comisiones debido a la frecuencia de operaciones',
+                                    'Ideal para: Traders que pueden dedicar varias horas al día al trading, tienen capital suficiente para cubrir los costos frecuentes, y pueden mantener la disciplina bajo presión'
+                                ]
+                            },
+                            {
+                                title: '2. Day Trading: Operaciones Intradía',
+                                paragraphs: [
+                                    'El day trading consiste en abrir y cerrar todas las posiciones dentro del mismo día, sin mantener posiciones abiertas durante la noche. Los traders buscan aprovechar movimientos de precio durante las sesiones de trading activas.',
+                                    'Esta estrategia es más relajada que el scalping pero aún requiere dedicar tiempo diario al análisis y ejecución de operaciones.'
+                                ],
+                                list: [
+                                    'Ventajas: No hay riesgo de gaps de mercado durante la noche, múltiples oportunidades diarias, puedes operar en diferentes sesiones',
+                                    'Desventajas: Requiere tiempo diario, puede ser estresante, necesitas disciplina para seguir tu plan',
+                                    'Ideal para: Traders que pueden dedicar 2-4 horas diarias, tienen experiencia básica en análisis técnico, y pueden manejar el estrés de operar diariamente'
+                                ]
+                            },
+                            {
+                                title: '3. Swing Trading: Operaciones de Varios Días',
+                                paragraphs: [
+                                    'El swing trading es una estrategia de medio plazo donde mantienes posiciones abiertas durante varios días o semanas. Buscas capturar movimientos de precio más significativos basándote en análisis técnico y fundamental.',
+                                    'Esta estrategia es ideal para traders que no pueden dedicar tiempo diario al trading pero quieren participar activamente en el mercado.'
+                                ],
+                                list: [
+                                    'Ventajas: Menos tiempo requerido, menos estrés, puedes mantener tu trabajo regular, movimientos de precio más grandes',
+                                    'Desventajas: Exposición al riesgo durante la noche y fines de semana, requiere más capital para márgenes, menos oportunidades que day trading',
+                                    'Ideal para: Traders con trabajo de tiempo completo, que pueden revisar posiciones algunas veces por semana, y prefieren menos operaciones pero más rentables'
+                                ]
+                            },
+                            {
+                                title: '4. Position Trading: Inversión a Largo Plazo',
+                                paragraphs: [
+                                    'El position trading es una estrategia de largo plazo donde mantienes posiciones durante semanas, meses o incluso años. Se basa principalmente en análisis fundamental y tendencias macroeconómicas.',
+                                    'Esta estrategia requiere paciencia y un enfoque más relajado, similar a la inversión tradicional pero con apalancamiento y acceso a más instrumentos financieros.'
+                                ],
+                                list: [
+                                    'Ventajas: Muy poco tiempo requerido, menos estrés emocional, aprovecha tendencias grandes del mercado',
+                                    'Desventajas: Requiere más capital, exposición a eventos macroeconómicos, menos control sobre posiciones diarias',
+                                    'Ideal para: Traders con visión a largo plazo, que pueden esperar semanas o meses por resultados, y prefieren análisis fundamental sobre técnico'
+                                ]
+                            },
+                            {
+                                title: '5. Cómo Elegir tu Estrategia',
+                                paragraphs: [
+                                    'La elección de tu estrategia debe basarse en varios factores personales y financieros. No existe una estrategia "mejor" universalmente; la mejor estrategia es la que se adapta a tu situación personal.'
+                                ],
+                                list: [
+                                    'Tiempo disponible: ¿Cuántas horas al día/semana puedes dedicar al trading?',
+                                    'Capital inicial: ¿Cuánto capital tienes disponible para operar?',
+                                    'Tolerancia al riesgo: ¿Qué tan cómodo te sientes con diferentes niveles de riesgo?',
+                                    'Experiencia: ¿Qué nivel de conocimiento tienes sobre análisis técnico y fundamental?',
+                                    'Objetivos financieros: ¿Buscas ingresos complementarios o crecimiento a largo plazo?',
+                                    'Personalidad: ¿Eres paciente o prefieres acción constante?'
+                                ]
+                            },
+                            {
+                                title: '6. Consejos para Principiantes',
+                                paragraphs: [
+                                    'Independientemente de la estrategia que elijas, hay principios fundamentales que todos los traders principiantes deben seguir:'
+                                ],
+                                list: [
+                                    'Empieza con una cuenta demo: Practica tu estrategia sin riesgo real durante al menos 3-6 meses',
+                                    'Gestiona tu riesgo: Nunca arriesgues más del 1-2% de tu capital por operación',
+                                    'Mantén un diario de trading: Registra todas tus operaciones, razones y resultados para aprender de tus errores',
+                                    'Desarrolla un plan de trading: Define tus reglas de entrada, salida y gestión de riesgo antes de operar',
+                                    'Sé paciente: El éxito en trading toma tiempo; no esperes resultados inmediatos',
+                                    'Educación continua: El mercado cambia constantemente; mantente actualizado con nuevas estrategias y técnicas',
+                                    'Elige un broker regulado: La seguridad de tus fondos es prioritaria, especialmente en Latinoamérica'
+                                ]
+                            },
+                            {
+                                title: '7. Estrategias Específicas por Mercado',
+                                paragraphs: [
+                                    'Diferentes mercados requieren diferentes enfoques. Aquí te mostramos cómo adaptar las estrategias según el mercado en el que operes:'
+                                ],
+                                list: [
+                                    'Forex: Ideal para scalping y day trading debido a la alta liquidez y volatilidad durante las sesiones principales',
+                                    'Acciones: Mejor para swing trading y position trading, aprovechando tendencias a largo plazo',
+                                    'Criptomonedas: Puedes usar cualquier estrategia, pero el swing trading es popular debido a la alta volatilidad',
+                                    'Commodities: Position trading funciona bien debido a las tendencias estacionales y macroeconómicas',
+                                    'Índices: Day trading y swing trading son efectivos debido a la diversificación y menor volatilidad que acciones individuales'
+                                ]
+                            },
+                            {
+                                title: '8. Herramientas y Recursos Necesarios',
+                                paragraphs: [
+                                    'Para implementar cualquier estrategia exitosamente, necesitarás las herramientas adecuadas:'
+                                ],
+                                list: [
+                                    'Plataforma de trading confiable: MetaTrader 4/5, cTrader, o plataformas propias del broker',
+                                    'Herramientas de análisis técnico: Indicadores, gráficos y herramientas de dibujo',
+                                    'Calendario económico: Para estar al tanto de eventos importantes que afectan los mercados',
+                                    'Noticias financieras: Mantente informado sobre eventos macroeconómicos y noticias del mercado',
+                                    'Calculadora de riesgo: Para determinar el tamaño de posición adecuado',
+                                    'Diario de trading: Software o plantilla para registrar tus operaciones',
+                                    'Acceso a datos históricos: Para backtesting de estrategias antes de implementarlas'
+                                ]
+                            },
+                            {
+                                title: '9. Errores Comunes al Elegir una Estrategia',
+                                paragraphs: [
+                                    'Muchos principiantes cometen estos errores al seleccionar su estrategia de trading:'
+                                ],
+                                list: [
+                                    'Elegir una estrategia demasiado compleja: Empieza simple y agrega complejidad gradualmente',
+                                    'Cambiar de estrategia constantemente: La consistencia es clave; dale tiempo a tu estrategia para funcionar',
+                                    'Ignorar tu personalidad: No elijas scalping si eres una persona paciente; no elijas position trading si necesitas acción constante',
+                                    'No considerar los costos: Las estrategias de alta frecuencia tienen costos más altos por spreads y comisiones',
+                                    'Copiar estrategias sin entenderlas: Aprende por qué funciona una estrategia antes de implementarla',
+                                    'No adaptar la estrategia a tu capital: Algunas estrategias requieren más capital que otras',
+                                    'Ignorar las condiciones del mercado: Una estrategia puede funcionar en un mercado pero no en otro'
+                                ]
+                            },
+                            {
+                                title: '10. Próximos Pasos',
+                                paragraphs: [
+                                    'Ahora que entiendes las diferentes estrategias disponibles, aquí están los pasos recomendados para comenzar:'
+                                ],
+                                list: [
+                                    'Evalúa tu situación personal: Tiempo disponible, capital, experiencia y objetivos',
+                                    'Selecciona 2-3 estrategias que se adapten a tu perfil',
+                                    'Abre una cuenta demo con un broker regulado',
+                                    'Practica cada estrategia durante al menos un mes en la cuenta demo',
+                                    'Compara los resultados y elige la estrategia con la que te sientas más cómodo',
+                                    'Desarrolla un plan de trading detallado para tu estrategia elegida',
+                                    'Comienza con capital mínimo cuando pases a cuenta real',
+                                    'Mantén un diario y revisa tu progreso regularmente',
+                                    'Ajusta tu estrategia según tus resultados y experiencia',
+                                    'Considera buscar un mentor o unirse a una comunidad de traders para apoyo'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Elegir la estrategia de trading adecuada es un paso crucial en tu viaje como trader. Recuerda que no hay una estrategia perfecta para todos; la mejor estrategia es la que se adapta a tu estilo de vida, capital disponible y objetivos financieros.',
+                                'Como principiante, te recomendamos empezar con swing trading o day trading, ya que ofrecen un buen equilibrio entre tiempo requerido y oportunidades de aprendizaje. Una vez que ganes experiencia y confianza, puedes explorar otras estrategias.',
+                                'Lo más importante es ser consistente, disciplinado y paciente. El trading exitoso no se trata de hacer dinero rápido, sino de desarrollar habilidades y conocimientos que te permitan operar de manera rentable a largo plazo.',
+                                'Si necesitas ayuda para elegir un broker adecuado para tu estrategia, visita nuestra página de comparación de brokers o lee nuestras reseñas detalladas de los mejores brokers para traders latinoamericanos.'
+                            ]
+                        }
+                    }
+                },
+                mobileTrading: {
+                    title: 'Trading Móvil: Las Mejores Apps para Traders',
+                    description: 'Revisión de las mejores aplicaciones móviles para trading: características, funcionalidades y cómo operar desde tu smartphone de forma segura.',
+                    category: 'Plataformas',
+                    content: {
+                        introduction: {
+                            title: 'Trading Móvil',
+                            paragraphs: [
+                                'El trading móvil ha revolucionado la forma en que los traders operan. Con aplicaciones móviles avanzadas, puedes operar desde cualquier lugar, en cualquier momento. Esta guía te ayudará a entender las mejores apps de trading y cómo usarlas de forma segura.',
+                                'Exploraremos las características clave de las apps de trading, las mejores opciones disponibles, y consejos de seguridad para proteger tus operaciones móviles.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Ventajas del Trading Móvil',
+                                paragraphs: [
+                                    'El trading móvil ofrece flexibilidad y conveniencia incomparables.'
+                                ],
+                                list: [
+                                    'Accesibilidad: Opera desde cualquier lugar con conexión a internet',
+                                    'Notificaciones: Recibe alertas instantáneas sobre movimientos de mercado',
+                                    'Monitoreo: Supervisa tus posiciones en tiempo real',
+                                    'Velocidad: Ejecuta operaciones rápidamente cuando detectas oportunidades',
+                                    'Conveniencia: No necesitas estar frente a una computadora'
+                                ]
+                            },
+                            {
+                                title: '2. Características Importantes',
+                                paragraphs: [
+                                    'Busca estas características al elegir una app de trading.'
+                                ],
+                                list: [
+                                    'Gráficos avanzados: Gráficos claros y herramientas de análisis',
+                                    'Ejecución rápida: Órdenes ejecutadas sin demoras',
+                                    'Gestión de órdenes: Stop loss, take profit, órdenes pendientes',
+                                    'Notificaciones: Alertas de precio y noticias del mercado',
+                                    'Seguridad: Autenticación de dos factores y encriptación'
+                                ]
+                            },
+                            {
+                                title: '3. Mejores Apps de Trading',
+                                paragraphs: [
+                                    'Estas son algunas de las mejores apps disponibles para traders latinoamericanos.'
+                                ],
+                                list: [
+                                    'MetaTrader 4/5 Mobile: La app más popular y completa',
+                                    'cTrader Mobile: Excelente para traders avanzados',
+                                    'eToro Mobile: Ideal para social trading',
+                                    'Brokers propios: Muchos brokers tienen apps personalizadas',
+                                    'Evalúa: Prueba diferentes apps para encontrar la que prefieras'
+                                ]
+                            },
+                            {
+                                title: '4. Seguridad en Trading Móvil',
+                                paragraphs: [
+                                    'La seguridad es crucial cuando operas desde dispositivos móviles.'
+                                ],
+                                list: [
+                                    'Wi-Fi seguro: Evita operar en redes Wi-Fi públicas',
+                                    'Autenticación: Activa autenticación de dos factores',
+                                    'Actualizaciones: Mantén la app actualizada',
+                                    'Dispositivo seguro: Usa contraseña o biometría en tu dispositivo',
+                                    'Cierre de sesión: Cierra sesión cuando termines'
+                                ]
+                            },
+                            {
+                                title: '5. Consejos para Trading Móvil',
+                                paragraphs: [
+                                    'Sigue estos consejos para tener éxito en trading móvil.'
+                                ],
+                                list: [
+                                    'Práctica: Familiarízate con la app antes de operar real',
+                                    'Conectividad: Asegura conexión estable antes de operar',
+                                    'Pantalla: Usa dispositivo con pantalla grande para mejor visualización',
+                                    'Gestión de riesgo: Aplica las mismas reglas de gestión de riesgo',
+                                    'No distracciones: Opera en lugar tranquilo sin distracciones'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'El trading móvil ofrece flexibilidad y conveniencia que pueden mejorar significativamente tu experiencia de trading. Con las apps correctas y prácticas de seguridad adecuadas, puedes operar efectivamente desde cualquier lugar.',
+                                'Recuerda que aunque el trading móvil es conveniente, no reemplaza completamente el trading desde computadora. Úsalo como complemento para monitorear y ejecutar operaciones cuando no estés frente a tu computadora.'
+                            ]
+                        }
+                    }
+                },
+                socialTrading: {
+                    title: 'Social Trading: ¿Qué es y Cómo Funciona?',
+                    description: 'Aprende sobre social trading y copy trading: cómo seguir a traders exitosos, copiar sus operaciones y construir tu cartera de forma inteligente.',
+                    category: 'Educación',
+                    content: {
+                        introduction: {
+                            title: 'Social Trading',
+                            paragraphs: [
+                                'El social trading ha democratizado el acceso al trading, permitiendo que traders novatos aprendan de y copien a traders experimentados. Esta guía te explicará qué es el social trading, cómo funciona, y cómo puedes usarlo para mejorar tus resultados.',
+                                'Aprenderás sobre copy trading, cómo elegir traders a seguir, y las mejores prácticas para tener éxito en social trading.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. ¿Qué es el Social Trading?',
+                                paragraphs: [
+                                    'El social trading combina trading con redes sociales, permitiendo que traders interactúen y aprendan unos de otros.'
+                                ],
+                                list: [
+                                    'Comunidad: Plataformas donde traders comparten ideas y estrategias',
+                                    'Copy trading: Copiar operaciones de traders exitosos automáticamente',
+                                    'Transparencia: Ver historial y rendimiento de otros traders',
+                                    'Aprendizaje: Aprender observando a traders experimentados',
+                                    'Diversificación: Seguir múltiples traders para diversificar'
+                                ]
+                            },
+                            {
+                                title: '2. Cómo Funciona el Copy Trading',
+                                paragraphs: [
+                                    'El copy trading te permite copiar automáticamente las operaciones de otros traders.'
+                                ],
+                                list: [
+                                    'Selección: Eliges traders a seguir basado en su rendimiento',
+                                    'Asignación: Decides cuánto capital asignar a cada trader',
+                                    'Copia automática: Las operaciones se copian automáticamente a tu cuenta',
+                                    'Control: Puedes detener la copia en cualquier momento',
+                                    'Gestión: Monitoreas el rendimiento y ajustas según sea necesario'
+                                ]
+                            },
+                            {
+                                title: '3. Cómo Elegir Traders a Seguir',
+                                paragraphs: [
+                                    'Elegir los traders correctos es crucial para el éxito en social trading.'
+                                ],
+                                list: [
+                                    'Rendimiento histórico: Revisa rendimiento a largo plazo, no solo corto',
+                                    'Drawdown: Verifica el drawdown máximo del trader',
+                                    'Consistencia: Busca traders con rendimiento consistente',
+                                    'Estrategia: Entiende la estrategia del trader',
+                                    'Diversificación: Sigue traders con diferentes estrategias'
+                                ]
+                            },
+                            {
+                                title: '4. Ventajas del Social Trading',
+                                paragraphs: [
+                                    'El social trading ofrece múltiples ventajas para traders novatos y experimentados.'
+                                ],
+                                list: [
+                                    'Aprendizaje: Aprende observando a traders exitosos',
+                                    'Acceso: Accede a estrategias de traders profesionales',
+                                    'Tiempo: Ahorra tiempo al copiar en lugar de analizar',
+                                    'Diversificación: Diversifica siguiendo múltiples traders',
+                                    'Comunidad: Únete a una comunidad de traders'
+                                ]
+                            },
+                            {
+                                title: '5. Riesgos y Desventajas',
+                                paragraphs: [
+                                    'El social trading también tiene riesgos que debes considerar.'
+                                ],
+                                list: [
+                                    'Rendimiento pasado: No garantiza rendimiento futuro',
+                                    'Control limitado: Menos control sobre operaciones individuales',
+                                    'Costos: Puede haber comisiones adicionales',
+                                    'Dependencia: Puedes volverte dependiente de otros traders',
+                                    'Riesgo: Sigues siendo responsable de tus pérdidas'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'El social trading puede ser una excelente herramienta para aprender y diversificar tu cartera, pero requiere investigación cuidadosa y gestión de riesgo adecuada.',
+                                'No uses el social trading como reemplazo completo de tu propio análisis. Úsalo como herramienta de aprendizaje y diversificación, pero siempre mantén control sobre tu capital y decisiones de trading.'
+                            ]
+                        }
+                    }
+                },
+                taxes: {
+                    title: 'Impuestos y Trading: Guía para Traders Latinoamericanos',
+                    description: 'Todo lo que necesitas saber sobre impuestos en trading: cómo declarar ganancias, deducciones permitidas y obligaciones fiscales por país.',
+                    category: 'Regulación',
+                    content: {
+                        introduction: {
+                            title: 'Impuestos y Trading',
+                            paragraphs: [
+                                'Los impuestos sobre ganancias de trading varían significativamente entre países latinoamericanos. Entender tus obligaciones fiscales es crucial para evitar problemas legales y optimizar tu situación fiscal.',
+                                'Esta guía cubre los aspectos básicos de impuestos en trading para traders latinoamericanos, incluyendo cómo declarar ganancias, deducciones permitidas, y consideraciones específicas por país.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Aspectos Generales',
+                                paragraphs: [
+                                    'Aunque las leyes varían por país, hay principios generales que aplican.'
+                                ],
+                                list: [
+                                    'Ganancias: Las ganancias de trading generalmente están sujetas a impuestos',
+                                    'Pérdidas: Las pérdidas pueden ser deducibles en algunos países',
+                                    'Documentación: Mantén registros detallados de todas tus operaciones',
+                                    'Asesoría: Consulta con un contador especializado en trading',
+                                    'Actualización: Las leyes fiscales cambian, mantente informado'
+                                ]
+                            },
+                            {
+                                title: '2. Registro de Operaciones',
+                                paragraphs: [
+                                    'Mantener registros precisos es esencial para declaraciones fiscales.'
+                                ],
+                                list: [
+                                    'Diario de trading: Registra todas las operaciones con fechas y montos',
+                                    'Comprobantes: Guarda comprobantes de depósitos y retiros',
+                                    'Estados de cuenta: Mantén estados de cuenta del broker',
+                                    'Ganancias y pérdidas: Calcula ganancias/pérdidas netas por período',
+                                    'Organización: Organiza documentos por año fiscal'
+                                ]
+                            },
+                            {
+                                title: '3. Consideraciones por País',
+                                paragraphs: [
+                                    'Cada país tiene regulaciones específicas sobre impuestos en trading.'
+                                ],
+                                list: [
+                                    'México: Ganancias de trading generalmente se consideran ingresos',
+                                    'Argentina: Puede haber tratamiento especial para trading',
+                                    'Brasil: Regulaciones específicas sobre ganancias de capital',
+                                    'Colombia: Tratamiento fiscal de operaciones financieras',
+                                    'Chile: Impuestos sobre ganancias de capital',
+                                    'Importante: Consulta leyes específicas de tu país'
+                                ]
+                            },
+                            {
+                                title: '4. Deducciones Permitidas',
+                                paragraphs: [
+                                    'Algunos costos pueden ser deducibles de tus ganancias.'
+                                ],
+                                list: [
+                                    'Comisiones: Comisiones pagadas al broker pueden ser deducibles',
+                                    'Educación: Cursos y materiales educativos en algunos países',
+                                    'Herramientas: Software y herramientas de trading',
+                                    'Internet: Costos de conexión relacionados con trading',
+                                    'Verificación: Verifica qué deducciones aplican en tu país'
+                                ]
+                            },
+                            {
+                                title: '5. Consejos Fiscales',
+                                paragraphs: [
+                                    'Sigue estos consejos para manejar tus impuestos de trading efectivamente.'
+                                ],
+                                list: [
+                                    'Asesoría profesional: Consulta con contador especializado',
+                                    'Planificación: Planifica tus operaciones considerando implicaciones fiscales',
+                                    'Documentación: Mantén todos los documentos organizados',
+                                    'Declaración oportuna: Declara tus ganancias a tiempo',
+                                    'Actualización: Mantente informado sobre cambios en leyes fiscales'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'Los impuestos en trading pueden ser complejos y varían significativamente entre países. Es esencial mantener registros precisos y consultar con profesionales fiscales para asegurar cumplimiento y optimización.',
+                                'No ignores tus obligaciones fiscales. La falta de cumplimiento puede resultar en multas y problemas legales. Invierte tiempo en entender tus obligaciones y mantener registros adecuados desde el principio.'
+                            ]
+                        }
+                    }
+                }
+            },
+            categories: {
+                forex: 'Forex',
+                crypto: 'Crypto',
+                education: 'Educación',
+                brokers: 'Brokers',
+                security: 'Seguridad',
+                commodities: 'Commodities',
+                psychology: 'Psicología',
+                analysis: 'Análisis',
+                cfds: 'CFDs',
+                regulation: 'Regulación',
+                platforms: 'Plataformas'
+            }
         },
         
         // Guides Section
@@ -990,6 +2614,8 @@ const languages = {
         
         // Education page
         education: {
+            pageTitle: 'Educación y Capacitación en Trading - Guía Completa 2024',
+            pageDescription: 'Aprende todo sobre trading, brokers e inversiones. Guías educativas, cursos, estrategias y recursos de capacitación para traders latinoamericanos.',
             hero: {
                 title: 'Educación y Capacitación en Trading',
                 subtitle: 'Aprende todo lo que necesitas saber sobre brokers, inversiones y trading. Guías completas, cursos, estrategias y recursos educativos para traders de todos los niveles.',
@@ -1050,7 +2676,18 @@ const languages = {
                 }
             },
             bestBrokers: {
-                title: 'Mejores Brokers con Recursos Educativos'
+                title: 'Mejores Brokers con Recursos Educativos',
+                features: {
+                    freeWebinars: 'Webinars gratuitos',
+                    educationalCenter: 'Centro educativo completo',
+                    tutorialVideos: 'Videos tutoriales',
+                    tradingAcademy: 'Academia de trading',
+                    educationalArticles: 'Artículos educativos',
+                    freeDemoAccount: 'Cuenta demo gratuita',
+                    igAcademy: 'IG Academy',
+                    certifiedCourses: 'Cursos certificados',
+                    premiumResources: 'Recursos premium'
+                }
             },
             videos: {
                 title: 'Videos Educativos',
@@ -1208,6 +2845,60 @@ const languages = {
                     description: 'Los mercados evolucionan constantemente. Mantente actualizado con las últimas tendencias y técnicas.'
                 }
             },
+            glossary: {
+                title: 'Glosario de Términos de Trading',
+                subtitle: 'Definiciones de los términos más importantes en el mundo del trading e inversiones',
+                terms: {
+                    spread: {
+                        term: 'Spread',
+                        definition: 'La diferencia entre el precio de compra (bid) y el precio de venta (ask) de un instrumento financiero. Es el costo principal de operar con un broker.'
+                    },
+                    leverage: {
+                        term: 'Apalancamiento (Leverage)',
+                        definition: 'Permite operar con más capital del que tienes depositado. Por ejemplo, con apalancamiento 1:100, puedes controlar $10,000 con solo $100 de depósito.'
+                    },
+                    stopLoss: {
+                        term: 'Stop Loss',
+                        definition: 'Una orden automática que cierra una posición cuando el precio alcanza un nivel predeterminado para limitar pérdidas.'
+                    },
+                    takeProfit: {
+                        term: 'Take Profit',
+                        definition: 'Una orden automática que cierra una posición cuando el precio alcanza un nivel de ganancia objetivo predeterminado.'
+                    },
+                    cfd: {
+                        term: 'CFD (Contrato por Diferencia)',
+                        definition: 'Un derivado financiero que permite especular sobre el movimiento de precios de un activo sin poseerlo realmente.'
+                    },
+                    margin: {
+                        term: 'Margen (Margin)',
+                        definition: 'El capital requerido para abrir y mantener una posición apalancada. Se expresa como un porcentaje del valor total de la operación.'
+                    },
+                    liquidity: {
+                        term: 'Liquidez',
+                        definition: 'La facilidad con la que un activo puede comprarse o venderse sin afectar significativamente su precio. Los mercados líquidos tienen muchos compradores y vendedores.'
+                    },
+                    volatility: {
+                        term: 'Volatilidad',
+                        definition: 'La medida de la variabilidad de los precios de un activo. Alta volatilidad significa grandes fluctuaciones de precio, mientras que baja volatilidad indica movimientos más estables.'
+                    },
+                    technicalAnalysis: {
+                        term: 'Análisis Técnico',
+                        definition: 'Método de análisis que estudia gráficos y patrones de precios históricos para predecir movimientos futuros del mercado.'
+                    },
+                    fundamentalAnalysis: {
+                        term: 'Análisis Fundamental',
+                        definition: 'Método de análisis que evalúa factores económicos, financieros y otros factores cualitativos para determinar el valor intrínseco de un activo.'
+                    },
+                    pip: {
+                        term: 'Pip',
+                        definition: 'Unidad de medida del cambio de precio en el mercado Forex. Generalmente representa el cuarto decimal en la mayoría de pares de divisas (0.0001).'
+                    },
+                    demoAccount: {
+                        term: 'Cuenta Demo',
+                        definition: 'Una cuenta de práctica que permite operar con dinero virtual para aprender y probar estrategias sin riesgo financiero real.'
+                    }
+                }
+            },
             faq: {
                 title: 'Preguntas Frecuentes sobre Educación en Trading',
                 subtitle: 'Respuestas a las preguntas más comunes sobre aprender trading',
@@ -1264,6 +2955,7 @@ const languages = {
             cfds: 'CFDs',
             commodities: 'Commodities',
             education: 'Education & Training',
+            blog: 'Blog',
             reviews: 'Reviews',
             about: 'About',
             contact: 'Contact',
@@ -1474,6 +3166,769 @@ const languages = {
             locationLabel: 'Location',
             phone: '+1 (555) 123-4567',
             location: 'Latin America'
+        },
+        
+        // Market Overview Section
+        marketOverview: {
+            title: 'Financial Markets in Latin America',
+            subtitle: 'Complete information about the main markets and investment opportunities',
+            forex: {
+                title: 'Forex Market',
+                description1: 'The foreign exchange market is the largest in the world with a daily volume of over $6.6 trillion. Latin American traders can access this market 24 hours a day, 5 days a week, trading major currency pairs such as EUR/USD, GBP/USD and USD/JPY.',
+                description2: 'Regulated brokers offer competitive spreads, controlled leverage and advanced platforms such as MetaTrader 4 and 5 for professional technical analysis.',
+                explore: 'Explore Forex'
+            },
+            crypto: {
+                title: 'Cryptocurrencies',
+                description1: 'The cryptocurrency market has experienced exponential growth in Latin America. Bitcoin, Ethereum and other altcoins offer investment opportunities with high volatility and growth potential.',
+                description2: 'Crypto-specialized brokers offer access to more than 100 different cryptocurrencies, leveraged trading, and advanced tools for technical and fundamental analysis.',
+                explore: 'Explore Crypto'
+            },
+            stocks: {
+                title: 'Stocks',
+                description1: 'Stock trading allows investing in leading companies from global markets such as NYSE, NASDAQ, and European markets. Latin American traders can access thousands of international stocks.',
+                description2: 'Modern brokers offer access to stocks with competitive commissions, integrated fundamental and technical analysis, and the possibility of receiving dividends from the companies you invest in.',
+                explore: 'Explore Stocks'
+            }
+        },
+        
+        // Broker Comparison Section
+        brokerComparison: {
+            title: 'Broker Comparison',
+            subtitle: 'Compare the main features of the best brokers for Latin American traders',
+            tableHeaders: {
+                broker: 'Broker',
+                regulation: 'Regulation',
+                spreads: 'Forex Spreads',
+                leverage: 'Leverage',
+                minDeposit: 'Minimum Deposit',
+                platforms: 'Platforms'
+            },
+            tableTerms: {
+                from: 'From',
+                upTo: 'Up to',
+                variable: 'Variable',
+                ownPlatform: 'Own Platform'
+            },
+            viewFullComparison: 'View Full Comparison',
+            compareBrokers: 'Compare Brokers'
+        },
+        
+        // Blog Section
+        blog: {
+            pageTitle: 'Trading Blog - LatamBrokerReviews',
+            pageDescription: 'Articles, guides and analysis about trading, brokers and investments in Latin America. Stay updated with the latest market trends.',
+            hero: {
+                title: 'Trading Blog',
+                subtitle: 'Articles, guides and analysis about trading, brokers and investments in Latin America. Stay updated with the latest market trends.'
+            },
+            readMore: 'Read More',
+            backToBlog: 'Back to Blog',
+            posts: {
+                forexGuide: {
+                    title: 'Complete Guide to Forex Trading for Beginners',
+                    description: 'Learn the fundamentals of currency trading, from basic concepts to advanced strategies for Latin American traders.',
+                    category: 'Forex',
+                    content: {
+                        introduction: {
+                            title: 'Introduction to the Forex Market',
+                            paragraphs: [
+                                'The foreign exchange market, known as Forex (Foreign Exchange), is the world\'s largest financial market, with a daily trading volume exceeding $6 trillion. For Latin American traders, Forex offers unique investment and trading opportunities 24 hours a day.',
+                                'This comprehensive guide will take you from basic concepts to advanced strategies, helping you understand how the Forex market works and how you can start trading effectively.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. What is the Forex Market?',
+                                paragraphs: [
+                                    'Forex is the market where currencies are bought and sold. Unlike other financial markets, Forex operates 24 hours a day, five days a week, allowing traders from around the world to participate at any time.',
+                                    'The Forex market is decentralized, meaning there is no central physical location. Instead, it operates through a global network of banks, financial institutions, and brokers.'
+                                ],
+                                list: [
+                                    'World\'s most liquid market: Facilitates quick entries and exits',
+                                    'Extended hours: Operates 24/5, ideal for traders from different time zones',
+                                    'Leverage available: Allows trading with more capital than you have',
+                                    'Accessible: You can start with relatively low capital'
+                                ]
+                            },
+                            {
+                                title: '2. Basic Forex Concepts',
+                                paragraphs: [
+                                    'Before you start trading, it\'s essential to understand the fundamental concepts of the Forex market.'
+                                ],
+                                list: [
+                                    'Currency pair: You always trade with pairs (e.g., EUR/USD, USD/MXN)',
+                                    'Spread: Difference between buy and sell price',
+                                    'Pip: Unit of measurement for price changes (0.0001 for most pairs)',
+                                    'Lot: Standard size of a trade (100,000 units)',
+                                    'Leverage: Ability to trade with more capital than you have',
+                                    'Margin: Capital required to open a leveraged position'
+                                ]
+                            },
+                            {
+                                title: '3. Major Currency Pairs',
+                                paragraphs: [
+                                    'Currency pairs are classified into three main categories: majors, minors, and exotics.'
+                                ],
+                                list: [
+                                    'Majors: Most traded pairs (EUR/USD, GBP/USD, USD/JPY, USD/CHF, AUD/USD, USD/CAD, NZD/USD)',
+                                    'Minors: Pairs that don\'t include USD (EUR/GBP, EUR/JPY, GBP/JPY)',
+                                    'Exotics: Pairs with currencies from emerging economies (USD/MXN, USD/BRL, USD/ARS)',
+                                    'For Latin American traders, exotic pairs like USD/MXN, USD/BRL, and USD/ARS are especially relevant'
+                                ]
+                            },
+                            {
+                                title: '4. How to Read a Forex Quote',
+                                paragraphs: [
+                                    'A Forex quote shows two prices: the buy price (bid) and the sell price (ask).'
+                                ],
+                                list: [
+                                    'Bid: Price at which you can sell the base currency',
+                                    'Ask: Price at which you can buy the base currency',
+                                    'Spread: Difference between bid and ask (cost of the trade)',
+                                    'Example: EUR/USD 1.0850/1.0852 means you can buy at 1.0852 and sell at 1.0850'
+                                ]
+                            },
+                            {
+                                title: '5. Factors Affecting Currency Prices',
+                                paragraphs: [
+                                    'Currency prices are influenced by multiple economic and political factors.'
+                                ],
+                                list: [
+                                    'Interest rates: Differences between countries affect capital flow',
+                                    'Economic indicators: GDP, inflation, employment, etc.',
+                                    'Political stability: Political events can cause volatility',
+                                    'International trade: Trade balances between countries',
+                                    'Market sentiment: Perception and expectations of investors'
+                                ]
+                            },
+                            {
+                                title: '6. Basic Forex Trading Strategies',
+                                paragraphs: [
+                                    'There are several strategies that beginners can use to start in Forex.'
+                                ],
+                                list: [
+                                    'Trend trading: Follow the direction of the market',
+                                    'Range trading: Trade between support and resistance levels',
+                                    'Breakout trading: Enter when price breaks key levels',
+                                    'Scalping: Very short-term trades',
+                                    'Swing trading: Hold positions for several days'
+                                ]
+                            },
+                            {
+                                title: '7. Risk Management in Forex',
+                                paragraphs: [
+                                    'Risk management is crucial for long-term success in Forex.'
+                                ],
+                                list: [
+                                    'Never risk more than 1-2% of your capital per trade',
+                                    'Use stop-loss on all your trades',
+                                    'Define your take-profit before entering',
+                                    'Don\'t trade with more than 5-10% of your total capital at risk simultaneously',
+                                    'Keep a trading journal to learn from your mistakes'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusion',
+                            paragraphs: [
+                                'The Forex market offers exciting opportunities for Latin American traders, but it requires education, practice, and discipline. Start with a demo account, learn the basics, develop a solid strategy, and always manage your risk properly.',
+                                'Remember that success in Forex is not achieved overnight. Patience, continuous education, and discipline are the keys to becoming a successful trader.'
+                            ]
+                        }
+                    }
+                },
+                cryptoFuture: {
+                    title: 'The Future of Cryptocurrencies in Latin America',
+                    description: 'Analysis of regulatory trends and investment opportunities in cryptocurrencies for Latin American traders.',
+                    category: 'Crypto',
+                    content: {
+                        introduction: {
+                            title: 'The Future of Cryptocurrencies in Latin America',
+                            paragraphs: [
+                                'Cryptocurrencies are transforming the financial landscape in Latin America, offering new investment opportunities and access to financial services for millions of people. As adoption grows, Latin American traders need to understand regulatory trends and the opportunities this emerging market presents.',
+                                'In this article, we\'ll explore the current and future state of cryptocurrencies in the region, analyzing regulations, adoption, and the best strategies for Latin American traders.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Current State of Cryptocurrencies in Latin America',
+                                paragraphs: [
+                                    'Latin America has become one of the regions with the highest cryptocurrency adoption worldwide. Countries like El Salvador, Argentina, Brazil, and Mexico are leading adoption.'
+                                ],
+                                list: [
+                                    'El Salvador: First country to adopt Bitcoin as legal tender',
+                                    'Argentina: High use of cryptocurrencies as protection against inflation',
+                                    'Brazil: Clear regulation and growing institutional adoption',
+                                    'Mexico: Developing regulatory framework focused on consumer protection',
+                                    'Colombia: Active market with progressive regulations'
+                                ]
+                            },
+                            {
+                                title: '2. Regulatory Trends',
+                                paragraphs: [
+                                    'Latin American governments are developing regulatory frameworks for cryptocurrencies, seeking balance between innovation and consumer protection.'
+                                ],
+                                list: [
+                                    'Proactive regulation: Countries like Brazil and Mexico are establishing clear frameworks',
+                                    'Protection focus: Regulations focused on preventing fraud and protecting investors',
+                                    'Institutional adoption: Banks and companies are integrating cryptocurrency services',
+                                    'Taxes: Clarification on tax treatment of cryptocurrency gains',
+                                    'Licenses: Requirements for exchanges and trading platforms'
+                                ]
+                            },
+                            {
+                                title: '3. Investment Opportunities',
+                                paragraphs: [
+                                    'For Latin American traders, cryptocurrencies offer multiple investment and trading opportunities.'
+                                ],
+                                list: [
+                                    'Active trading: High volatility offers short-term profit opportunities',
+                                    'Long-term investment: Bitcoin and Ethereum as store of value',
+                                    'DeFi: Access to decentralized financial services',
+                                    'Staking: Generate passive income with cryptocurrencies',
+                                    'NFTs: Emerging market for non-fungible tokens'
+                                ]
+                            },
+                            {
+                                title: '4. Challenges and Risks',
+                                paragraphs: [
+                                    'Despite opportunities, there are important challenges that traders must consider.'
+                                ],
+                                list: [
+                                    'Extreme volatility: Prices can change drastically in short time',
+                                    'Changing regulation: Laws can change quickly',
+                                    'Security: Risk of hacks and fraud',
+                                    'Liquidity: Some cryptocurrencies have low liquidity',
+                                    'Limited adoption: Not all cryptocurrencies have real use'
+                                ]
+                            },
+                            {
+                                title: '5. Best Practices for Traders',
+                                paragraphs: [
+                                    'To succeed in cryptocurrency trading in Latin America, follow these best practices.'
+                                ],
+                                list: [
+                                    'Choose regulated exchanges: Prioritize platforms with licenses and regulation',
+                                    'Diversify: Don\'t put all your capital in one cryptocurrency',
+                                    'Manage risk: Use stop-loss and never invest more than you can lose',
+                                    'Stay informed: Follow regulatory and market news',
+                                    'Use secure wallets: Store cryptocurrencies in wallets with good security',
+                                    'Consider taxes: Keep records for tax declarations'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusion',
+                            paragraphs: [
+                                'The future of cryptocurrencies in Latin America is promising, with growing adoption and developing regulatory frameworks. For Latin American traders, this represents significant opportunities, but also requires education, proper risk management, and understanding of local regulations.',
+                                'Success in cryptocurrency trading requires patience, discipline, and deep market understanding. Stay updated with regulatory and market trends, and always prioritize security and risk management.'
+                            ]
+                        }
+                    }
+                },
+                commonMistakes: {
+                    title: '5 Common Mistakes You Must Avoid When Starting Trading',
+                    description: 'Learn about the most frequent mistakes beginners make and how to avoid them for a better start in trading.',
+                    category: 'Education'
+                },
+                chooseBroker: {
+                    title: 'How to Choose the Best Broker for Trading in 2024',
+                    description: 'Complete guide to evaluating brokers: regulation, spreads, commissions, platforms and payment methods for Latin American traders.',
+                    category: 'Brokers'
+                },
+                security: {
+                    title: 'Trading Security: How to Protect Your Capital',
+                    description: 'Essential tips on security, risk management and fund protection when trading with online brokers.',
+                    category: 'Security'
+                },
+                goldTrading: {
+                    title: 'Gold Trading: Complete Guide for Investors',
+                    description: 'Everything you need to know about investing in gold: factors affecting price, trading strategies and specialized brokers.',
+                    category: 'Commodities'
+                },
+                psychology: {
+                    title: 'Trading Psychology: Emotional Control for Traders',
+                    description: 'Learn to control emotions, maintain discipline and develop the right mindset for successful trading.',
+                    category: 'Psychology'
+                },
+                analysisComparison: {
+                    title: 'Technical vs Fundamental Analysis: Which to Choose?',
+                    description: 'Detailed comparison between technical and fundamental analysis, when to use each and how to combine them effectively.',
+                    category: 'Analysis'
+                },
+                cfdsGuide: {
+                    title: 'CFDs for Beginners: Everything You Need to Know',
+                    description: 'Complete guide on contracts for difference: what they are, how they work, advantages, risks and best CFD brokers.',
+                    category: 'CFDs'
+                },
+                regulatedBrokers: {
+                    title: 'Regulated Brokers in Latin America: 2024 Guide',
+                    description: 'Complete list of regulated brokers by country in Latin America and what to look for when verifying broker regulation.',
+                    category: 'Regulation'
+                },
+                metatrader: {
+                    title: 'MetaTrader 4 vs MetaTrader 5: Which to Choose?',
+                    description: 'Detailed comparison between MT4 and MT5: differences, advantages, disadvantages and which platform is better for Latin American traders.',
+                    category: 'Platforms'
+                },
+                riskManagement: {
+                    title: 'Risk Management in Trading: Complete Guide',
+                    description: 'Learn to protect your capital with risk management techniques: stop loss, take profit, position sizing and protection strategies.',
+                    category: 'Education'
+                },
+                paymentMethods: {
+                    title: 'Payment Methods for Latin American Traders',
+                    description: 'Complete guide on deposit and withdrawal methods available for Latin American traders: cards, transfers, e-wallets and local methods.',
+                    category: 'Brokers'
+                },
+                demoAccount: {
+                    title: 'Demo Accounts: Your Best Ally to Learn Trading',
+                    description: 'Everything about free demo accounts: how to use them effectively, what to learn, and how to transition to real trading with confidence.',
+                    category: 'Education'
+                },
+                tradingStrategies: {
+                    title: 'Trading Strategies for Beginners',
+                    description: 'Discover the best trading strategies for beginners: scalping, day trading, swing trading and how to choose the right one for you.',
+                    category: 'Analysis',
+                    content: {
+                        introduction: {
+                            title: 'Introduction',
+                            paragraphs: [
+                                'If you\'re new to the world of trading, you probably feel overwhelmed by the amount of information and strategies available. Choosing the right strategy is fundamental to your success as a trader, especially if you\'re trading from Latin America.',
+                                'In this article, we\'ll explore the main trading strategies for beginners, their characteristics, advantages and disadvantages, and how to determine which one is most suitable for your lifestyle, available capital, and financial goals.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Scalping: High-Frequency Trading',
+                                paragraphs: [
+                                    'Scalping is a very short-term trading strategy where traders open and close positions in minutes or even seconds. The goal is to obtain small frequent profits by taking advantage of minimal price movements.',
+                                    'This strategy requires a lot of attention and time in front of the screen, as you need to constantly monitor the market during the most active hours.'
+                                ],
+                                list: [
+                                    'Advantages: Multiple trading opportunities during the day, less exposure to overnight market risk',
+                                    'Disadvantages: Requires a lot of time and concentration, high costs due to spreads and commissions because of frequent operations',
+                                    'Ideal for: Traders who can dedicate several hours a day to trading, have sufficient capital to cover frequent costs, and can maintain discipline under pressure'
+                                ]
+                            },
+                            {
+                                title: '2. Day Trading: Intraday Operations',
+                                paragraphs: [
+                                    'Day trading consists of opening and closing all positions within the same day, without holding positions overnight. Traders seek to take advantage of price movements during active trading sessions.',
+                                    'This strategy is more relaxed than scalping but still requires dedicating daily time to analysis and trade execution.'
+                                ],
+                                list: [
+                                    'Advantages: No risk of market gaps overnight, multiple daily opportunities, you can trade in different sessions',
+                                    'Disadvantages: Requires daily time, can be stressful, you need discipline to follow your plan',
+                                    'Ideal for: Traders who can dedicate 2-4 hours daily, have basic experience in technical analysis, and can handle the stress of daily trading'
+                                ]
+                            },
+                            {
+                                title: '3. Swing Trading: Multi-Day Operations',
+                                paragraphs: [
+                                    'Swing trading is a medium-term strategy where you hold positions open for several days or weeks. You seek to capture more significant price movements based on technical and fundamental analysis.',
+                                    'This strategy is ideal for traders who cannot dedicate daily time to trading but want to actively participate in the market.'
+                                ],
+                                list: [
+                                    'Advantages: Less time required, less stress, you can maintain your regular job, larger price movements',
+                                    'Disadvantages: Exposure to risk overnight and weekends, requires more capital for margins, fewer opportunities than day trading',
+                                    'Ideal for: Traders with full-time jobs, who can review positions a few times per week, and prefer fewer but more profitable trades'
+                                ]
+                            },
+                            {
+                                title: '4. Position Trading: Long-Term Investment',
+                                paragraphs: [
+                                    'Position trading is a long-term strategy where you hold positions for weeks, months, or even years. It\'s based mainly on fundamental analysis and macroeconomic trends.',
+                                    'This strategy requires patience and a more relaxed approach, similar to traditional investing but with leverage and access to more financial instruments.'
+                                ],
+                                list: [
+                                    'Advantages: Very little time required, less emotional stress, takes advantage of major market trends',
+                                    'Disadvantages: Requires more capital, exposure to macroeconomic events, less control over daily positions',
+                                    'Ideal for: Traders with a long-term vision, who can wait weeks or months for results, and prefer fundamental over technical analysis'
+                                ]
+                            },
+                            {
+                                title: '5. How to Choose Your Strategy',
+                                paragraphs: [
+                                    'Your strategy choice should be based on several personal and financial factors. There\'s no universally "best" strategy; the best strategy is the one that fits your personal situation.'
+                                ],
+                                list: [
+                                    'Available time: How many hours per day/week can you dedicate to trading?',
+                                    'Initial capital: How much capital do you have available to trade?',
+                                    'Risk tolerance: How comfortable are you with different risk levels?',
+                                    'Experience: What level of knowledge do you have about technical and fundamental analysis?',
+                                    'Financial goals: Are you looking for supplementary income or long-term growth?',
+                                    'Personality: Are you patient or do you prefer constant action?'
+                                ]
+                            },
+                            {
+                                title: '6. Tips for Beginners',
+                                paragraphs: [
+                                    'Regardless of the strategy you choose, there are fundamental principles that all beginner traders should follow:'
+                                ],
+                                list: [
+                                    'Start with a demo account: Practice your strategy without real risk for at least 3-6 months',
+                                    'Manage your risk: Never risk more than 1-2% of your capital per trade',
+                                    'Keep a trading journal: Record all your trades, reasons, and results to learn from your mistakes',
+                                    'Develop a trading plan: Define your entry, exit, and risk management rules before trading',
+                                    'Be patient: Success in trading takes time; don\'t expect immediate results',
+                                    'Continuous education: The market constantly changes; stay updated with new strategies and techniques',
+                                    'Choose a regulated broker: The security of your funds is a priority, especially in Latin America'
+                                ]
+                            },
+                            {
+                                title: '7. Market-Specific Strategies',
+                                paragraphs: [
+                                    'Different markets require different approaches. Here\'s how to adapt strategies according to the market you trade:'
+                                ],
+                                list: [
+                                    'Forex: Ideal for scalping and day trading due to high liquidity and volatility during main sessions',
+                                    'Stocks: Better for swing trading and position trading, taking advantage of long-term trends',
+                                    'Cryptocurrencies: You can use any strategy, but swing trading is popular due to high volatility',
+                                    'Commodities: Position trading works well due to seasonal and macroeconomic trends',
+                                    'Indices: Day trading and swing trading are effective due to diversification and lower volatility than individual stocks'
+                                ]
+                            },
+                            {
+                                title: '8. Required Tools and Resources',
+                                paragraphs: [
+                                    'To successfully implement any strategy, you\'ll need the right tools:'
+                                ],
+                                list: [
+                                    'Reliable trading platform: MetaTrader 4/5, cTrader, or broker\'s proprietary platforms',
+                                    'Technical analysis tools: Indicators, charts, and drawing tools',
+                                    'Economic calendar: To stay aware of important events affecting markets',
+                                    'Financial news: Stay informed about macroeconomic events and market news',
+                                    'Risk calculator: To determine appropriate position size',
+                                    'Trading journal: Software or template to record your trades',
+                                    'Access to historical data: For backtesting strategies before implementing them'
+                                ]
+                            },
+                            {
+                                title: '9. Common Mistakes When Choosing a Strategy',
+                                paragraphs: [
+                                    'Many beginners make these mistakes when selecting their trading strategy:'
+                                ],
+                                list: [
+                                    'Choosing a strategy that\'s too complex: Start simple and add complexity gradually',
+                                    'Constantly changing strategies: Consistency is key; give your strategy time to work',
+                                    'Ignoring your personality: Don\'t choose scalping if you\'re a patient person; don\'t choose position trading if you need constant action',
+                                    'Not considering costs: High-frequency strategies have higher costs due to spreads and commissions',
+                                    'Copying strategies without understanding them: Learn why a strategy works before implementing it',
+                                    'Not adapting the strategy to your capital: Some strategies require more capital than others',
+                                    'Ignoring market conditions: A strategy may work in one market but not another'
+                                ]
+                            },
+                            {
+                                title: '10. Next Steps',
+                                paragraphs: [
+                                    'Now that you understand the different strategies available, here are the recommended steps to get started:'
+                                ],
+                                list: [
+                                    'Evaluate your personal situation: Available time, capital, experience, and goals',
+                                    'Select 2-3 strategies that fit your profile',
+                                    'Open a demo account with a regulated broker',
+                                    'Practice each strategy for at least one month on the demo account',
+                                    'Compare results and choose the strategy you feel most comfortable with',
+                                    'Develop a detailed trading plan for your chosen strategy',
+                                    'Start with minimum capital when moving to a real account',
+                                    'Keep a journal and review your progress regularly',
+                                    'Adjust your strategy based on your results and experience',
+                                    'Consider finding a mentor or joining a trading community for support'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusion',
+                            paragraphs: [
+                                'Choosing the right trading strategy is a crucial step in your journey as a trader. Remember that there\'s no perfect strategy for everyone; the best strategy is the one that fits your lifestyle, available capital, and financial goals.',
+                                'As a beginner, we recommend starting with swing trading or day trading, as they offer a good balance between time required and learning opportunities. Once you gain experience and confidence, you can explore other strategies.',
+                                'The most important thing is to be consistent, disciplined, and patient. Successful trading isn\'t about making quick money, but about developing skills and knowledge that allow you to trade profitably in the long term.',
+                                'If you need help choosing a suitable broker for your strategy, visit our broker comparison page or read our detailed reviews of the best brokers for Latin American traders.'
+                            ]
+                        }
+                    }
+                },
+                mobileTrading: {
+                    title: 'Mobile Trading: Best Apps for Traders',
+                    description: 'Review of the best mobile applications for trading: features, functionalities and how to trade from your smartphone safely.',
+                    category: 'Platforms',
+                    content: {
+                        introduction: {
+                            title: 'Mobile Trading',
+                            paragraphs: [
+                                'Mobile trading has revolutionized the way traders operate. With advanced mobile applications, you can trade from anywhere, at any time. This guide will help you understand the best trading apps and how to use them safely.',
+                                'We\'ll explore the key features of trading apps, the best options available, and security tips to protect your mobile trading operations.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Advantages of Mobile Trading',
+                                paragraphs: [
+                                    'Mobile trading offers unmatched flexibility and convenience.'
+                                ],
+                                list: [
+                                    'Accessibility: Trade from anywhere with internet connection',
+                                    'Notifications: Receive instant alerts about market movements',
+                                    'Monitoring: Supervise your positions in real time',
+                                    'Speed: Execute trades quickly when you detect opportunities',
+                                    'Convenience: You don\'t need to be in front of a computer'
+                                ]
+                            },
+                            {
+                                title: '2. Important Features',
+                                paragraphs: [
+                                    'Look for these features when choosing a trading app.'
+                                ],
+                                list: [
+                                    'Advanced charts: Clear charts and analysis tools',
+                                    'Fast execution: Orders executed without delays',
+                                    'Order management: Stop loss, take profit, pending orders',
+                                    'Notifications: Price alerts and market news',
+                                    'Security: Two-factor authentication and encryption'
+                                ]
+                            },
+                            {
+                                title: '3. Best Trading Apps',
+                                paragraphs: [
+                                    'These are some of the best apps available for Latin American traders.'
+                                ],
+                                list: [
+                                    'MetaTrader 4/5 Mobile: The most popular and complete app',
+                                    'cTrader Mobile: Excellent for advanced traders',
+                                    'eToro Mobile: Ideal for social trading',
+                                    'Proprietary brokers: Many brokers have customized apps',
+                                    'Evaluate: Try different apps to find the one you prefer'
+                                ]
+                            },
+                            {
+                                title: '4. Security in Mobile Trading',
+                                paragraphs: [
+                                    'Security is crucial when trading from mobile devices.'
+                                ],
+                                list: [
+                                    'Secure Wi-Fi: Avoid trading on public Wi-Fi networks',
+                                    'Authentication: Enable two-factor authentication',
+                                    'Updates: Keep the app updated',
+                                    'Secure device: Use password or biometrics on your device',
+                                    'Logout: Log out when finished'
+                                ]
+                            },
+                            {
+                                title: '5. Tips for Mobile Trading',
+                                paragraphs: [
+                                    'Follow these tips to succeed in mobile trading.'
+                                ],
+                                list: [
+                                    'Practice: Familiarize yourself with the app before real trading',
+                                    'Connectivity: Ensure stable connection before trading',
+                                    'Screen: Use device with large screen for better visualization',
+                                    'Risk management: Apply the same risk management rules',
+                                    'No distractions: Trade in quiet place without distractions'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusion',
+                            paragraphs: [
+                                'Mobile trading offers flexibility and convenience that can significantly improve your trading experience. With the right apps and proper security practices, you can trade effectively from anywhere.',
+                                'Remember that although mobile trading is convenient, it doesn\'t completely replace computer trading. Use it as a complement to monitor and execute trades when you\'re not in front of your computer.'
+                            ]
+                        }
+                    }
+                },
+                socialTrading: {
+                    title: 'Social Trading: What is it and How Does it Work?',
+                    description: 'Learn about social trading and copy trading: how to follow successful traders, copy their trades and build your portfolio intelligently.',
+                    category: 'Education',
+                    content: {
+                        introduction: {
+                            title: 'Social Trading',
+                            paragraphs: [
+                                'Social trading has democratized access to trading, allowing novice traders to learn from and copy experienced traders. This guide will explain what social trading is, how it works, and how you can use it to improve your results.',
+                                'You\'ll learn about copy trading, how to choose traders to follow, and best practices for success in social trading.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. What is Social Trading?',
+                                paragraphs: [
+                                    'Social trading combines trading with social networks, allowing traders to interact and learn from each other.'
+                                ],
+                                list: [
+                                    'Community: Platforms where traders share ideas and strategies',
+                                    'Copy trading: Automatically copy trades from successful traders',
+                                    'Transparency: See history and performance of other traders',
+                                    'Learning: Learn by observing experienced traders',
+                                    'Diversification: Follow multiple traders to diversify'
+                                ]
+                            },
+                            {
+                                title: '2. How Copy Trading Works',
+                                paragraphs: [
+                                    'Copy trading allows you to automatically copy trades from other traders.'
+                                ],
+                                list: [
+                                    'Selection: Choose traders to follow based on their performance',
+                                    'Allocation: Decide how much capital to allocate to each trader',
+                                    'Automatic copy: Trades are automatically copied to your account',
+                                    'Control: You can stop copying at any time',
+                                    'Management: Monitor performance and adjust as needed'
+                                ]
+                            },
+                            {
+                                title: '3. How to Choose Traders to Follow',
+                                paragraphs: [
+                                    'Choosing the right traders is crucial for success in social trading.'
+                                ],
+                                list: [
+                                    'Historical performance: Review long-term performance, not just short-term',
+                                    'Drawdown: Check the trader\'s maximum drawdown',
+                                    'Consistency: Look for traders with consistent performance',
+                                    'Strategy: Understand the trader\'s strategy',
+                                    'Diversification: Follow traders with different strategies'
+                                ]
+                            },
+                            {
+                                title: '4. Advantages of Social Trading',
+                                paragraphs: [
+                                    'Social trading offers multiple advantages for novice and experienced traders.'
+                                ],
+                                list: [
+                                    'Learning: Learn by observing successful traders',
+                                    'Access: Access strategies from professional traders',
+                                    'Time: Save time by copying instead of analyzing',
+                                    'Diversification: Diversify by following multiple traders',
+                                    'Community: Join a community of traders'
+                                ]
+                            },
+                            {
+                                title: '5. Risks and Disadvantages',
+                                paragraphs: [
+                                    'Social trading also has risks you must consider.'
+                                ],
+                                list: [
+                                    'Past performance: Doesn\'t guarantee future performance',
+                                    'Limited control: Less control over individual trades',
+                                    'Costs: May have additional commissions',
+                                    'Dependency: You may become dependent on other traders',
+                                    'Risk: You\'re still responsible for your losses'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusion',
+                            paragraphs: [
+                                'Social trading can be an excellent tool for learning and diversifying your portfolio, but requires careful research and proper risk management.',
+                                'Don\'t use social trading as a complete replacement for your own analysis. Use it as a learning tool and diversification, but always maintain control over your capital and trading decisions.'
+                            ]
+                        }
+                    }
+                },
+                taxes: {
+                    title: 'Taxes and Trading: Guide for Latin American Traders',
+                    description: 'Everything you need to know about taxes in trading: how to declare profits, allowed deductions and tax obligations by country.',
+                    category: 'Regulation',
+                    content: {
+                        introduction: {
+                            title: 'Taxes and Trading',
+                            paragraphs: [
+                                'Taxes on trading profits vary significantly between Latin American countries. Understanding your tax obligations is crucial to avoid legal problems and optimize your tax situation.',
+                                'This guide covers the basics of taxes in trading for Latin American traders, including how to declare profits, allowed deductions, and specific considerations by country.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. General Aspects',
+                                paragraphs: [
+                                    'Although laws vary by country, there are general principles that apply.'
+                                ],
+                                list: [
+                                    'Profits: Trading profits are generally subject to taxes',
+                                    'Losses: Losses may be deductible in some countries',
+                                    'Documentation: Keep detailed records of all trades',
+                                    'Professional advice: Consult with an accountant specialized in trading',
+                                    'Updates: Tax laws change, stay informed'
+                                ]
+                            },
+                            {
+                                title: '2. Trade Records',
+                                paragraphs: [
+                                    'Keeping accurate records is essential for tax declarations.'
+                                ],
+                                list: [
+                                    'Trading journal: Record all trades with dates and amounts',
+                                    'Receipts: Keep receipts of deposits and withdrawals',
+                                    'Account statements: Keep broker account statements',
+                                    'Profits and losses: Calculate net profits/losses per period',
+                                    'Organization: Organize documents by fiscal year'
+                                ]
+                            },
+                            {
+                                title: '3. Considerations by Country',
+                                paragraphs: [
+                                    'Each country has specific regulations on trading taxes.'
+                                ],
+                                list: [
+                                    'Mexico: Trading profits generally considered income',
+                                    'Argentina: May have special treatment for trading',
+                                    'Brazil: Specific regulations on capital gains',
+                                    'Colombia: Tax treatment of financial operations',
+                                    'Chile: Taxes on capital gains',
+                                    'Important: Consult specific laws of your country'
+                                ]
+                            },
+                            {
+                                title: '4. Allowed Deductions',
+                                paragraphs: [
+                                    'Some costs may be deductible from your profits.'
+                                ],
+                                list: [
+                                    'Commissions: Commissions paid to broker may be deductible',
+                                    'Education: Courses and educational materials in some countries',
+                                    'Tools: Software and trading tools',
+                                    'Internet: Connection costs related to trading',
+                                    'Verification: Verify what deductions apply in your country'
+                                ]
+                            },
+                            {
+                                title: '5. Tax Tips',
+                                paragraphs: [
+                                    'Follow these tips to handle your trading taxes effectively.'
+                                ],
+                                list: [
+                                    'Professional advice: Consult with specialized accountant',
+                                    'Planning: Plan your trades considering tax implications',
+                                    'Documentation: Keep all documents organized',
+                                    'Timely declaration: Declare your profits on time',
+                                    'Updates: Stay informed about changes in tax laws'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusion',
+                            paragraphs: [
+                                'Taxes in trading can be complex and vary significantly between countries. It\'s essential to keep accurate records and consult with tax professionals to ensure compliance and optimization.',
+                                'Don\'t ignore your tax obligations. Non-compliance can result in fines and legal problems. Invest time in understanding your obligations and keeping adequate records from the start.'
+                            ]
+                        }
+                    }
+                }
+            },
+            categories: {
+                forex: 'Forex',
+                crypto: 'Crypto',
+                education: 'Education',
+                brokers: 'Brokers',
+                security: 'Security',
+                commodities: 'Commodities',
+                psychology: 'Psychology',
+                analysis: 'Analysis',
+                cfds: 'CFDs',
+                regulation: 'Regulation',
+                platforms: 'Platforms'
+            }
         },
         
         // Guides Section
@@ -2238,6 +4693,8 @@ const languages = {
         
         // Education page
         education: {
+            pageTitle: 'Education and Training in Trading - Complete Guide 2024',
+            pageDescription: 'Learn everything about trading, brokers and investments. Educational guides, courses, strategies and training resources for Latin American traders.',
             hero: {
                 title: 'Education & Training in Trading',
                 subtitle: 'Learn everything you need to know about brokers, investments and trading. Complete guides, courses, strategies and educational resources for traders of all levels.',
@@ -2298,7 +4755,18 @@ const languages = {
                 }
             },
             bestBrokers: {
-                title: 'Best Brokers with Educational Resources'
+                title: 'Best Brokers with Educational Resources',
+                features: {
+                    freeWebinars: 'Free webinars',
+                    educationalCenter: 'Complete educational center',
+                    tutorialVideos: 'Tutorial videos',
+                    tradingAcademy: 'Trading academy',
+                    educationalArticles: 'Educational articles',
+                    freeDemoAccount: 'Free demo account',
+                    igAcademy: 'IG Academy',
+                    certifiedCourses: 'Certified courses',
+                    premiumResources: 'Premium resources'
+                }
             },
             videos: {
                 title: 'Educational Videos',
@@ -2454,6 +4922,60 @@ const languages = {
                 keepLearning: {
                     title: 'Keep Learning',
                     description: 'Markets evolve constantly. Stay updated with the latest trends and techniques.'
+                }
+            },
+            glossary: {
+                title: 'Trading Terms Glossary',
+                subtitle: 'Definitions of the most important terms in the world of trading and investments',
+                terms: {
+                    spread: {
+                        term: 'Spread',
+                        definition: 'The difference between the buy price (bid) and sell price (ask) of a financial instrument. It is the main cost of trading with a broker.'
+                    },
+                    leverage: {
+                        term: 'Leverage',
+                        definition: 'Allows trading with more capital than you have deposited. For example, with 1:100 leverage, you can control $10,000 with just $100 deposit.'
+                    },
+                    stopLoss: {
+                        term: 'Stop Loss',
+                        definition: 'An automatic order that closes a position when the price reaches a predetermined level to limit losses.'
+                    },
+                    takeProfit: {
+                        term: 'Take Profit',
+                        definition: 'An automatic order that closes a position when the price reaches a predetermined profit target level.'
+                    },
+                    cfd: {
+                        term: 'CFD (Contract for Difference)',
+                        definition: 'A financial derivative that allows speculating on the price movement of an asset without actually owning it.'
+                    },
+                    margin: {
+                        term: 'Margin',
+                        definition: 'The capital required to open and maintain a leveraged position. Expressed as a percentage of the total trade value.'
+                    },
+                    liquidity: {
+                        term: 'Liquidity',
+                        definition: 'The ease with which an asset can be bought or sold without significantly affecting its price. Liquid markets have many buyers and sellers.'
+                    },
+                    volatility: {
+                        term: 'Volatility',
+                        definition: 'The measure of price variability of an asset. High volatility means large price fluctuations, while low volatility indicates more stable movements.'
+                    },
+                    technicalAnalysis: {
+                        term: 'Technical Analysis',
+                        definition: 'Analysis method that studies charts and historical price patterns to predict future market movements.'
+                    },
+                    fundamentalAnalysis: {
+                        term: 'Fundamental Analysis',
+                        definition: 'Analysis method that evaluates economic, financial and other qualitative factors to determine the intrinsic value of an asset.'
+                    },
+                    pip: {
+                        term: 'Pip',
+                        definition: 'Unit of measurement for price changes in the Forex market. Generally represents the fourth decimal in most currency pairs (0.0001).'
+                    },
+                    demoAccount: {
+                        term: 'Demo Account',
+                        definition: 'A practice account that allows trading with virtual money to learn and test strategies without real financial risk.'
+                    }
                 }
             },
             faq: {

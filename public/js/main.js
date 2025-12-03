@@ -670,7 +670,7 @@ function populateBrokerDropdowns(brokers) {
                         // Try to load logo and replace icon if successful
                         const logoImg = document.createElement('img');
                         logoImg.src = logoUrl;
-                        logoImg.alt = `${broker.name} logo`;
+                        logoImg.alt = `${broker.name} logo - ${broker.name} broker logo image for trading platform`;
                         logoImg.style.width = '100%';
                         logoImg.style.height = '100%';
                         logoImg.style.objectFit = 'contain';

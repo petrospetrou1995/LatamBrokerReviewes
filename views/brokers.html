@@ -9,8 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/brokers.css" rel="stylesheet">
-</head>
+    </head>
 <body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item">
+                        <span itemprop="name" data-translate="nav.home">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name" data-translate="nav.brokers">Brokers</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -38,6 +56,7 @@
                         <a href="/education-training" class="dropdown-item" data-translate="nav.education">Educación y Capacitación</a>
                     </div>
                 </li>
+                <li><a href="/blog" class="nav-link" data-translate="nav.blog">Blog</a></li>
                 <li><a href="/#reviews" class="nav-link" data-translate="nav.reviews">Reseñas</a></li>
                 <li><a href="/#about" class="nav-link" data-translate="nav.about">Acerca de</a></li>
                 <li><a href="/#contact" class="nav-link" data-translate="nav.contact">Contacto</a></li>

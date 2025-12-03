@@ -21,3 +21,4 @@ If no logo is found:
 - If that fails, it will display a category-based icon
 - Icons are automatically assigned based on broker category (Forex, Crypto, Stocks, etc.)
 
+

@@ -20,7 +20,7 @@
         setupLoadMoreButtons();
         // Add a small delay to ensure server is ready
         setTimeout(() => {
-            loadReviews();
+        loadReviews();
         }, 500);
     }
     
@@ -228,7 +228,7 @@
         }
         
         if (reset) {
-            reviewsContainer.innerHTML = '';
+        reviewsContainer.innerHTML = '';
             displayedCount = 0;
         }
         

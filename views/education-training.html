@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación y Capacitación en Trading - Guía Completa 2024</title>
-    <meta name="description" content="Aprende todo sobre trading, brokers e inversiones. Guías educativas, cursos, estrategias y recursos de capacitación para traders latinoamericanos.">
+    <title data-translate="education.pageTitle">Educación y Capacitación en Trading - Guía Completa 2024</title>
+    <meta name="description" data-translate="education.pageDescription" content="Aprende todo sobre trading, brokers e inversiones. Guías educativas, cursos, estrategias y recursos de capacitación para traders latinoamericanos.">
     <meta name="keywords" content="educación trading, cursos trading, aprender trading, capacitación brokers, estrategias trading">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://latambrokerreviews.com/education-training">
@@ -49,8 +49,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/category-pages.css" rel="stylesheet">
-</head>
+    </head>
 <body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item">
+                        <span itemprop="name" data-translate="nav.home">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name" data-translate="nav.education">Education</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -78,6 +96,7 @@
                         <a href="/education-training" class="dropdown-item active" data-translate="nav.education">Educación y Capacitación</a>
                     </div>
                 </li>
+                <li><a href="/blog" class="nav-link" data-translate="nav.blog">Blog</a></li>
                 <li><a href="/#reviews" class="nav-link" data-translate="nav.reviews">Reseñas</a></li>
                 <li><a href="/#about" class="nav-link" data-translate="nav.about">Acerca de</a></li>
                 <li><a href="/#contact" class="nav-link" data-translate="nav.contact">Contacto</a></li>
@@ -246,15 +265,15 @@
                     <div class="broker-features">
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Webinars gratuitos</span>
+                            <span data-translate="education.bestBrokers.features.freeWebinars">Webinars gratuitos</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Centro educativo completo</span>
+                            <span data-translate="education.bestBrokers.features.educationalCenter">Centro educativo completo</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Videos tutoriales</span>
+                            <span data-translate="education.bestBrokers.features.tutorialVideos">Videos tutoriales</span>
                         </div>
                     </div>
                     <a href="/broker/xm-group" class="btn btn-primary" data-translate="brokers.visitSite">Visitar Broker</a>
@@ -270,15 +289,15 @@
                     <div class="broker-features">
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Academia de trading</span>
+                            <span data-translate="education.bestBrokers.features.tradingAcademy">Academia de trading</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Artículos educativos</span>
+                            <span data-translate="education.bestBrokers.features.educationalArticles">Artículos educativos</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Cuenta demo gratuita</span>
+                            <span data-translate="education.bestBrokers.features.freeDemoAccount">Cuenta demo gratuita</span>
                         </div>
                     </div>
                     <a href="/broker/libertex" class="btn btn-primary" data-translate="brokers.visitSite">Visitar Broker</a>
@@ -294,15 +313,15 @@
                     <div class="broker-features">
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>IG Academy</span>
+                            <span data-translate="education.bestBrokers.features.igAcademy">IG Academy</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Cursos certificados</span>
+                            <span data-translate="education.bestBrokers.features.certifiedCourses">Cursos certificados</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check"></i>
-                            <span>Recursos premium</span>
+                            <span data-translate="education.bestBrokers.features.premiumResources">Recursos premium</span>
                         </div>
                     </div>
                     <a href="/broker/ig-markets" class="btn btn-primary" data-translate="brokers.visitSite">Visitar Broker</a>
@@ -374,52 +393,52 @@
             <p class="section-subtitle" data-translate="education.glossary.subtitle">Definiciones de los términos más importantes en el mundo del trading e inversiones</p>
             <div class="glossary-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px;">
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Spread</h3>
-                    <p style="color: #666; line-height: 1.6;">La diferencia entre el precio de compra (bid) y el precio de venta (ask) de un instrumento financiero. Es el costo principal de operar con un broker.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.spread.term">Spread</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.spread.definition">La diferencia entre el precio de compra (bid) y el precio de venta (ask) de un instrumento financiero. Es el costo principal de operar con un broker.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Apalancamiento (Leverage)</h3>
-                    <p style="color: #666; line-height: 1.6;">Permite operar con más capital del que tienes depositado. Por ejemplo, con apalancamiento 1:100, puedes controlar $10,000 con solo $100 de depósito.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.leverage.term">Apalancamiento (Leverage)</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.leverage.definition">Permite operar con más capital del que tienes depositado. Por ejemplo, con apalancamiento 1:100, puedes controlar $10,000 con solo $100 de depósito.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Stop Loss</h3>
-                    <p style="color: #666; line-height: 1.6;">Una orden automática que cierra una posición cuando el precio alcanza un nivel predeterminado para limitar pérdidas.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.stopLoss.term">Stop Loss</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.stopLoss.definition">Una orden automática que cierra una posición cuando el precio alcanza un nivel predeterminado para limitar pérdidas.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Take Profit</h3>
-                    <p style="color: #666; line-height: 1.6;">Una orden automática que cierra una posición cuando el precio alcanza un nivel de ganancia objetivo predeterminado.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.takeProfit.term">Take Profit</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.takeProfit.definition">Una orden automática que cierra una posición cuando el precio alcanza un nivel de ganancia objetivo predeterminado.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">CFD (Contrato por Diferencia)</h3>
-                    <p style="color: #666; line-height: 1.6;">Un derivado financiero que permite especular sobre el movimiento de precios de un activo sin poseerlo realmente.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.cfd.term">CFD (Contrato por Diferencia)</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.cfd.definition">Un derivado financiero que permite especular sobre el movimiento de precios de un activo sin poseerlo realmente.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Margen (Margin)</h3>
-                    <p style="color: #666; line-height: 1.6;">El capital requerido para abrir y mantener una posición apalancada. Se expresa como un porcentaje del valor total de la operación.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.margin.term">Margen (Margin)</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.margin.definition">El capital requerido para abrir y mantener una posición apalancada. Se expresa como un porcentaje del valor total de la operación.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Liquidez</h3>
-                    <p style="color: #666; line-height: 1.6;">La facilidad con la que un activo puede comprarse o venderse sin afectar significativamente su precio. Los mercados líquidos tienen muchos compradores y vendedores.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.liquidity.term">Liquidez</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.liquidity.definition">La facilidad con la que un activo puede comprarse o venderse sin afectar significativamente su precio. Los mercados líquidos tienen muchos compradores y vendedores.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Volatilidad</h3>
-                    <p style="color: #666; line-height: 1.6;">La medida de la variabilidad de los precios de un activo. Alta volatilidad significa grandes fluctuaciones de precio, mientras que baja volatilidad indica movimientos más estables.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.volatility.term">Volatilidad</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.volatility.definition">La medida de la variabilidad de los precios de un activo. Alta volatilidad significa grandes fluctuaciones de precio, mientras que baja volatilidad indica movimientos más estables.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Análisis Técnico</h3>
-                    <p style="color: #666; line-height: 1.6;">Método de análisis que estudia gráficos y patrones de precios históricos para predecir movimientos futuros del mercado.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.technicalAnalysis.term">Análisis Técnico</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.technicalAnalysis.definition">Método de análisis que estudia gráficos y patrones de precios históricos para predecir movimientos futuros del mercado.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Análisis Fundamental</h3>
-                    <p style="color: #666; line-height: 1.6;">Método de análisis que evalúa factores económicos, financieros y otros factores cualitativos para determinar el valor intrínseco de un activo.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.fundamentalAnalysis.term">Análisis Fundamental</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.fundamentalAnalysis.definition">Método de análisis que evalúa factores económicos, financieros y otros factores cualitativos para determinar el valor intrínseco de un activo.</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Pip</h3>
-                    <p style="color: #666; line-height: 1.6;">Unidad de medida del cambio de precio en el mercado Forex. Generalmente representa el cuarto decimal en la mayoría de pares de divisas (0.0001).</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.pip.term">Pip</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.pip.definition">Unidad de medida del cambio de precio en el mercado Forex. Generalmente representa el cuarto decimal en la mayoría de pares de divisas (0.0001).</p>
                 </div>
                 <div class="glossary-item" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #007bff; margin-bottom: 10px;">Cuenta Demo</h3>
-                    <p style="color: #666; line-height: 1.6;">Una cuenta de práctica que permite operar con dinero virtual para aprender y probar estrategias sin riesgo financiero real.</p>
+                    <h3 style="color: #007bff; margin-bottom: 10px;" data-translate="education.glossary.terms.demoAccount.term">Cuenta Demo</h3>
+                    <p style="color: #666; line-height: 1.6;" data-translate="education.glossary.terms.demoAccount.definition">Una cuenta de práctica que permite operar con dinero virtual para aprender y probar estrategias sin riesgo financiero real.</p>
                 </div>
             </div>
         </div>

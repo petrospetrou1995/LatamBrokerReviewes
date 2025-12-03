@@ -49,8 +49,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/category-pages.css" rel="stylesheet">
-</head>
+    </head>
 <body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item">
+                        <span itemprop="name" data-translate="nav.home">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name" data-translate="nav.forex">Forex</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -78,6 +96,7 @@
                         <a href="/education-training" class="dropdown-item" data-translate="nav.education">Educación y Capacitación</a>
                     </div>
                 </li>
+                <li><a href="/blog" class="nav-link" data-translate="nav.blog">Blog</a></li>
                 <li><a href="/#reviews" class="nav-link" data-translate="nav.reviews">Reseñas</a></li>
                 <li><a href="/#about" class="nav-link" data-translate="nav.about">Acerca de</a></li>
                 <li><a href="/#contact" class="nav-link" data-translate="nav.contact">Contacto</a></li>
@@ -469,6 +488,35 @@
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p itemprop="text" data-translate="forex.faq.q4.answer">El apalancamiento permite operar con más capital del que tienes depositado. Por ejemplo, con apalancamiento 1:100, puedes controlar $10,000 con solo $100. Aunque aumenta las ganancias potenciales, también aumenta el riesgo. Usa el apalancamiento con precaución y nunca más del necesario.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Content Section -->
+    <section class="content-section" style="padding: 60px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; color: #333;">Contenido Relacionado</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h3 style="margin-bottom: 15px; color: #333;"><i class="fas fa-list"></i> Ver Todos los Brokers</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Explora nuestra lista completa de brokers de Forex revisados y comparados para traders latinoamericanos.</p>
+                    <a href="/brokers" class="btn btn-primary">Ver Brokers</a>
+                </div>
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h3 style="margin-bottom: 15px; color: #333;"><i class="fas fa-balance-scale"></i> Comparar Brokers</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Compara spreads, comisiones y características de los mejores brokers de Forex en una tabla detallada.</p>
+                    <a href="/broker-comparison" class="btn btn-primary">Comparar Ahora</a>
+                </div>
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h3 style="margin-bottom: 15px; color: #333;"><i class="fas fa-graduation-cap"></i> Educación y Capacitación</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Aprende los fundamentos del trading de Forex con nuestras guías completas, tutoriales y recursos educativos.</p>
+                    <a href="/education-training" class="btn btn-primary">Aprender Más</a>
+                </div>
+                <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h3 style="margin-bottom: 15px; color: #333;"><i class="fas fa-newspaper"></i> Blog de Trading</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Lee artículos sobre estrategias de Forex, análisis de mercado y consejos para traders principiantes y avanzados.</p>
+                    <a href="/blog" class="btn btn-primary">Leer Blog</a>
                 </div>
             </div>
         </div>
