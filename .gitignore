@@ -35,6 +35,10 @@ Thumbs.db
 dist/
 build/
 
+# Server files (removed - static site only)
+server.js.backup
+routes/
+
 # Database
 *.db
 *.sqlite
