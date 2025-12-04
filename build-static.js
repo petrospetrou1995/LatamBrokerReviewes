@@ -48,10 +48,16 @@ async function buildStatic() {
     const source = path.join(VIEWS_DIR, file);
     let content = fs.readFileSync(source, 'utf8');
     
-    // Update script paths for static deployment (if not already absolute)
+    // Update script paths for static deployment
+    // Replace /js/ with /public/js/ for JavaScript files
     content = content.replace(/src="\/js\//g, 'src="/public/js/');
+    // Replace /css/ with /public/css/ for CSS files
     content = content.replace(/href="\/css\//g, 'href="/public/css/');
+    // Replace /images/ with /public/images/ for image files
     content = content.replace(/href="\/images\//g, 'href="/public/images/');
+    // Also handle src="/public/js/..." if already converted (ensure no double conversion)
+    content = content.replace(/src="\/public\/public\//g, 'src="/public/');
+    content = content.replace(/href="\/public\/public\//g, 'href="/public/');
     
     // Fix broker detail page links to use .html extension
     content = content.replace(/href="\/broker\/([^"]+)"/g, 'href="/broker/$1.html"');
