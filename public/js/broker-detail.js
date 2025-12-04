@@ -468,6 +468,7 @@
             
             const newReviews = data?.reviews || [];
             console.log('📊 Final reviews count:', newReviews.length);
+            console.log('📊 Sample review:', newReviews[0]);
             
             if (reset) {
                 currentReviews = newReviews;
@@ -475,8 +476,11 @@
                 currentReviews = currentReviews.concat(newReviews);
             }
             
+            console.log('📊 currentReviews after assignment:', currentReviews.length);
+            console.log('📊 About to call displayBrokerReviews with reset:', reset);
+            
             displayBrokerReviews(reset);
-            updateLoadMoreButton(data.totalPages || 1);
+            updateLoadMoreButton(data?.totalPages || 1);
         } catch (error) {
             console.error('Error loading reviews:', error);
             showError('Error loading reviews');
@@ -496,9 +500,15 @@
     // Display broker reviews
     function displayBrokerReviews(reset = true) {
         const reviewsContainer = document.getElementById('brokerReviewsGrid');
-        if (!reviewsContainer) return;
+        if (!reviewsContainer) {
+            console.error('❌ brokerReviewsGrid container not found!');
+            return;
+        }
+        
+        console.log('📊 displayBrokerReviews called. currentReviews.length:', currentReviews.length, 'reset:', reset);
         
         if (!currentReviews.length) {
+            console.warn('⚠️ No reviews to display. currentReviews is empty.');
             if (reset) {
                 // Get translated "no reviews" message
                 const currentLang = localStorage.getItem('language') || 'en';
