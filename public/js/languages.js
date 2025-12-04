@@ -168,6 +168,8 @@ const languages = {
             helpful: 'Útil',
             notHelpful: 'No útil',
             verified: 'Verificado',
+            pros: 'Pros:',
+            cons: 'Contras:',
             // Additional review translations
             readMore: 'Leer más',
             showLess: 'Mostrar menos',
@@ -3449,6 +3451,8 @@ const languages = {
             helpful: 'Helpful',
             notHelpful: 'Not Helpful',
             verified: 'Verified',
+            pros: 'Pros:',
+            cons: 'Cons:',
             // Additional review translations
             readMore: 'Read more',
             showLess: 'Show less',

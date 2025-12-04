@@ -356,7 +356,32 @@
             }
         });
         
+        // Apply translations to newly added review elements
+        if (typeof window.applyTranslations === 'function') {
+            window.applyTranslations(currentLanguage);
+        }
+        
         console.log(`Now displayed ${displayedCount} reviews total.`);
+    }
+    
+    // Helper function to get translation
+    function getReviewTranslation(key) {
+        if (typeof languages !== 'undefined' && languages[currentLanguage] && languages[currentLanguage].reviews) {
+            return key.split('.').reduce((obj, k) => obj && obj[k], languages[currentLanguage].reviews) || key;
+        }
+        return key;
+    }
+    
+    // Format date according to language
+    function formatReviewDate(dateString) {
+        const date = new Date(dateString);
+        const langCode = currentLanguage === 'es' ? 'es-ES' : 'en-US';
+        const options = { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric'
+        };
+        return date.toLocaleDateString(langCode, options);
     }
     
     // Create a review element
@@ -395,36 +420,43 @@
                 <h3 class="review-title">${title}</h3>
                 <p class="review-text">${content}</p>
                 
-                <div class="review-details">
-                    <div class="review-pros">
-                        <h4>${currentLanguage === 'es' ? 'Pros:' : 'Pros:'}</h4>
-                        <ul>
-                            ${pros.map(pro => `<li>${pro}</li>`).join('')}
-                        </ul>
+                ${pros && pros.length > 0 ? `
+                    <div class="review-details">
+                        <div class="review-pros">
+                            <h4 data-translate="reviews.pros">${getReviewTranslation('pros')}</h4>
+                            <ul>
+                                ${pros.map(pro => `<li>${pro}</li>`).join('')}
+                            </ul>
+                        </div>
+                ` : ''}
+                
+                ${cons && cons.length > 0 ? `
+                        <div class="review-cons">
+                            <h4 data-translate="reviews.cons">${getReviewTranslation('cons')}</h4>
+                            <ul>
+                                ${cons.map(con => `<li>${con}</li>`).join('')}
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="review-cons">
-                        <h4>${currentLanguage === 'es' ? 'Contras:' : 'Cons:'}</h4>
-                        <ul>
-                            ${cons.map(con => `<li>${con}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
+                ` : (pros && pros.length > 0 ? '</div>' : '')}
                 
                 <div class="review-meta">
-                    <span class="experience">${getExperienceText(review.experience)}</span>
-                    <span class="duration">${getDurationText(review.tradingDuration)}</span>
-                    ${review.verified ? '<span class="verified"><i class="fas fa-check-circle"></i> Verified</span>' : ''}
+                    <span class="review-date">${formatReviewDate(review.createdAt || review.date)}</span>
+                    ${review.experience ? `<span class="experience" data-translate="reviews.experience.${review.experience}">${getExperienceText(review.experience)}</span>` : ''}
+                    ${review.tradingDuration ? `<span class="duration" data-translate="reviews.duration.${review.tradingDuration}">${getDurationText(review.tradingDuration)}</span>` : ''}
+                    ${review.verified ? `<span class="verified" data-translate="reviews.verified"><i class="fas fa-check-circle"></i> ${getReviewTranslation('verified')}</span>` : ''}
                 </div>
                 
                 <div class="review-actions">
-                    <button class="helpful-btn" data-review-id="${review._id}" data-action="helpful">
+                    <button class="helpful-btn" data-review-id="${review._id || review.id}" data-action="helpful" aria-label="${getReviewTranslation('helpful')}">
                         <i class="fas fa-thumbs-up"></i>
-                        ${review.helpful || 0} ${currentLanguage === 'es' ? 'Útil' : 'Helpful'}
+                        <span class="helpful-count">${review.helpful || 0}</span>
+                        <span class="helpful-text" data-translate="reviews.helpful">${getReviewTranslation('helpful')}</span>
                     </button>
-                    <button class="not-helpful-btn" data-review-id="${review._id}" data-action="not-helpful">
+                    <button class="not-helpful-btn" data-review-id="${review._id || review.id}" data-action="not-helpful" aria-label="${getReviewTranslation('notHelpful')}">
                         <i class="fas fa-thumbs-down"></i>
-                        ${review.notHelpful || 0} ${currentLanguage === 'es' ? 'No útil' : 'Not helpful'}
+                        <span class="not-helpful-count">${review.notHelpful || 0}</span>
+                        <span class="not-helpful-text" data-translate="reviews.notHelpful">${getReviewTranslation('notHelpful')}</span>
                     </button>
                 </div>
             </div>
@@ -448,23 +480,14 @@
     
     // Get experience text in current language
     function getExperienceText(experience) {
-        const translations = {
-            'beginner': currentLanguage === 'es' ? 'Principiante' : 'Beginner',
-            'intermediate': currentLanguage === 'es' ? 'Intermedio' : 'Intermediate',
-            'advanced': currentLanguage === 'es' ? 'Avanzado' : 'Advanced'
-        };
-        return translations[experience] || experience;
+        if (!experience) return '';
+        return getReviewTranslation(`experience.${experience}`) || experience;
     }
     
     // Get duration text in current language
     function getDurationText(duration) {
-        const translations = {
-            'less-than-1-year': currentLanguage === 'es' ? 'Menos de 1 año' : 'Less than 1 year',
-            '1-3-years': currentLanguage === 'es' ? '1-3 años' : '1-3 years',
-            '3-5-years': currentLanguage === 'es' ? '3-5 años' : '3-5 years',
-            'more-than-5-years': currentLanguage === 'es' ? 'Más de 5 años' : 'More than 5 years'
-        };
-        return translations[duration] || duration;
+        if (!duration) return '';
+        return getReviewTranslation(`duration.${duration}`) || duration;
     }
     
     // Toggle helpful rating
@@ -546,6 +569,13 @@
     
     // Expose loadMoreReviews globally for direct access
     window.loadMoreReviews = loadMoreReviews;
+    
+    // Listen for language changes
+    window.addEventListener('languageChanged', function(event) {
+        const newLang = event.detail?.language || localStorage.getItem('language') || 'en';
+        console.log('Language changed in reviews.js, updating to:', newLang);
+        updateLanguage(newLang);
+    });
     
     // Initialize when DOM is ready
     if (document.readyState === 'loading') {

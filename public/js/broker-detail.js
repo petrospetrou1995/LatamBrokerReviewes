@@ -532,9 +532,33 @@
         // Display ALL reviews (no pagination - show all reviews matching statistics)
         const reviewsToDisplay = currentReviews;
         
+        // Get current language for date formatting and translations
+        const currentLang = localStorage.getItem('language') || 'en';
+        const langCode = currentLang === 'es' ? 'es' : 'en';
+        
+        // Helper function to get translation
+        function getReviewTranslation(key) {
+            if (typeof languages !== 'undefined' && languages[currentLang] && languages[currentLang].reviews) {
+                return key.split('.').reduce((obj, k) => obj && obj[k], languages[currentLang].reviews) || key;
+            }
+            return key;
+        }
+        
+        // Format date according to language
+        function formatReviewDate(dateString) {
+            const date = new Date(dateString);
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                locale: langCode === 'es' ? 'es-ES' : 'en-US'
+            };
+            return date.toLocaleDateString(langCode === 'es' ? 'es-ES' : 'en-US', options);
+        }
+        
         reviewsToDisplay.forEach(review => {
             const reviewHTML = `
-                <div class="review-card">
+                <div class="review-card" data-review-id="${review._id || review.id}">
                     <div class="review-header">
                         <div class="review-user">
                             <div class="user-avatar">
@@ -553,17 +577,38 @@
                     <div class="review-content">
                         <h3>${review.title}</h3>
                         <p>${review.content}</p>
+                        ${review.pros && Array.isArray(review.pros) && review.pros.length > 0 ? `
+                            <div class="review-pros">
+                                <h4 data-translate="reviews.pros">${getReviewTranslation('pros')}</h4>
+                                <ul>
+                                    ${review.pros.map(pro => `<li>${pro}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        ${review.cons && Array.isArray(review.cons) && review.cons.length > 0 ? `
+                            <div class="review-cons">
+                                <h4 data-translate="reviews.cons">${getReviewTranslation('cons')}</h4>
+                                <ul>
+                                    ${review.cons.map(con => `<li>${con}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
                     </div>
                     <div class="review-meta">
-                        <span class="review-date">${new Date(review.createdAt).toLocaleDateString()}</span>
+                        <span class="review-date">${formatReviewDate(review.createdAt || review.date)}</span>
+                        ${review.verified ? `<span class="verified-badge" data-translate="reviews.verified"><i class="fas fa-check-circle"></i> ${getReviewTranslation('verified')}</span>` : ''}
+                        ${review.experience ? `<span class="review-experience" data-translate="reviews.experience.${review.experience}">${getReviewTranslation(`experience.${review.experience}`)}</span>` : ''}
+                        ${review.tradingDuration ? `<span class="review-duration" data-translate="reviews.duration.${review.tradingDuration}">${getReviewTranslation(`duration.${review.tradingDuration}`)}</span>` : ''}
                         <div class="review-helpful">
-                            <button class="helpful-btn" data-review-id="${review._id}" data-action="helpful">
+                            <button class="helpful-btn" data-review-id="${review._id || review.id}" data-action="helpful" aria-label="${getReviewTranslation('helpful')}">
                                 <i class="fas fa-thumbs-up"></i>
-                                <span>${review.helpful || 0}</span>
+                                <span class="helpful-count">${review.helpful || 0}</span>
+                                <span class="helpful-text" data-translate="reviews.helpful">${getReviewTranslation('helpful')}</span>
                             </button>
-                            <button class="not-helpful-btn" data-review-id="${review._id}" data-action="not-helpful">
+                            <button class="not-helpful-btn" data-review-id="${review._id || review.id}" data-action="not-helpful" aria-label="${getReviewTranslation('notHelpful')}">
                                 <i class="fas fa-thumbs-down"></i>
-                                <span>${review.notHelpful || 0}</span>
+                                <span class="not-helpful-count">${review.notHelpful || 0}</span>
+                                <span class="not-helpful-text" data-translate="reviews.notHelpful">${getReviewTranslation('notHelpful')}</span>
                             </button>
                         </div>
                     </div>
@@ -571,6 +616,11 @@
             `;
             reviewsContainer.insertAdjacentHTML('beforeend', reviewHTML);
         });
+        
+        // Apply translations to newly added review elements
+        if (typeof window.applyTranslations === 'function') {
+            window.applyTranslations(currentLang);
+        }
 
         // Add event listeners for helpful buttons
         setupReviewEventListeners();
