@@ -6,6 +6,18 @@
     margin-bottom: 40px;
 }
 
+.broker-header-section .reviews-grid {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.broker-header-section h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
 .broker-header-content {
     display: flex;
     align-items: center;
