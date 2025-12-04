@@ -473,9 +473,8 @@
             reviewsContainer.innerHTML = '';
         }
         
-        // Calculate which reviews to display
-        const alreadyDisplayed = reset ? 0 : reviewsContainer.children.length;
-        const reviewsToDisplay = currentReviews.slice(alreadyDisplayed);
+        // Display ALL reviews (no pagination - show all reviews matching statistics)
+        const reviewsToDisplay = currentReviews;
         
         reviewsToDisplay.forEach(review => {
             const reviewHTML = `
