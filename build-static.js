@@ -73,6 +73,25 @@ async function buildStatic() {
       );
     }
     
+    // Add FAQ chatbot to all pages (except admin/login)
+    if (file !== 'admin.html' && file !== 'login.html') {
+      // Add chatbot CSS before </head> or before </body>
+      if (content.includes('</head>') && !content.includes('faq-bot.css')) {
+        content = content.replace('</head>', '    <link rel="stylesheet" href="/public/css/faq-bot.css">\n</head>');
+      } else if (content.includes('</body>') && !content.includes('faq-bot.css')) {
+        // If no </head>, add before </body>
+        const bodyMatch = content.match(/(<\/body>)/);
+        if (bodyMatch) {
+          content = content.replace('</body>', '    <link rel="stylesheet" href="/public/css/faq-bot.css">\n</body>');
+        }
+      }
+      
+      // Add chatbot JS before </body>
+      if (content.includes('</body>') && !content.includes('faq-bot.js')) {
+        content = content.replace('</body>', '    <script src="/public/js/faq-bot.js"></script>\n</body>');
+      }
+    }
+    
     const dest = path.join(OUTPUT_DIR, file);
     fs.writeFileSync(dest, content);
     console.log(`  ✓ ${file}`);
