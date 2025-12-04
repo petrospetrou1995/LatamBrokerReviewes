@@ -458,7 +458,17 @@
         
         if (!currentReviews.length) {
             if (reset) {
-                reviewsContainer.innerHTML = '<p class="no-reviews">No hay reseñas disponibles para este broker.</p>';
+                // Get translated "no reviews" message
+                const currentLang = localStorage.getItem('language') || 'en';
+                let noReviewsMessage = 'No reviews available for this broker.';
+                if (typeof languages !== 'undefined' && languages[currentLang] && languages[currentLang].reviews && languages[currentLang].reviews.noReviews) {
+                    noReviewsMessage = languages[currentLang].reviews.noReviews;
+                }
+                reviewsContainer.innerHTML = `<p class="no-reviews" data-translate="reviews.noReviews">${noReviewsMessage}</p>`;
+                // Apply translations to ensure it's translated
+                if (typeof window.applyTranslations === 'function') {
+                    window.applyTranslations(currentLang);
+                }
             }
             return;
         }
