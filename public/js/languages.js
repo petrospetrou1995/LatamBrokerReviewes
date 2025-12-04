@@ -2486,12 +2486,12 @@ const languages = {
                 answer: 'Los brokers generalmente permiten retiros usando los mismos métodos de depósito. Procesos comunes incluyen transferencias bancarias, tarjetas, y métodos de pago electrónicos. Los tiempos de procesamiento varían (1-5 días hábiles típicamente). Verifica las políticas de retiro y posibles comisiones antes de depositar.'
             },
             faqBot: {
-                title: 'Preguntas Frecuentes',
+                title: 'BrokerAssistBot',
                 welcome: '¡Bienvenido! Estoy aquí para ayudarte con tus preguntas sobre brokers y trading en Latinoamérica.',
                 welcomeAfterLang: '¡Perfecto! Ahora puedes seleccionar una pregunta para ver la respuesta:',
                 selectLanguage: 'Por favor, selecciona tu idioma preferido para las respuestas:',
                 languageSelected: 'Idioma configurado. Selecciona una pregunta:',
-                selectQuestion: 'Selecciona una pregunta:',
+                selectQuestion: 'Bienvenido al mejor asistente de IA, soy BrokerAssistBot. Por favor, elige una pregunta de la siguiente lista. Gracias por visitar nuestro sitio web.',
                 backToQuestions: 'Volver a las preguntas',
                 selectAnother: 'Seleccionar otra pregunta'
             }
@@ -4905,12 +4905,12 @@ const languages = {
                 answer: 'Brokers generally allow withdrawals using the same deposit methods. Common processes include bank transfers, cards, and electronic payment methods. Processing times vary (typically 1-5 business days). Check withdrawal policies and possible fees before depositing.'
             },
             faqBot: {
-                title: 'Frequently Asked Questions',
+                title: 'BrokerAssistBot',
                 welcome: 'Welcome! I\'m here to help you with questions about brokers and trading in Latin America.',
                 welcomeAfterLang: 'Perfect! Now you can select a question to see the answer:',
                 selectLanguage: 'Please select your preferred language for the replies:',
                 languageSelected: 'Language set. Select a question:',
-                selectQuestion: 'Select a question:',
+                selectQuestion: 'Welcome to the best AI assistant, I am BrokerAssistBot. Please choose a question from the following list. Thank you for visiting our website.',
                 backToQuestions: 'Back to questions',
                 selectAnother: 'Select another question'
             }

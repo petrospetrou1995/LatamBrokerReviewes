@@ -250,7 +250,7 @@
                     <i class="fas fa-robot"></i>
                 </div>
                 <div class="message-content">
-                    <p style="margin-bottom: 10px; font-weight: 600;">${selectQuestionText}</p>
+                    <p style="margin-bottom: 15px; line-height: 1.6; font-size: 0.95rem;">${selectQuestionText}</p>
                 </div>
             </div>
         `;
