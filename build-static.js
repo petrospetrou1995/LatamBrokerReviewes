@@ -1,11 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const mongoose = require('mongoose');
-require('dotenv').config();
-
-// Import models
-const Broker = require('./models/Broker');
-const Review = require('./models/Review');
 
 // Configuration
 const OUTPUT_DIR = path.join(__dirname, 'dist');
@@ -14,18 +8,6 @@ const VIEWS_DIR = path.join(__dirname, 'views');
 
 async function buildStatic() {
   console.log('🚀 Starting static site build...\n');
-
-  // Connect to database
-  try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/latam-broker-reviews', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log('✅ Connected to database');
-  } catch (error) {
-    console.error('❌ Database connection failed:', error.message);
-    console.log('⚠️  Continuing with static pages only (no broker data)...\n');
-  }
 
   // Create output directory
   if (fs.existsSync(OUTPUT_DIR)) {
@@ -84,58 +66,47 @@ async function buildStatic() {
   });
   console.log(`✅ Copied ${htmlFiles.length} HTML files\n`);
 
-  // Generate broker data JSON
-  if (mongoose.connection.readyState === 1) {
-    console.log('📊 Generating broker data...');
+  // Load broker data from static JSON file
+  console.log('📊 Loading broker data...');
+  const brokersJsonPath = path.join(__dirname, 'public', 'data', 'brokers.json');
+  let brokers = [];
+  
+  if (fs.existsSync(brokersJsonPath)) {
     try {
-      const brokers = await Broker.find({ isActive: true }).lean();
-      const brokersData = {
-        brokers: brokers,
-        generatedAt: new Date().toISOString()
-      };
+      const brokersData = JSON.parse(fs.readFileSync(brokersJsonPath, 'utf8'));
+      brokers = brokersData.brokers || [];
+      console.log(`✅ Loaded ${brokers.length} brokers from static file\n`);
       
-      const brokersJsonPath = path.join(OUTPUT_DIR, 'public', 'data', 'brokers.json');
-      fs.mkdirSync(path.dirname(brokersJsonPath), { recursive: true });
-      fs.writeFileSync(brokersJsonPath, JSON.stringify(brokersData, null, 2));
-      console.log(`✅ Generated brokers.json (${brokers.length} brokers)\n`);
-
-      // Generate reviews data
-      console.log('📝 Generating reviews data...');
-      const reviews = await Review.find({ isApproved: true }).populate('broker', 'name slug').lean();
-      const reviewsData = {
-        reviews: reviews,
-        generatedAt: new Date().toISOString()
-      };
-      
-      const reviewsJsonPath = path.join(OUTPUT_DIR, 'public', 'data', 'reviews.json');
-      fs.mkdirSync(path.dirname(reviewsJsonPath), { recursive: true });
-      fs.writeFileSync(reviewsJsonPath, JSON.stringify(reviewsData, null, 2));
-      console.log(`✅ Generated reviews.json (${reviews.length} reviews)\n`);
-
-      // Generate static sitemap.xml
-      console.log('🗺️  Generating sitemap.xml...');
-      generateSitemap(brokers);
-      console.log('✅ Generated sitemap.xml\n');
-
-      // Generate broker detail pages
-      console.log('📄 Generating broker detail pages...');
-      await generateBrokerPages(brokers);
-      console.log(`✅ Generated ${brokers.length} broker detail pages\n`);
-
+      // Copy brokers.json to dist
+      const distBrokersJsonPath = path.join(OUTPUT_DIR, 'public', 'data', 'brokers.json');
+      fs.mkdirSync(path.dirname(distBrokersJsonPath), { recursive: true });
+      fs.writeFileSync(distBrokersJsonPath, JSON.stringify(brokersData, null, 2));
+      console.log('✅ Copied brokers.json to dist\n');
     } catch (error) {
-      console.error('❌ Error generating data:', error.message);
+      console.error('❌ Error loading brokers.json:', error.message);
+      brokers = [];
     }
   } else {
-    console.log('⚠️  Skipping data generation (no database connection)\n');
-    
-    // Create empty data files
-    fs.mkdirSync(path.join(OUTPUT_DIR, 'public', 'data'), { recursive: true });
-    fs.writeFileSync(path.join(OUTPUT_DIR, 'public', 'data', 'brokers.json'), JSON.stringify({ brokers: [], generatedAt: new Date().toISOString() }));
-    fs.writeFileSync(path.join(OUTPUT_DIR, 'public', 'data', 'reviews.json'), JSON.stringify({ reviews: [], generatedAt: new Date().toISOString() }));
-    
-    // Generate static sitemap without broker pages
-    generateSitemap([]);
+    console.log('⚠️  brokers.json not found, creating empty file\n');
+    brokers = [];
   }
+  
+  // Create empty reviews.json (reviews are loaded from languages.js)
+  console.log('📝 Creating reviews.json...');
+  const reviewsJsonPath = path.join(OUTPUT_DIR, 'public', 'data', 'reviews.json');
+  fs.mkdirSync(path.dirname(reviewsJsonPath), { recursive: true });
+  fs.writeFileSync(reviewsJsonPath, JSON.stringify({ reviews: [], generatedAt: new Date().toISOString() }));
+  console.log('✅ Created reviews.json (reviews loaded from languages.js)\n');
+
+  // Generate static sitemap.xml
+  console.log('🗺️  Generating sitemap.xml...');
+  generateSitemap(brokers);
+  console.log('✅ Generated sitemap.xml\n');
+
+  // Generate broker detail pages
+  console.log('📄 Generating broker detail pages...');
+  generateBrokerPages(brokers);
+  console.log(`✅ Generated ${brokers.length} broker detail pages\n`);
 
   // Generate blog post pages (always, regardless of database connection)
   console.log('📝 Generating blog post pages...');
@@ -178,13 +149,9 @@ RewriteRule . /index.html [L]
   console.log(`📦 Output directory: ${OUTPUT_DIR}`);
   console.log('\n📋 Next steps:');
   console.log('   1. Deploy the "dist" folder to your static hosting');
-  console.log('   2. Update API calls in JavaScript to use /public/data/brokers.json');
-  console.log('   3. Test the site locally by serving the dist folder\n');
-
-  // Close database connection
-  if (mongoose.connection.readyState === 1) {
-    await mongoose.connection.close();
-  }
+  console.log('   2. Brokers loaded from /public/data/brokers.json');
+  console.log('   3. Reviews loaded from languages.js');
+  console.log('   4. Test the site locally by serving the dist folder\n');
 }
 
 function copyDirectory(src, dest) {
@@ -280,16 +247,10 @@ function generateSitemap(brokers) {
   fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemap);
 }
 
-async function generateBrokerPages(brokers) {
+function generateBrokerPages(brokers) {
   const brokerDetailTemplate = fs.readFileSync(path.join(VIEWS_DIR, 'broker-detail.html'), 'utf8');
   
   for (const broker of brokers) {
-    // Get reviews for this broker
-    const reviews = await Review.find({ 
-      broker: broker._id, 
-      isApproved: true 
-    }).sort({ createdAt: -1 }).limit(10).lean();
-    
     // Create broker directory
     const brokerDir = path.join(OUTPUT_DIR, 'broker');
     if (!fs.existsSync(brokerDir)) {
@@ -297,7 +258,7 @@ async function generateBrokerPages(brokers) {
     }
     
     // For static site, we'll use the same template
-    // The JavaScript will load broker data from JSON
+    // The JavaScript will load broker data from JSON and reviews from languages.js
     fs.writeFileSync(path.join(brokerDir, `${broker.slug}.html`), brokerDetailTemplate);
   }
 }

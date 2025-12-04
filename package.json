@@ -8,10 +8,7 @@
     "build:static": "node build-static.js",
     "serve:static": "npx serve dist -p 3000"
   },
-  "dependencies": {
-    "mongoose": "^7.5.0",
-    "dotenv": "^16.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "keywords": ["broker", "reviews", "latin-america", "trading", "libertex", "static-site"],
   "author": "LatamBrokerReviews",
