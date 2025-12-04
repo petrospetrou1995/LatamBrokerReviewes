@@ -316,6 +316,23 @@
     transform: translateY(0);
 }
 
+.btn-select-another {
+    margin-top: 15px;
+}
+
+.btn-select-another:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-select-another:active {
+    transform: translateY(0);
+}
+
+.btn-select-another i {
+    margin-right: 8px;
+}
+
 .chatbot-send {
     width: 44px;
     height: 44px;

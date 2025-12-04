@@ -2487,11 +2487,13 @@ const languages = {
             },
             faqBot: {
                 title: 'Preguntas Frecuentes',
-                welcome: '¡Hola! Selecciona una pregunta para ver la respuesta:',
-                selectLanguage: 'Por favor, selecciona tu idioma preferido:',
+                welcome: '¡Bienvenido! Estoy aquí para ayudarte con tus preguntas sobre brokers y trading en Latinoamérica.',
+                welcomeAfterLang: '¡Perfecto! Ahora puedes seleccionar una pregunta para ver la respuesta:',
+                selectLanguage: 'Por favor, selecciona tu idioma preferido para las respuestas:',
                 languageSelected: 'Idioma configurado. Selecciona una pregunta:',
                 selectQuestion: 'Selecciona una pregunta:',
-                backToQuestions: 'Volver a las preguntas'
+                backToQuestions: 'Volver a las preguntas',
+                selectAnother: 'Seleccionar otra pregunta'
             }
         },
         
@@ -4904,11 +4906,13 @@ const languages = {
             },
             faqBot: {
                 title: 'Frequently Asked Questions',
-                welcome: 'Hello! Select a question to see the answer:',
-                selectLanguage: 'Please select your preferred language:',
+                welcome: 'Welcome! I\'m here to help you with questions about brokers and trading in Latin America.',
+                welcomeAfterLang: 'Perfect! Now you can select a question to see the answer:',
+                selectLanguage: 'Please select your preferred language for the replies:',
                 languageSelected: 'Language set. Select a question:',
                 selectQuestion: 'Select a question:',
-                backToQuestions: 'Back to questions'
+                backToQuestions: 'Back to questions',
+                selectAnother: 'Select another question'
             }
         },
         

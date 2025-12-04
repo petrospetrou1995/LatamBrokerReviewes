@@ -143,7 +143,8 @@
         if (!messagesContainer) return;
 
         const browserLang = detectBrowserLanguage();
-        const detectedLang = browserLang === 'es' ? 'Español' : 'English';
+        const welcomeMessage = getTranslation('faqBot.welcome');
+        const selectLanguageText = getTranslation('faqBot.selectLanguage');
         
         const langSelectionHTML = `
             <div class="chatbot-message bot-message">
@@ -151,12 +152,13 @@
                     <i class="fas fa-robot"></i>
                 </div>
                 <div class="message-content">
-                    <p data-translate="faqBot.selectLanguage">Por favor, selecciona tu idioma preferido:</p>
+                    <p style="margin-bottom: 15px; font-size: 1rem; line-height: 1.5;">${welcomeMessage}</p>
+                    <p style="margin-bottom: 12px; font-weight: 600;">${selectLanguageText}</p>
                     <div class="language-buttons" style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;">
-                        <button class="lang-btn" data-lang="es" style="padding: 10px 20px; border: 2px solid #667eea; background: ${browserLang === 'es' ? '#667eea' : 'white'}; color: ${browserLang === 'es' ? 'white' : '#667eea'}; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">
+                        <button class="lang-btn" data-lang="es" style="padding: 12px 24px; border: 2px solid #667eea; background: ${browserLang === 'es' ? '#667eea' : 'white'}; color: ${browserLang === 'es' ? 'white' : '#667eea'}; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 0.95rem;">
                             🇪🇸 Español ${browserLang === 'es' ? '(Detectado)' : ''}
                         </button>
-                        <button class="lang-btn" data-lang="en" style="padding: 10px 20px; border: 2px solid #667eea; background: ${browserLang === 'en' ? '#667eea' : 'white'}; color: ${browserLang === 'en' ? 'white' : '#667eea'}; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">
+                        <button class="lang-btn" data-lang="en" style="padding: 12px 24px; border: 2px solid #667eea; background: ${browserLang === 'en' ? '#667eea' : 'white'}; color: ${browserLang === 'en' ? 'white' : '#667eea'}; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 0.95rem;">
                             🇬🇧 English ${browserLang === 'en' ? '(Detected)' : ''}
                         </button>
                     </div>
@@ -240,7 +242,6 @@
         if (!messagesContainer) return;
 
         const faqData = getFAQData();
-        const welcomeMessage = getTranslation('faqBot.welcome');
         const selectQuestionText = getTranslation('faqBot.selectQuestion');
 
         let questionsHTML = `
@@ -249,8 +250,7 @@
                     <i class="fas fa-robot"></i>
                 </div>
                 <div class="message-content">
-                    <p>${welcomeMessage}</p>
-                    <p style="margin-top: 10px; font-weight: 600;">${selectQuestionText}</p>
+                    <p style="margin-bottom: 10px; font-weight: 600;">${selectQuestionText}</p>
                 </div>
             </div>
         `;
