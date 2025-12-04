@@ -80,6 +80,17 @@
         setupEventListeners();
         updateView();
         applyUrlFilters();
+        
+        // Listen for language changes to reload translations
+        window.addEventListener('languageChanged', function(event) {
+            console.log('Language changed event received in brokers.js:', event.detail.language);
+            // Re-display brokers to apply new translations
+            displayBrokers();
+            // Also update comparison view if it's active
+            if (currentView === 'compare' && comparisonBrokers.length > 0) {
+                displayComparisonView();
+            }
+        });
     }
     
     // Load brokers from static JSON or API
@@ -316,7 +327,7 @@
                         <div class="broker-rating">
                             <div class="stars">${stars}</div>
                             <span class="rating-number">${broker.rating}/5</span>
-                            <span class="reviews-count">(${broker.totalReviews} ${getTranslation('brokers.reviews')})</span>
+                            <span class="reviews-count">(${broker.totalReviews} <span data-translate="brokers.reviews">${getTranslation('brokers.reviews')}</span>)</span>
                         </div>
                     </div>
                 </div>
@@ -326,7 +337,7 @@
                 </div>
                 
                 <div class="broker-features">
-                    <h4>${getTranslation('brokers.mainFeatures') || 'Características principales'}:</h4>
+                    <h4 data-translate="brokers.mainFeatures">${getTranslation('brokers.mainFeatures') || 'Características principales'}:</h4>
                     <div class="features-list">
                         ${broker.features.slice(0, 3).map(feature => 
                             `<span class="feature-tag">${translateBrokerFeature(feature.name)}</span>`
@@ -337,34 +348,34 @@
                 <div class="broker-stats">
                     <div class="stat-item">
                         <span class="stat-value">${broker.rating}</span>
-                        <span class="stat-label">${getTranslation('brokers.rating')}</span>
+                        <span class="stat-label" data-translate="brokers.rating">${getTranslation('brokers.rating')}</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">${broker.totalReviews}</span>
-                        <span class="stat-label">${getTranslation('brokers.reviews')}</span>
+                        <span class="stat-label" data-translate="brokers.reviews">${getTranslation('brokers.reviews')}</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">${broker.countries.length}</span>
-                        <span class="stat-label">${getTranslation('brokers.countries')}</span>
+                        <span class="stat-label" data-translate="brokers.countries">${getTranslation('brokers.countries')}</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">${translateCategory(broker.category)}</span>
-                        <span class="stat-label">${getTranslation('brokers.category')}</span>
+                        <span class="stat-label" data-translate="brokers.category">${getTranslation('brokers.category')}</span>
                     </div>
                 </div>
                 
                 <div class="broker-actions">
-                    <a href="${broker.website}" target="_blank" class="btn-visit" onclick="console.log('Visit site clicked:', '${broker.website}')">
+                    <a href="${broker.website}" target="_blank" class="btn-visit" onclick="console.log('Visit site clicked:', '${broker.website}')" data-translate="brokers.visitSite">
                         <i class="fas fa-external-link-alt"></i>
-                        ${getTranslation('brokers.visitSite')}
+                        <span data-translate="brokers.visitSite">${getTranslation('brokers.visitSite')}</span>
                     </a>
-                    <button class="btn-compare" data-broker-id="${broker._id}" data-action="add-comparison">
+                    <button class="btn-compare" data-broker-id="${broker._id}" data-action="add-comparison" data-translate="brokers.view.compare">
                         <i class="fas fa-balance-scale"></i>
-                        ${getTranslation('brokers.view.compare')}
+                        <span data-translate="brokers.view.compare">${getTranslation('brokers.view.compare')}</span>
                     </button>
-                    <a href="/broker/${broker.slug}.html" class="btn-reviews">
+                    <a href="/broker/${broker.slug}.html" class="btn-reviews" data-translate="brokers.reviews">
                         <i class="fas fa-star"></i>
-                        ${getTranslation('brokers.reviews')}
+                        <span data-translate="brokers.reviews">${getTranslation('brokers.reviews')}</span>
                     </a>
                 </div>
             </div>
@@ -482,22 +493,22 @@
                 
                 <div class="comparison-stats">
                     <div class="stat-row">
-                        <span class="stat-label">${getTranslation('brokers.reviews')}:</span>
+                        <span class="stat-label" data-translate="brokers.reviews">${getTranslation('brokers.reviews')}:</span>
                         <span class="stat-value">${broker.totalReviews}</span>
                     </div>
                     <div class="stat-row">
-                        <span class="stat-label">${getTranslation('brokers.countries')}:</span>
+                        <span class="stat-label" data-translate="brokers.countries">${getTranslation('brokers.countries')}:</span>
                         <span class="stat-value">${broker.countries.length}</span>
                     </div>
                     <div class="stat-row">
-                        <span class="stat-label">${getTranslation('brokers.category')}:</span>
+                        <span class="stat-label" data-translate="brokers.category">${getTranslation('brokers.category')}:</span>
                         <span class="stat-value">${translateCategory(broker.category)}</span>
                     </div>
                 </div>
                 
                 <div class="broker-actions">
-                    <a href="${broker.website}" target="_blank" class="btn-visit">
-                        ${getTranslation('brokers.visitSite')}
+                    <a href="${broker.website}" target="_blank" class="btn-visit" data-translate="brokers.visitSite">
+                        <span data-translate="brokers.visitSite">${getTranslation('brokers.visitSite')}</span>
                     </a>
                 </div>
             </div>
