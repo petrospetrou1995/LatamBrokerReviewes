@@ -295,6 +295,9 @@
         
         if (!faq) return;
 
+        const selectAnotherText = getTranslation('faqBot.selectAnother');
+        const backToQuestionsText = getTranslation('faqBot.backToQuestions');
+
         const answerHTML = `
             <div class="chatbot-message bot-message">
                 <div class="message-avatar">
@@ -305,7 +308,10 @@
                         <h4 style="margin: 0 0 12px 0; color: #333; font-size: 1rem; font-weight: 600;">${faq.question}</h4>
                     </div>
                     <div class="faq-answer-content">
-                        <p style="margin: 0; line-height: 1.6; color: #555;">${faq.answer}</p>
+                        <p style="margin: 0 0 20px 0; line-height: 1.6; color: #555;">${faq.answer}</p>
+                        <button class="btn-select-another" onclick="window.faqBotSelectAnother()" style="width: 100%; padding: 12px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);">
+                            <i class="fas fa-list"></i> ${selectAnotherText}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -320,6 +326,11 @@
             footer.style.display = 'block';
         }
     }
+
+    // Make selectAnother function globally accessible
+    window.faqBotSelectAnother = function() {
+        showFAQQuestions();
+    };
 
     // Back to questions handler
     function backToQuestions() {
