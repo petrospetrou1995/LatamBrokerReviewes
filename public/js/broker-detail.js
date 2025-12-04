@@ -5,7 +5,7 @@
     let currentBroker = null;
     let currentReviews = [];
     let currentPage = 1;
-    const reviewsPerPage = 6;
+    const reviewsPerPage = 20; // Show at least 20 reviews per page
 
     // Initialize page
     document.addEventListener('DOMContentLoaded', function() {
@@ -77,6 +77,7 @@
             }
             
             displayBrokerDetails();
+            updateBrokerLogo(currentBroker); // Ensure logo is displayed
             loadBrokerReviews();
         } catch (error) {
             console.error('Error loading broker:', error);
@@ -226,6 +227,19 @@
             } else {
                 console.log('applyTranslations function not found');
             }
+            
+            // Ensure Visit Website button text is translated
+            const visitWebsiteBtn = document.getElementById('brokerWebsite');
+            if (visitWebsiteBtn) {
+                const visitWebsiteSpan = visitWebsiteBtn.querySelector('span[data-translate="brokers.visitSite"]');
+                if (visitWebsiteSpan && typeof languages !== 'undefined') {
+                    const currentLang = localStorage.getItem('language') || 'es';
+                    const translations = languages[currentLang];
+                    if (translations && translations.brokers && translations.brokers.visitSite) {
+                        visitWebsiteSpan.textContent = translations.brokers.visitSite;
+                    }
+                }
+            }
         }, 100);
         
         // Update website link
@@ -339,10 +353,11 @@
             // Use static data loader or JSON file
             let data;
             if (window.loadReviews) {
+                // Load all reviews for this broker (no limit initially to show at least 20)
                 data = await window.loadReviews({ 
                     broker: currentBroker._id || currentBroker.slug,
                     page: currentPage,
-                    limit: reviewsPerPage 
+                    limit: 100 // Load more reviews initially
                 });
             } else {
                 // Fallback to direct JSON fetch with multiple path attempts

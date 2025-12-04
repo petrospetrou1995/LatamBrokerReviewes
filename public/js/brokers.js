@@ -71,7 +71,7 @@
     let filteredBrokers = [];
     let currentView = 'grid';
     let currentPage = 1;
-    let itemsPerPage = 9;
+    let itemsPerPage = 100; // Show all brokers by default
     let comparisonBrokers = [];
     
     // Initialize brokers page
@@ -292,14 +292,12 @@
         const container = document.getElementById('brokersContainer');
         if (!container) return;
         
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        const pageBrokers = filteredBrokers.slice(startIndex, endIndex);
-        
+        // Show all brokers if not in compare view
         if (currentView === 'compare') {
             displayComparisonView();
         } else {
-            container.innerHTML = pageBrokers.map(broker => createBrokerCard(broker)).join('');
+            // Show all filtered brokers (no pagination limit)
+            container.innerHTML = filteredBrokers.map(broker => createBrokerCard(broker)).join('');
         }
         
         updatePagination();

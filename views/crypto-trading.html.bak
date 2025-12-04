@@ -367,7 +367,7 @@
                             <span>Plataforma web</span>
                         </div>
                     </div>
-                    <div class="broker-actions" style="display: flex; gap: 10px; margin-top: 15px;"><a href="/broker/plus500.html" class="btn btn-primary"><i class="fas fa-star"></i> <span data-translate="brokers.reviews">Ver Reseñas</span></a><a href="https://plus500.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-translate="brokers.visitSite"><i class="fas fa-external-link-alt"></i> <span data-translate="brokers.visitSite">Visitar Sitio</span></a></div>
+                    <a href="https://plus500.com" target="_blank" class="btn btn-primary" data-translate="brokers.visitSite">Visitar Broker</a>
                 </div>
             </div>
         </div>

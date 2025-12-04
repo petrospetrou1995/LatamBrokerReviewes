@@ -142,76 +142,16 @@
     <!-- Comparison Table -->
     <section class="content-section" style="padding: 60px 0;">
         <div class="container">
-            <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%;">
-                <table class="comparison-table" style="width: 100%; min-width: 600px; border-collapse: collapse; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
-                    <thead>
-                        <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff;">
-                            <th style="padding: 20px; text-align: left; font-weight: 600;">Característica</th>
-                            <th style="padding: 20px; text-align: center; font-weight: 600;">Libertex</th>
-                            <th style="padding: 20px; text-align: center; font-weight: 600;">XM Group</th>
-                            <th style="padding: 20px; text-align: center; font-weight: 600;">eToro</th>
-                            <th style="padding: 20px; text-align: center; font-weight: 600;">Plus500</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #e9ecef;">
-                            <td style="padding: 15px; font-weight: 600;">Rating</td>
-                            <td style="padding: 15px; text-align: center;">4.8 ⭐</td>
-                            <td style="padding: 15px; text-align: center;">4.6 ⭐</td>
-                            <td style="padding: 15px; text-align: center;">4.4 ⭐</td>
-                            <td style="padding: 15px; text-align: center;">4.3 ⭐</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e9ecef; background: #f8f9fa;">
-                            <td style="padding: 15px; font-weight: 600;">Depósito Mínimo</td>
-                            <td style="padding: 15px; text-align: center;">$100</td>
-                            <td style="padding: 15px; text-align: center;">$5</td>
-                            <td style="padding: 15px; text-align: center;">$200</td>
-                            <td style="padding: 15px; text-align: center;">$100</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e9ecef;">
-                            <td style="padding: 15px; font-weight: 600;">Spreads Forex</td>
-                            <td style="padding: 15px; text-align: center;">Desde 0.1 pips</td>
-                            <td style="padding: 15px; text-align: center;">Desde 0.6 pips</td>
-                            <td style="padding: 15px; text-align: center;">Variables</td>
-                            <td style="padding: 15px; text-align: center;">Desde 0.6 pips</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e9ecef; background: #f8f9fa;">
-                            <td style="padding: 15px; font-weight: 600;">Instrumentos</td>
-                            <td style="padding: 15px; text-align: center;">300+</td>
-                            <td style="padding: 15px; text-align: center;">1000+</td>
-                            <td style="padding: 15px; text-align: center;">2000+</td>
-                            <td style="padding: 15px; text-align: center;">2000+</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e9ecef;">
-                            <td style="padding: 15px; font-weight: 600;">Plataformas</td>
-                            <td style="padding: 15px; text-align: center;">Web, Mobile, MT4</td>
-                            <td style="padding: 15px; text-align: center;">Web, Mobile, MT4, MT5</td>
-                            <td style="padding: 15px; text-align: center;">Web, Mobile</td>
-                            <td style="padding: 15px; text-align: center;">Web, Mobile</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e9ecef; background: #f8f9fa;">
-                            <td style="padding: 15px; font-weight: 600;">Regulación</td>
-                            <td style="padding: 15px; text-align: center;">CySEC, MiFID</td>
-                            <td style="padding: 15px; text-align: center;">CySEC, FCA, ASIC</td>
-                            <td style="padding: 15px; text-align: center;">CySEC, FCA, ASIC</td>
-                            <td style="padding: 15px; text-align: center;">CySEC, FCA, ASIC</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e9ecef;">
-                            <td style="padding: 15px; font-weight: 600;">Soporte en Español</td>
-                            <td style="padding: 15px; text-align: center;"><i class="fas fa-check" style="color: #28a745;"></i></td>
-                            <td style="padding: 15px; text-align: center;"><i class="fas fa-check" style="color: #28a745;"></i></td>
-                            <td style="padding: 15px; text-align: center;"><i class="fas fa-check" style="color: #28a745;"></i></td>
-                            <td style="padding: 15px; text-align: center;"><i class="fas fa-check" style="color: #28a745;"></i></td>
-                        </tr>
-                        <tr style="background: #f8f9fa;">
-                            <td style="padding: 15px; font-weight: 600;">Acción</td>
-                            <td style="padding: 15px; text-align: center;"><a href="/broker/libertex.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 14px;">Ver Detalles</a></td>
-                            <td style="padding: 15px; text-align: center;"><a href="/broker/xm-group.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 14px;">Ver Detalles</a></td>
-                            <td style="padding: 15px; text-align: center;"><a href="/broker/etoro.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 14px;">Ver Detalles</a></td>
-                            <td style="padding: 15px; text-align: center;"><a href="/broker/plus500.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 14px;">Ver Detalles</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div id="comparisonLoading" style="text-align: center; padding: 40px;">
+                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: #667eea;"></i>
+                <p style="margin-top: 20px; color: #666;">Cargando comparación de brokers...</p>
+            </div>
+            <div id="comparisonTableContainer" style="display: none;">
+                <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%;">
+                    <table id="comparisonTable" class="comparison-table" style="width: 100%; min-width: 800px; border-collapse: collapse; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+                        <!-- Table will be generated dynamically by JavaScript -->
+                    </table>
+                </div>
             </div>
         </div>
     </section>
@@ -243,6 +183,8 @@
     <script src="/js/languages.js"></script>
     <script src="/js/language-switcher.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/static-brokers.js"></script>
+    <script src="/js/broker-comparison.js"></script>
 </body>
 </html>
 
