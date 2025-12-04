@@ -134,14 +134,26 @@
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid #e9ecef;
     position: relative;
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+    opacity: 0;
 }
 
+.broker-card:nth-child(1) { animation-delay: 0.1s; }
+.broker-card:nth-child(2) { animation-delay: 0.2s; }
+.broker-card:nth-child(3) { animation-delay: 0.3s; }
+.broker-card:nth-child(4) { animation-delay: 0.4s; }
+.broker-card:nth-child(5) { animation-delay: 0.5s; }
+.broker-card:nth-child(6) { animation-delay: 0.6s; }
+.broker-card:nth-child(n+7) { animation-delay: 0.7s; }
+
 .broker-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+    border-color: #007bff;
 }
 
 .broker-card.featured {
