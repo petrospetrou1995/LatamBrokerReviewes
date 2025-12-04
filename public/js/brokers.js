@@ -67,6 +67,14 @@
         return category.charAt(0).toUpperCase() + category.slice(1);
     }
     
+    // Get translated broker description
+    function getTranslatedDescription(brokerSlug, lang) {
+        if (typeof languages !== 'undefined' && languages[lang] && languages[lang].brokers && languages[lang].brokers.descriptions) {
+            return languages[lang].brokers.descriptions[brokerSlug] || '';
+        }
+        return '';
+    }
+    
     let brokers = [];
     let filteredBrokers = [];
     let currentView = 'grid';
@@ -84,7 +92,9 @@
         // Listen for language changes to reload translations
         window.addEventListener('languageChanged', function(event) {
             console.log('Language changed event received in brokers.js:', event.detail.language);
-            // Re-display brokers to apply new translations
+            // Update descriptions
+            updateBrokerDescriptions();
+            // Re-display brokers to apply new translations (including review comments)
             displayBrokers();
             // Also update comparison view if it's active
             if (currentView === 'compare' && comparisonBrokers.length > 0) {
@@ -299,7 +309,7 @@
     }
     
     // Display brokers
-    function displayBrokers() {
+    async function displayBrokers() {
         const container = document.getElementById('brokersContainer');
         if (!container) return;
         
@@ -308,16 +318,80 @@
             displayComparisonView();
         } else {
             // Show all filtered brokers (no pagination limit)
-            container.innerHTML = filteredBrokers.map(broker => createBrokerCard(broker)).join('');
+            // Use Promise.all to handle async createBrokerCard
+            const brokerCards = await Promise.all(filteredBrokers.map(broker => createBrokerCard(broker)));
+            container.innerHTML = brokerCards.join('');
         }
+        
+        // Apply translations to newly created broker cards
+        const currentLang = localStorage.getItem('language') || 'en';
+        if (typeof window.applyTranslations === 'function') {
+            window.applyTranslations(currentLang);
+        }
+        
+        // Update descriptions based on current language
+        updateBrokerDescriptions();
         
         updatePagination();
     }
     
+    // Update broker descriptions when language changes
+    function updateBrokerDescriptions() {
+        const currentLang = localStorage.getItem('language') || 'en';
+        document.querySelectorAll('.broker-description[data-broker-slug]').forEach(descEl => {
+            const brokerSlug = descEl.getAttribute('data-broker-slug');
+            const translatedDesc = getTranslatedDescription(brokerSlug, currentLang);
+            if (translatedDesc) {
+                descEl.textContent = translatedDesc.substring(0, 150) + '...';
+            }
+        });
+    }
+    
     // Create broker card
-    function createBrokerCard(broker) {
+    async function createBrokerCard(broker) {
         const isFeatured = broker.isFeatured ? 'featured' : '';
         const stars = generateStars(broker.rating);
+        
+        // Get translated description
+        const currentLang = localStorage.getItem('language') || 'en';
+        let description = broker.description;
+        const translatedDesc = getTranslatedDescription(broker.slug, currentLang);
+        if (translatedDesc) {
+            description = translatedDesc;
+        }
+        
+        // Load a recent review/comment for featured brokers
+        let reviewComment = '';
+        if (isFeatured && typeof window.loadReviews === 'function') {
+            try {
+                const reviewData = await window.loadReviews({ 
+                    broker: broker.slug || broker._id,
+                    limit: 1,
+                    page: 1
+                });
+                if (reviewData && reviewData.reviews && reviewData.reviews.length > 0) {
+                    const review = reviewData.reviews[0];
+                    const reviewContent = review.content || '';
+                    const truncatedContent = reviewContent.length > 100 ? reviewContent.substring(0, 100) + '...' : reviewContent;
+                    reviewComment = `
+                        <div class="broker-comment" style="margin-top: 15px; padding: 12px; background: #f8f9fa; border-radius: 8px; border-left: 3px solid #667eea;">
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <div style="width: 32px; height: 32px; border-radius: 50%; background: #667eea; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 10px; font-size: 0.9rem;">
+                                    ${review.user.name.charAt(0).toUpperCase()}
+                                </div>
+                                <div>
+                                    <strong style="font-size: 0.9rem; color: #333;">${review.user.name}</strong>
+                                    <div style="font-size: 0.8rem; color: #666;">${generateStars(review.rating)}</div>
+                                </div>
+                            </div>
+                            <p style="margin: 0; font-size: 0.85rem; color: #555; line-height: 1.4;">"${truncatedContent}"</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.log('Could not load review comment:', error);
+            }
+        }
         
         return `
             <div class="broker-card ${currentView === 'list' ? 'list-view' : ''} ${isFeatured}" ${isFeatured ? `data-featured-text="${getTranslation('brokers.features.Destacado')}"` : ''}>
@@ -332,9 +406,10 @@
                     </div>
                 </div>
                 
-                <div class="broker-description">
-                    ${broker.description.substring(0, 150)}...
+                <div class="broker-description" data-broker-slug="${broker.slug}">
+                    ${description.substring(0, 150)}...
                 </div>
+                ${reviewComment}
                 
                 <div class="broker-features">
                     <h4 data-translate="brokers.mainFeatures">${getTranslation('brokers.mainFeatures') || 'Características principales'}:</h4>
