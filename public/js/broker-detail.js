@@ -423,66 +423,51 @@
                 }
             }
             
-            if (!data) {
-                // Fallback to direct JSON fetch with multiple path attempts
-                const paths = [
-                    '/public/data/reviews.json',
-                    './public/data/reviews.json',
-                    'public/data/reviews.json',
-                    '/data/reviews.json',
-                    './data/reviews.json'
-                ];
-                
-                let allReviews = [];
-                for (const path of paths) {
-                    try {
-                        const response = await fetch(path);
-                        if (!response.ok) continue;
+            // Final fallback: Direct access to languages.js if data is empty
+            if (!data || !data.reviews || data.reviews.length === 0) {
+                console.log('⚠️ No reviews from window.loadReviews, trying direct languages.js access');
+                if (typeof languages !== 'undefined' && languages.reviews) {
+                    const brokerSlug = currentBroker.slug || currentBroker._id;
+                    const brokerReviews = languages.reviews[brokerSlug] || [];
+                    console.log(`📝 Direct access: Found ${brokerReviews.length} reviews for ${brokerSlug}`);
+                    
+                    if (brokerReviews.length > 0) {
+                        const currentLang = localStorage.getItem('language') || 'en';
+                        const lang = currentLang === 'es' ? 'es' : 'en';
                         
-                        const text = await response.text();
-                        if (text.trim().startsWith('<!DOCTYPE') || text.trim().startsWith('<html')) {
-                            continue;
-                        }
+                        const translatedReviews = brokerReviews.map(review => ({
+                            _id: review.id,
+                            id: review.id,
+                            broker: { slug: brokerSlug, _id: brokerSlug },
+                            user: review.user,
+                            rating: review.rating,
+                            title: review.title[lang] || review.title.es || review.title.en,
+                            content: review.content[lang] || review.content.es || review.content.en,
+                            pros: review.pros[lang] || review.pros.es || review.pros.en,
+                            cons: review.cons[lang] || review.cons.es || review.cons.en,
+                            experience: review.experience,
+                            tradingDuration: review.tradingDuration,
+                            verified: review.verified,
+                            helpful: review.helpful || 0,
+                            notHelpful: review.notHelpful || 0,
+                            createdAt: review.createdAt || new Date().toISOString(),
+                            date: review.createdAt || new Date().toISOString(),
+                            isApproved: true
+                        }));
                         
-                        const jsonData = JSON.parse(text);
-                        if (jsonData && Array.isArray(jsonData.reviews)) {
-                            allReviews = jsonData.reviews;
-                            break;
-                        } else if (Array.isArray(jsonData)) {
-                            allReviews = jsonData;
-                            break;
-                        }
-                    } catch (e) {
-                        continue;
+                        data = {
+                            reviews: translatedReviews,
+                            total: translatedReviews.length,
+                            totalPages: 1,
+                            currentPage: 1
+                        };
+                        console.log(`✅ Loaded ${translatedReviews.length} reviews via direct languages.js access`);
                     }
                 }
-                
-                const brokerReviews = allReviews.filter(r => {
-                    if (!r.broker) return false;
-                    const brokerId = r.broker._id || r.broker.id;
-                    const brokerSlug = r.broker.slug;
-                    return brokerId === (currentBroker._id || currentBroker.id) || 
-                           brokerSlug === currentBroker.slug;
-                });
-                
-                // Sort by date (newest first)
-                brokerReviews.sort((a, b) => {
-                    const dateA = new Date(a.createdAt || a.date || a.created_at || 0);
-                    const dateB = new Date(b.createdAt || b.date || b.created_at || 0);
-                    return dateB - dateA;
-                });
-                
-                const start = (currentPage - 1) * reviewsPerPage;
-                const end = start + reviewsPerPage;
-                data = {
-                    reviews: brokerReviews.slice(start, end),
-                    total: brokerReviews.length,
-                    totalPages: Math.ceil(brokerReviews.length / reviewsPerPage),
-                    currentPage: currentPage
-                };
             }
             
-            const newReviews = data.reviews || [];
+            const newReviews = data?.reviews || [];
+            console.log('📊 Final reviews count:', newReviews.length);
             
             if (reset) {
                 currentReviews = newReviews;
