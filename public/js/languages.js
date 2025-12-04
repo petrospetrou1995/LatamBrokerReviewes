@@ -4901,6 +4901,14 @@ const languages = {
             q10: {
                 question: 'How can I withdraw my profits from a broker?',
                 answer: 'Brokers generally allow withdrawals using the same deposit methods. Common processes include bank transfers, cards, and electronic payment methods. Processing times vary (typically 1-5 business days). Check withdrawal policies and possible fees before depositing.'
+            },
+            faqBot: {
+                title: 'FAQ Assistant',
+                welcome: 'Hello! I\'m your FAQ assistant. Select a question to see the answer:',
+                selectLanguage: 'Please select your preferred language:',
+                languageSelected: 'Language set. Select a question:',
+                selectQuestion: 'Select a question:',
+                backToQuestions: 'Back to questions'
             }
         },
         
