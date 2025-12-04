@@ -3,16 +3,19 @@
     'use strict';
 
     let currentLanguage = localStorage.getItem('language') || 'es';
+    let chatBotLanguage = localStorage.getItem('chatbotLanguage') || null;
     let chatHistory = [];
     let isOpen = false;
+    let languageSelected = false;
 
     // Initialize FAQ data from languages.js
     function getFAQData() {
-        if (typeof languages === 'undefined' || !languages[currentLanguage]) {
+        const lang = chatBotLanguage || currentLanguage;
+        if (typeof languages === 'undefined' || !languages[lang]) {
             return [];
         }
 
-        const faqData = languages[currentLanguage].faq;
+        const faqData = languages[lang].faq;
         if (!faqData) return [];
 
         const questions = [];
@@ -106,9 +109,10 @@
 
     // Get translation
     function getTranslation(key) {
-        if (typeof languages !== 'undefined' && languages[currentLanguage]) {
+        const lang = chatBotLanguage || currentLanguage;
+        if (typeof languages !== 'undefined' && languages[lang]) {
             const keys = key.split('.');
-            let value = languages[currentLanguage];
+            let value = languages[lang];
             
             for (const k of keys) {
                 if (value && value[k]) {
@@ -120,6 +124,109 @@
             return value;
         }
         return key;
+    }
+
+    // Detect browser language
+    function detectBrowserLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang.startsWith('es')) {
+            return 'es';
+        } else if (browserLang.startsWith('en')) {
+            return 'en';
+        }
+        return 'es'; // Default to Spanish for Latin America
+    }
+
+    // Show language selection
+    function showLanguageSelection() {
+        const messagesContainer = document.getElementById('chatbotMessages');
+        if (!messagesContainer) return;
+
+        const browserLang = detectBrowserLanguage();
+        const detectedLang = browserLang === 'es' ? 'Español' : 'English';
+        
+        const langSelectionHTML = `
+            <div class="chatbot-message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p data-translate="faqBot.selectLanguage">Por favor, selecciona tu idioma preferido:</p>
+                    <div class="language-buttons" style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="lang-btn" data-lang="es" style="padding: 10px 20px; border: 2px solid #667eea; background: ${browserLang === 'es' ? '#667eea' : 'white'}; color: ${browserLang === 'es' ? 'white' : '#667eea'}; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">
+                            🇪🇸 Español ${browserLang === 'es' ? '(Detectado)' : ''}
+                        </button>
+                        <button class="lang-btn" data-lang="en" style="padding: 10px 20px; border: 2px solid #667eea; background: ${browserLang === 'en' ? '#667eea' : 'white'}; color: ${browserLang === 'en' ? 'white' : '#667eea'}; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">
+                            🇬🇧 English ${browserLang === 'en' ? '(Detected)' : ''}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        messagesContainer.innerHTML = langSelectionHTML;
+
+        // Add event listeners to language buttons
+        const langButtons = messagesContainer.querySelectorAll('.lang-btn');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const selectedLang = this.getAttribute('data-lang');
+                selectChatbotLanguage(selectedLang);
+            });
+            btn.addEventListener('mouseenter', function() {
+                if (this.style.background !== '#667eea') {
+                    this.style.background = '#f0f4ff';
+                }
+            });
+            btn.addEventListener('mouseleave', function() {
+                const lang = this.getAttribute('data-lang');
+                if (this.style.background !== '#667eea') {
+                    this.style.background = lang === browserLang ? '#667eea' : 'white';
+                }
+            });
+        });
+    }
+
+    // Select chatbot language
+    function selectChatbotLanguage(lang) {
+        chatBotLanguage = lang;
+        currentLanguage = lang;
+        localStorage.setItem('chatbotLanguage', lang);
+        localStorage.setItem('language', lang);
+        languageSelected = true;
+
+        const messagesContainer = document.getElementById('chatbotMessages');
+        if (!messagesContainer) return;
+
+        // Update welcome message in selected language
+        const welcomeMessage = getTranslation('faqBot.welcome');
+        const languageSelectedMsg = getTranslation('faqBot.languageSelected');
+        
+        messagesContainer.innerHTML = `
+            <div class="chatbot-message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>${welcomeMessage}</p>
+                </div>
+            </div>
+        `;
+
+        // Update placeholder
+        const input = document.getElementById('chatbotInput');
+        if (input) {
+            input.placeholder = getTranslation('faqBot.placeholder');
+        }
+
+        // Update title
+        const title = document.querySelector('.chatbot-title span');
+        if (title) {
+            title.textContent = getTranslation('faqBot.title');
+        }
+
+        // Trigger language change event for other components
+        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
     }
 
     // Create chatbot HTML
@@ -136,25 +243,18 @@
                     </button>
                 </div>
                 <div class="chatbot-messages" id="chatbotMessages">
-                    <div class="chatbot-message bot-message">
-                        <div class="message-avatar">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="message-content">
-                            <p data-translate="faqBot.welcome">¡Hola! Soy tu asistente de preguntas frecuentes. ¿En qué puedo ayudarte sobre brokers y trading en Latinoamérica?</p>
-                        </div>
-                    </div>
+                    <!-- Language selection or welcome message will be added here -->
                 </div>
                 <div class="chatbot-input-container">
-                    <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Escribe tu pregunta..." data-translate-placeholder="faqBot.placeholder">
-                    <button id="chatbotSend" class="chatbot-send">
+                    <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Escribe tu pregunta..." data-translate-placeholder="faqBot.placeholder" disabled>
+                    <button id="chatbotSend" class="chatbot-send" disabled>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
             </div>
             <button id="chatbotToggle" class="chatbot-toggle">
                 <i class="fas fa-comments"></i>
-                <span class="chatbot-badge" id="chatbotBadge">1</span>
+                <span class="chatbot-badge" id="chatbotBadge" style="display: none;">1</span>
             </button>
         `;
         
@@ -197,6 +297,12 @@
     function sendMessage() {
         const input = document.getElementById('chatbotInput');
         if (!input || !input.value.trim()) return;
+
+        // Check if language is selected
+        if (!chatBotLanguage) {
+            showLanguageSelection();
+            return;
+        }
 
         const userQuestion = input.value.trim();
         addMessage(userQuestion, false);
@@ -242,9 +348,35 @@
         chatbot.classList.toggle('open', isOpen);
         
         if (isOpen) {
-            const input = document.getElementById('chatbotInput');
-            if (input) {
-                setTimeout(() => input.focus(), 300);
+            // Check if language is already selected
+            if (!chatBotLanguage) {
+                // Show language selection
+                showLanguageSelection();
+            } else {
+                // Show welcome message if not already shown
+                const messagesContainer = document.getElementById('chatbotMessages');
+                if (messagesContainer && messagesContainer.children.length === 0) {
+                    const welcomeMessage = getTranslation('faqBot.welcome');
+                    messagesContainer.innerHTML = `
+                        <div class="chatbot-message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>${welcomeMessage}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+                const input = document.getElementById('chatbotInput');
+                if (input) {
+                    input.disabled = false;
+                    setTimeout(() => input.focus(), 300);
+                }
+                const sendBtn = document.getElementById('chatbotSend');
+                if (sendBtn) {
+                    sendBtn.disabled = false;
+                }
             }
         }
     }
@@ -252,6 +384,12 @@
     // Initialize chatbot
     function initChatbot() {
         createChatbotHTML();
+        
+        // Check if chatbot language is already set
+        if (chatBotLanguage) {
+            languageSelected = true;
+            currentLanguage = chatBotLanguage;
+        }
         
         // Event listeners
         const toggle = document.getElementById('chatbotToggle');
@@ -273,44 +411,50 @@
 
         if (input) {
             input.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
+                if (e.key === 'Enter' && !input.disabled) {
                     sendMessage();
                 }
             });
         }
 
-        // Listen for language changes
+        // Listen for language changes (from main language switcher)
         window.addEventListener('languageChanged', (event) => {
-            currentLanguage = event.detail.language || localStorage.getItem('language') || 'es';
-            // Reload chatbot with new language
-            const messagesContainer = document.getElementById('chatbotMessages');
-            if (messagesContainer) {
-                messagesContainer.innerHTML = `
-                    <div class="chatbot-message bot-message">
-                        <div class="message-avatar">
-                            <i class="fas fa-robot"></i>
+            const newLang = event.detail.language || localStorage.getItem('language') || 'es';
+            
+            // Only update if chatbot language is already set
+            if (chatBotLanguage && chatBotLanguage !== newLang) {
+                chatBotLanguage = newLang;
+                currentLanguage = newLang;
+                localStorage.setItem('chatbotLanguage', newLang);
+                
+                // Reload chatbot with new language
+                const messagesContainer = document.getElementById('chatbotMessages');
+                if (messagesContainer && languageSelected) {
+                    const welcomeMessage = getTranslation('faqBot.welcome');
+                    messagesContainer.innerHTML = `
+                        <div class="chatbot-message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>${welcomeMessage}</p>
+                            </div>
                         </div>
-                        <div class="message-content">
-                            <p data-translate="faqBot.welcome">¡Hola! Soy tu asistente de preguntas frecuentes. ¿En qué puedo ayudarte sobre brokers y trading en Latinoamérica?</p>
-                        </div>
-                    </div>
-                `;
-                if (typeof window.applyTranslations === 'function') {
-                    window.applyTranslations(currentLanguage);
+                    `;
                 }
-            }
-            
-            // Update placeholder
-            const input = document.getElementById('chatbotInput');
-            if (input) {
-                const placeholder = getTranslation('faqBot.placeholder');
-                input.placeholder = placeholder;
-            }
-            
-            // Update title
-            const title = document.querySelector('.chatbot-title span');
-            if (title) {
-                title.textContent = getTranslation('faqBot.title');
+                
+                // Update placeholder
+                const input = document.getElementById('chatbotInput');
+                if (input) {
+                    const placeholder = getTranslation('faqBot.placeholder');
+                    input.placeholder = placeholder;
+                }
+                
+                // Update title
+                const title = document.querySelector('.chatbot-title span');
+                if (title) {
+                    title.textContent = getTranslation('faqBot.title');
+                }
             }
         });
     }

@@ -2489,6 +2489,8 @@ const languages = {
                 title: 'Asistente de Preguntas',
                 welcome: '¡Hola! Soy tu asistente de preguntas frecuentes. ¿En qué puedo ayudarte sobre brokers y trading en Latinoamérica?',
                 placeholder: 'Escribe tu pregunta...',
+                selectLanguage: 'Por favor, selecciona tu idioma preferido:',
+                languageSelected: 'Idioma configurado. ¿En qué puedo ayudarte?',
                 brokerInfo: 'Para elegir el mejor broker, considera factores como regulación, spreads y comisiones, métodos de pago locales, soporte en español/portugués, y reseñas de otros traders. Puedes explorar nuestras reseñas detalladas para comparar brokers.',
                 tradingInfo: 'El trading implica comprar y vender instrumentos financieros. Es importante educarte primero, usar cuentas demo para practicar, y gestionar el riesgo adecuadamente. Consulta nuestras guías educativas para aprender más.',
                 regulationInfo: 'Es crucial elegir brokers regulados por autoridades reconocidas como CySEC, FCA, ASIC o reguladores locales. Verifica siempre el número de licencia en el sitio oficial del regulador.',
