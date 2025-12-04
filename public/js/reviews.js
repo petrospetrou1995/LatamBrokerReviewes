@@ -8,7 +8,7 @@
     let currentPage = 1;
     let totalPages = 1;
     let isLoading = false;
-    const reviewsPerPage = 6;
+    const reviewsPerPage = 12; // Increased from 6 to show more reviews per page
     
     // Initialize reviews system
     function initReviews() {
@@ -58,8 +58,15 @@
                     console.log('Direct load more button click handler fired');
                     e.preventDefault();
                     e.stopPropagation();
-                    loadMoreReviews();
+                    if (typeof loadMoreReviews === 'function') {
+                        loadMoreReviews();
+                    } else if (typeof window.loadMoreReviews === 'function') {
+                        window.loadMoreReviews();
+                    }
                 });
+                
+                // Also add to window for global access
+                window.loadMoreBtnDirect = newBtn;
                 
                 // Also add mousedown as backup
                 newBtn.addEventListener('mousedown', function(e) {
@@ -262,16 +269,24 @@
     
     // Load more reviews
     function loadMoreReviews() {
-        console.log('🔽 loadMoreReviews called. currentPage:', currentPage, 'totalPages:', totalPages, 'isLoading:', isLoading, 'displayedCount:', displayedCount);
+        console.log('🔽 loadMoreReviews called. currentPage:', currentPage, 'totalPages:', totalPages, 'isLoading:', isLoading, 'displayedCount:', displayedCount, 'reviews.length:', reviews.length);
         
+        if (isLoading) {
+            console.log('⚠️ Cannot load more - already loading');
+            return;
+        }
+        
+        // Check if we've reached the last page
         if (currentPage >= totalPages) {
             console.log('⚠️ Cannot load more - already on last page');
             updateLoadMoreButton();
             return;
         }
         
-        if (isLoading) {
-            console.log('⚠️ Cannot load more - already loading');
+        // Check if we've displayed all reviews we have
+        if (displayedCount >= reviews.length && currentPage >= totalPages) {
+            console.log('⚠️ All reviews already displayed');
+            updateLoadMoreButton();
             return;
         }
         
