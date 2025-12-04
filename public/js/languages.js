@@ -2215,6 +2215,228 @@ const languages = {
                 intro: {
                     title: 'Métodos de Pago por País',
                     text: 'En Latinoamérica, cada país tiene sus propios métodos de pago locales. Encontrar un broker que acepte estos métodos puede hacer que depositar y retirar fondos sea mucho más fácil y económico.'
+                },
+                spei: {
+                    title: '🇲🇽 Brokers con SPEI (México)',
+                    description: 'SPEI (Sistema de Pagos Electrónicos Interbancarios) es el sistema de transferencias bancarias instantáneas de México. Es uno de los métodos más populares y seguros para depositar fondos en brokers.',
+                    advantages: 'Ventajas de SPEI:',
+                    advantage1: '✅ Transferencias instantáneas',
+                    advantage2: '✅ Sin comisiones adicionales',
+                    advantage3: '✅ Muy seguro',
+                    advantage4: '✅ Disponible 24/7',
+                    advantage5: '✅ Límites altos de transferencia',
+                    tip: '💡 Busca brokers que acepten SPEI: Muchos brokers internacionales ahora aceptan SPEI para traders mexicanos. Verifica en la sección de métodos de pago del broker.'
+                },
+                pse: {
+                    title: '🇨🇴 Brokers con PSE (Colombia)',
+                    description: 'PSE (Pagos Seguros en Línea) es el sistema de pagos en línea más utilizado en Colombia. Permite realizar pagos directamente desde tu cuenta bancaria.',
+                    advantages: 'Ventajas de PSE:',
+                    advantage1: '✅ Pagos directos desde cuenta bancaria',
+                    advantage2: '✅ Muy seguro y regulado',
+                    advantage3: '✅ Procesamiento rápido',
+                    advantage4: '✅ Sin necesidad de tarjeta de crédito',
+                    advantage5: '✅ Ampliamente aceptado',
+                    tip: '💡 Brokers con PSE: Busca brokers que tengan integración con PSE para facilitar tus depósitos desde Colombia.'
+                },
+                cbu: {
+                    title: '🇦🇷 Brokers con CBU/ALIAS (Argentina)',
+                    description: 'CBU (Clave Bancaria Uniforme) y ALIAS son métodos de transferencia bancaria en Argentina. CBU es el número de cuenta bancaria, mientras que ALIAS es un nombre fácil de recordar asociado a tu cuenta.',
+                    advantages: 'Ventajas de CBU/ALIAS:',
+                    advantage1: '✅ Transferencias bancarias directas',
+                    advantage2: '✅ Sin intermediarios',
+                    advantage3: '✅ ALIAS es fácil de recordar',
+                    advantage4: '✅ Seguro y confiable',
+                    advantage5: '✅ Comisiones bajas',
+                    tip: '💡 Brokers que aceptan CBU/ALIAS: Algunos brokers aceptan transferencias bancarias directas usando CBU o ALIAS argentino.'
+                },
+                webpay: {
+                    title: '🇨🇱 Brokers con Webpay (Chile)',
+                    description: 'Webpay es el sistema de pagos en línea más utilizado en Chile, operado por Transbank. Permite pagos con tarjetas de crédito y débito, y transferencias bancarias.',
+                    advantages: 'Ventajas de Webpay:',
+                    advantage1: '✅ Acepta tarjetas de crédito y débito',
+                    advantage2: '✅ Transferencias bancarias',
+                    advantage3: '✅ Muy seguro (PCI DSS)',
+                    advantage4: '✅ Procesamiento rápido',
+                    advantage5: '✅ Ampliamente usado en Chile',
+                    tip: '💡 Brokers con Webpay: Busca brokers que integren Webpay para facilitar tus depósitos desde Chile.'
+                },
+                otherMethods: {
+                    title: 'Otros Métodos de Pago en LATAM',
+                    cards: '💳 Tarjetas',
+                    cardsDesc: 'Visa, Mastercard, Amex - Ampliamente aceptadas',
+                    ewallets: '🌐 E-Wallets',
+                    ewalletsDesc: 'PayPal, Skrill, Neteller - Rápidos y seguros',
+                    transfers: '🏦 Transferencias',
+                    transfersDesc: 'Transferencias bancarias internacionales',
+                    crypto: '₿ Criptomonedas',
+                    cryptoDesc: 'Bitcoin, Ethereum - Cada vez más populares'
+                },
+                tips: {
+                    title: '💡 Consejos para Elegir Método de Pago',
+                    tip1: '✓ Verifica comisiones antes de depositar',
+                    tip2: '✓ Compara tiempos de procesamiento',
+                    tip3: '✓ Usa métodos locales cuando sea posible (menores costos)',
+                    tip4: '✓ Verifica límites mínimos y máximos',
+                    tip5: '✓ Asegúrate de que el método esté disponible para retiros también'
+                },
+                cta: {
+                    title: 'Encuentra Brokers con tu Método de Pago',
+                    text: 'Compara brokers y encuentra el que acepta tus métodos de pago preferidos.',
+                    button: 'Ver Todos los Brokers'
+                }
+            },
+            regulatedBrokers: {
+                title: 'Brokers Regulados en Latinoamérica',
+                description: 'Descubre los brokers regulados más seguros para Latinoamérica',
+                heroTitle: 'Brokers Regulados y Seguros en Latinoamérica',
+                heroSubtitle: 'Protege tu capital eligiendo brokers regulados por las autoridades más estrictas del mundo',
+                intro: {
+                    title: '¿Por Qué es Crucial Elegir un Broker Regulado?',
+                    text: 'La regulación es la garantía más importante de seguridad para tus fondos. Los brokers regulados deben cumplir con estándares estrictos de capital, transparencia y protección al cliente. En caso de problemas, tienes acceso a mecanismos de compensación y protección de fondos.'
+                },
+                fca: {
+                    title: 'Brokers Regulados por FCA (Reino Unido)',
+                    description: 'La Financial Conduct Authority (FCA) es una de las regulaciones más estrictas del mundo. Los brokers regulados por FCA ofrecen:',
+                    feature1: 'Protección de Fondos: Hasta £85,000 por cliente en caso de quiebra',
+                    feature2: 'Segregación de Fondos: Tu dinero está separado de los fondos del broker',
+                    feature3: 'Transparencia: Reportes financieros regulares y auditorías',
+                    feature4: 'Compensación: Acceso al Financial Services Compensation Scheme',
+                    tip: '💡 Cómo Verificar: Busca el número de licencia FCA en el sitio web del broker y verifícalo en register.fca.org.uk'
+                },
+                cysec: {
+                    title: 'Brokers Regulados por CySEC (Chipre)',
+                    description: 'La Cyprus Securities and Exchange Commission (CySEC) es una regulación europea muy reconocida. Los brokers CySEC ofrecen:',
+                    feature1: 'Protección MiFID II: Estándares europeos de protección al inversor',
+                    feature2: 'Segregación de Fondos: Protección de capital del cliente',
+                    feature3: 'Límites de Apalancamiento: Protección contra pérdidas excesivas',
+                    feature4: 'Compensación: Hasta €20,000 por cliente',
+                    tip: '💡 Cómo Verificar: Verifica la licencia en cysec.gov.cy'
+                },
+                asic: {
+                    title: 'Brokers Regulados por ASIC (Australia)',
+                    description: 'La Australian Securities and Investments Commission (ASIC) es conocida por su enfoque estricto en protección al consumidor:',
+                    feature1: 'Estándares Altos: Requisitos de capital estrictos',
+                    feature2: 'Protección de Fondos: Segregación obligatoria',
+                    feature3: 'Transparencia: Reportes financieros regulares',
+                    feature4: 'Regulación Activa: Supervisión continua'
+                },
+                localRegulators: {
+                    title: 'Reguladores Locales en Latinoamérica',
+                    argentina: '🇦🇷 Argentina - CNV',
+                    argentinaDesc: 'Comisión Nacional de Valores regula brokers locales',
+                    mexico: '🇲🇽 México - CNBV',
+                    mexicoDesc: 'Comisión Nacional Bancaria y de Valores',
+                    chile: '🇨🇱 Chile - CMF',
+                    chileDesc: 'Comisión para el Mercado Financiero',
+                    colombia: '🇨🇴 Colombia - SFC',
+                    colombiaDesc: 'Superintendencia Financiera de Colombia'
+                },
+                redFlags: {
+                    title: 'Señales de Alerta: Brokers No Regulados',
+                    flag1: '❌ No muestran número de licencia claramente',
+                    flag2: '❌ Regulación en jurisdicciones offshore sospechosas',
+                    flag3: '❌ Promesas de ganancias garantizadas',
+                    flag4: '❌ Presión agresiva para depositar fondos',
+                    flag5: '❌ Dificultades para retirar fondos',
+                    flag6: '❌ Reseñas negativas sobre retiros'
+                },
+                checklist: {
+                    title: '✅ Checklist de Seguridad',
+                    item1: '✓ Broker regulado por FCA, CySEC, ASIC o regulador local reconocido',
+                    item2: '✓ Número de licencia visible y verificable',
+                    item3: '✓ Segregación de fondos del cliente',
+                    item4: '✓ Esquema de compensación disponible',
+                    item5: '✓ Transparencia en términos y condiciones',
+                    item6: '✓ Historial limpio sin sanciones recientes',
+                    item7: '✓ Reseñas positivas sobre retiros de fondos'
+                },
+                cta: {
+                    title: 'Encuentra Brokers Regulados',
+                    text: 'Explora nuestra lista de brokers regulados y seguros para Latinoamérica.',
+                    button: 'Ver Brokers Regulados'
+                }
+            },
+            tradingPlatforms: {
+                title: 'Plataformas de Trading en Latinoamérica',
+                description: 'Guía completa de plataformas de trading: MT4, MT5 y más',
+                heroTitle: 'Plataformas de Trading en Latinoamérica',
+                heroSubtitle: 'Descubre las mejores plataformas: MetaTrader 4, MetaTrader 5 y plataformas modernas para traders latinoamericanos',
+                intro: {
+                    title: 'Elige la Plataforma Correcta para tu Trading',
+                    text: 'La plataforma de trading es tu herramienta principal. Debe ser intuitiva, estable y ofrecer todas las funciones que necesitas. En Latinoamérica, las plataformas más populares son MetaTrader 4 y MetaTrader 5, pero también hay excelentes alternativas.'
+                },
+                mt4: {
+                    title: 'MetaTrader 4 (MT4) - La Plataforma Más Popular',
+                    description: 'MT4 es la plataforma de trading más utilizada en el mundo, especialmente para Forex:',
+                    advantages: '✅ Ventajas',
+                    advantage1: 'Interfaz intuitiva',
+                    advantage2: 'Miles de indicadores',
+                    advantage3: 'Expert Advisors (EAs)',
+                    advantage4: 'Análisis técnico avanzado',
+                    advantage5: 'Comunidad enorme',
+                    limitations: '⚠️ Limitaciones',
+                    limitation1: 'Solo 4 marcos temporales',
+                    limitation2: 'Limitado a Forex y CFDs',
+                    limitation3: 'Interfaz algo antigua',
+                    limitation4: 'No incluye acciones',
+                    ideal: '💡 Ideal para: Traders de Forex que buscan una plataforma estable y con muchas herramientas de análisis técnico.'
+                },
+                mt5: {
+                    title: 'MetaTrader 5 (MT5) - La Evolución',
+                    description: 'MT5 es la versión mejorada de MT4 con más funciones y mercados:',
+                    advantages: '✅ Ventajas',
+                    advantage1: '21 marcos temporales',
+                    advantage2: 'Múltiples mercados',
+                    advantage3: 'Mejor backtesting',
+                    advantage4: 'Más indicadores',
+                    advantage5: 'Calendario económico',
+                    advantage6: 'Interfaz moderna',
+                    considerations: '⚠️ Consideraciones',
+                    consideration1: 'Menos EAs disponibles',
+                    consideration2: 'Curva de aprendizaje',
+                    consideration3: 'No todos los brokers lo ofrecen',
+                    ideal: '💡 Ideal para: Traders que operan múltiples mercados (Forex, acciones, commodities) y necesitan análisis avanzado.'
+                },
+                comparison: {
+                    title: 'MT4 vs MT5: Comparación Rápida',
+                    feature: 'Característica',
+                    timeframes: 'Marcos Temporales',
+                    markets: 'Mercados',
+                    indicators: 'Indicadores',
+                    eas: 'Expert Advisors',
+                    orders: 'Ordenes Pendientes',
+                    mt4Timeframes: '4',
+                    mt5Timeframes: '21',
+                    mt4Markets: 'Forex, CFDs',
+                    mt5Markets: 'Forex, Stocks, CFDs, Futures',
+                    mt4Indicators: '30+',
+                    mt5Indicators: '38+',
+                    mt4EAs: 'Miles disponibles',
+                    mt5EAs: 'Menos disponibles',
+                    mt4Orders: '4 tipos',
+                    mt5Orders: '6 tipos'
+                },
+                webMobile: {
+                    title: 'Plataformas Web y Móviles',
+                    description: 'Muchos brokers ofrecen plataformas web y móviles propias:',
+                    feature1: 'Plataformas Web: Trading desde cualquier navegador sin descargas',
+                    feature2: 'Apps Móviles: Trading desde tu smartphone iOS o Android',
+                    feature3: 'MT4/MT5 Móvil: Versiones móviles oficiales de MetaTrader',
+                    feature4: 'Plataformas Propietarias: Algunos brokers tienen sus propias plataformas avanzadas'
+                },
+                choosing: {
+                    title: '¿Cómo Elegir tu Plataforma?',
+                    tip1: '✓ Principiante: MT4 es más fácil de aprender',
+                    tip2: '✓ Forex Traders: MT4 tiene más recursos',
+                    tip3: '✓ Multi-Mercado: MT5 es mejor opción',
+                    tip4: '✓ Trading Móvil: Verifica apps disponibles',
+                    tip5: '✓ EAs/Robots: MT4 tiene más opciones',
+                    tip6: '✓ Análisis Avanzado: MT5 ofrece más herramientas'
+                },
+                cta: {
+                    title: 'Encuentra Brokers con tu Plataforma Preferida',
+                    text: 'Filtra brokers por plataforma: MT4, MT5 o plataformas propias.',
+                    button: 'Buscar Brokers'
                 }
             }
         },
@@ -4325,6 +4547,306 @@ const languages = {
             education: {
                 title: 'Education and Training',
                 description: 'Complete educational resources, courses, strategies and tools to improve your trading skills.'
+            },
+            // Comprehensive guide translations
+            chooseBroker: {
+                title: 'How to Choose a Broker in Latin America',
+                description: 'Complete step-by-step guide to find the perfect broker for your trading needs',
+                heroTitle: 'How to Choose the Best Broker in Latin America',
+                heroSubtitle: 'Complete step-by-step guide to find the perfect broker for your trading needs in 2024',
+                intro: {
+                    title: 'Why is it Important to Choose the Right Broker?',
+                    text: 'Choosing the right broker is one of the most important decisions you will make as a trader. A good broker not only provides access to financial markets, but also offers tools, education and support necessary for success.'
+                },
+                step1: {
+                    title: 'Verify Regulation and Security',
+                    text: 'The security of your funds is the most important. Look for brokers regulated by recognized authorities:',
+                    list1: 'FCA (UK): One of the strictest regulations in the world',
+                    list2: 'CySEC (Cyprus): European regulation recognized internationally',
+                    list3: 'ASIC (Australia): Solid regulation for international brokers',
+                    list4: 'Local Regulators: CNV (Argentina), CNBV (Mexico), CMF (Chile)',
+                    note: '💡 Tip: Always verify the broker\'s license number on the official regulator\'s website.'
+                },
+                step2: {
+                    title: 'Compare Commissions and Spreads',
+                    text: 'Trading costs can significantly affect your profits. Consider:',
+                    list1: 'Spreads: Difference between buy and sell price (lower is better)',
+                    list2: 'Commissions: Some brokers charge commission per trade',
+                    list3: 'Deposit/Withdrawal Fees: Check if there are charges for transfers',
+                    list4: 'Inactivity Fees: Some brokers charge if you don\'t trade for a while'
+                },
+                step3: {
+                    title: 'Evaluate Trading Platforms',
+                    text: 'The platform is your main trading tool. Verify:',
+                    list1: 'MetaTrader 4/5: The most popular and reliable platforms',
+                    list2: 'Web Platform: For trading from any device',
+                    list3: 'Mobile App: For trading on the go',
+                    list4: 'Tools: Advanced charts, technical indicators, analysis'
+                },
+                step4: {
+                    title: 'Payment Methods Available in LATAM',
+                    text: 'In Latin America, it\'s crucial to verify local payment methods:',
+                    list1: 'Bank Transfers: Most common and secure method',
+                    list2: 'Credit/Debit Cards: Fast deposits',
+                    list3: 'Digital Wallets: PayPal, Skrill, Neteller',
+                    list4: 'Local Methods: PagoEfectivo, OXXO, Rapipago (depending on country)'
+                },
+                step5: {
+                    title: 'Customer Support and Education',
+                    text: 'A good broker offers:',
+                    list1: 'Spanish Support: Live chat, email, phone',
+                    list2: 'Support Hours: Availability according to your time zone',
+                    list3: 'Educational Resources: Webinars, tutorials, guides',
+                    list4: 'Demo Account: To practice without risk'
+                },
+                step6: {
+                    title: 'Account Types and Minimum Deposit',
+                    text: 'Consider your needs:',
+                    list1: 'Micro Account: For beginners with small deposits',
+                    list2: 'Standard Account: For intermediate traders',
+                    list3: 'VIP/Premium Account: For professional traders',
+                    list4: 'Minimum Deposit: Verify that it\'s accessible for you'
+                },
+                checklist1: '✓ Broker regulated by recognized authority',
+                checklist2: '✓ Competitive spreads and commissions',
+                checklist3: '✓ Trading platform suitable for your needs',
+                checklist4: '✓ Payment methods available in your country',
+                checklist5: '✓ Customer support in Spanish',
+                checklist6: '✓ Demo account available',
+                checklist7: '✓ Positive reviews from other traders',
+                cta: 'View All Brokers'
+            },
+            paymentMethods: {
+                title: 'Payment Methods for Brokers in Latin America',
+                description: 'Complete guide to payment methods: SPEI, PSE, CBU/ALIAS, Webpay',
+                heroTitle: 'Payment Methods for Brokers in Latin America',
+                heroSubtitle: 'Find brokers that accept local payment methods: SPEI, PSE, CBU/ALIAS, Webpay and more',
+                intro: {
+                    title: 'Payment Methods by Country',
+                    text: 'In Latin America, each country has its own local payment methods. Finding a broker that accepts these methods can make depositing and withdrawing funds much easier and more economical.'
+                },
+                spei: {
+                    title: '🇲🇽 Brokers with SPEI (Mexico)',
+                    description: 'SPEI (Interbank Electronic Payment System) is Mexico\'s instant bank transfer system. It\'s one of the most popular and secure methods for depositing funds in brokers.',
+                    advantages: 'SPEI Advantages:',
+                    advantage1: '✅ Instant transfers',
+                    advantage2: '✅ No additional fees',
+                    advantage3: '✅ Very secure',
+                    advantage4: '✅ Available 24/7',
+                    advantage5: '✅ High transfer limits',
+                    tip: '💡 Look for brokers that accept SPEI: Many international brokers now accept SPEI for Mexican traders. Check the broker\'s payment methods section.'
+                },
+                pse: {
+                    title: '🇨🇴 Brokers with PSE (Colombia)',
+                    description: 'PSE (Secure Online Payments) is the most used online payment system in Colombia. It allows payments directly from your bank account.',
+                    advantages: 'PSE Advantages:',
+                    advantage1: '✅ Direct payments from bank account',
+                    advantage2: '✅ Very secure and regulated',
+                    advantage3: '✅ Fast processing',
+                    advantage4: '✅ No credit card needed',
+                    advantage5: '✅ Widely accepted',
+                    tip: '💡 Brokers with PSE: Look for brokers that have PSE integration to facilitate your deposits from Colombia.'
+                },
+                cbu: {
+                    title: '🇦🇷 Brokers with CBU/ALIAS (Argentina)',
+                    description: 'CBU (Uniform Bank Key) and ALIAS are bank transfer methods in Argentina. CBU is the bank account number, while ALIAS is an easy-to-remember name associated with your account.',
+                    advantages: 'CBU/ALIAS Advantages:',
+                    advantage1: '✅ Direct bank transfers',
+                    advantage2: '✅ No intermediaries',
+                    advantage3: '✅ ALIAS is easy to remember',
+                    advantage4: '✅ Secure and reliable',
+                    advantage5: '✅ Low fees',
+                    tip: '💡 Brokers that accept CBU/ALIAS: Some brokers accept direct bank transfers using Argentine CBU or ALIAS.'
+                },
+                webpay: {
+                    title: '🇨🇱 Brokers with Webpay (Chile)',
+                    description: 'Webpay is the most used online payment system in Chile, operated by Transbank. It allows payments with credit and debit cards, and bank transfers.',
+                    advantages: 'Webpay Advantages:',
+                    advantage1: '✅ Accepts credit and debit cards',
+                    advantage2: '✅ Bank transfers',
+                    advantage3: '✅ Very secure (PCI DSS)',
+                    advantage4: '✅ Fast processing',
+                    advantage5: '✅ Widely used in Chile',
+                    tip: '💡 Brokers with Webpay: Look for brokers that integrate Webpay to facilitate your deposits from Chile.'
+                },
+                otherMethods: {
+                    title: 'Other Payment Methods in LATAM',
+                    cards: '💳 Cards',
+                    cardsDesc: 'Visa, Mastercard, Amex - Widely accepted',
+                    ewallets: '🌐 E-Wallets',
+                    ewalletsDesc: 'PayPal, Skrill, Neteller - Fast and secure',
+                    transfers: '🏦 Transfers',
+                    transfersDesc: 'International bank transfers',
+                    crypto: '₿ Cryptocurrencies',
+                    cryptoDesc: 'Bitcoin, Ethereum - Increasingly popular'
+                },
+                tips: {
+                    title: '💡 Tips for Choosing Payment Method',
+                    tip1: '✓ Check fees before depositing',
+                    tip2: '✓ Compare processing times',
+                    tip3: '✓ Use local methods when possible (lower costs)',
+                    tip4: '✓ Verify minimum and maximum limits',
+                    tip5: '✓ Make sure the method is available for withdrawals too'
+                },
+                cta: {
+                    title: 'Find Brokers with Your Payment Method',
+                    text: 'Compare brokers and find the one that accepts your preferred payment methods.',
+                    button: 'View All Brokers'
+                }
+            },
+            regulatedBrokers: {
+                title: 'Regulated Brokers in Latin America',
+                description: 'Discover the safest regulated brokers for Latin America',
+                heroTitle: 'Regulated and Safe Brokers in Latin America',
+                heroSubtitle: 'Protect your capital by choosing brokers regulated by the world\'s strictest authorities',
+                intro: {
+                    title: 'Why is it Crucial to Choose a Regulated Broker?',
+                    text: 'Regulation is the most important guarantee of security for your funds. Regulated brokers must comply with strict capital, transparency and client protection standards. In case of problems, you have access to compensation and fund protection mechanisms.'
+                },
+                fca: {
+                    title: 'Brokers Regulated by FCA (UK)',
+                    description: 'The Financial Conduct Authority (FCA) is one of the strictest regulations in the world. FCA-regulated brokers offer:',
+                    feature1: 'Fund Protection: Up to £85,000 per client in case of bankruptcy',
+                    feature2: 'Fund Segregation: Your money is separated from the broker\'s funds',
+                    feature3: 'Transparency: Regular financial reports and audits',
+                    feature4: 'Compensation: Access to Financial Services Compensation Scheme',
+                    tip: '💡 How to Verify: Look for the FCA license number on the broker\'s website and verify it at register.fca.org.uk'
+                },
+                cysec: {
+                    title: 'Brokers Regulated by CySEC (Cyprus)',
+                    description: 'The Cyprus Securities and Exchange Commission (CySEC) is a highly recognized European regulation. CySEC brokers offer:',
+                    feature1: 'MiFID II Protection: European investor protection standards',
+                    feature2: 'Fund Segregation: Client capital protection',
+                    feature3: 'Leverage Limits: Protection against excessive losses',
+                    feature4: 'Compensation: Up to €20,000 per client',
+                    tip: '💡 How to Verify: Verify the license at cysec.gov.cy'
+                },
+                asic: {
+                    title: 'Brokers Regulated by ASIC (Australia)',
+                    description: 'The Australian Securities and Investments Commission (ASIC) is known for its strict approach to consumer protection:',
+                    feature1: 'High Standards: Strict capital requirements',
+                    feature2: 'Fund Protection: Mandatory segregation',
+                    feature3: 'Transparency: Regular financial reports',
+                    feature4: 'Active Regulation: Continuous supervision'
+                },
+                localRegulators: {
+                    title: 'Local Regulators in Latin America',
+                    argentina: '🇦🇷 Argentina - CNV',
+                    argentinaDesc: 'National Securities Commission regulates local brokers',
+                    mexico: '🇲🇽 Mexico - CNBV',
+                    mexicoDesc: 'National Banking and Securities Commission',
+                    chile: '🇨🇱 Chile - CMF',
+                    chileDesc: 'Financial Market Commission',
+                    colombia: '🇨🇴 Colombia - SFC',
+                    colombiaDesc: 'Financial Superintendence of Colombia'
+                },
+                redFlags: {
+                    title: 'Red Flags: Unregulated Brokers',
+                    flag1: '❌ Don\'t clearly show license number',
+                    flag2: '❌ Regulation in suspicious offshore jurisdictions',
+                    flag3: '❌ Guaranteed profit promises',
+                    flag4: '❌ Aggressive pressure to deposit funds',
+                    flag5: '❌ Difficulties withdrawing funds',
+                    flag6: '❌ Negative reviews about withdrawals'
+                },
+                checklist: {
+                    title: '✅ Security Checklist',
+                    item1: '✓ Broker regulated by FCA, CySEC, ASIC or recognized local regulator',
+                    item2: '✓ Visible and verifiable license number',
+                    item3: '✓ Client fund segregation',
+                    item4: '✓ Compensation scheme available',
+                    item5: '✓ Transparency in terms and conditions',
+                    item6: '✓ Clean history without recent sanctions',
+                    item7: '✓ Positive reviews about fund withdrawals'
+                },
+                cta: {
+                    title: 'Find Regulated Brokers',
+                    text: 'Explore our list of regulated and safe brokers for Latin America.',
+                    button: 'View Regulated Brokers'
+                }
+            },
+            tradingPlatforms: {
+                title: 'Trading Platforms in Latin America',
+                description: 'Complete guide to trading platforms: MT4, MT5 and more',
+                heroTitle: 'Trading Platforms in Latin America',
+                heroSubtitle: 'Discover the best platforms: MetaTrader 4, MetaTrader 5 and modern platforms for Latin American traders',
+                intro: {
+                    title: 'Choose the Right Platform for Your Trading',
+                    text: 'The trading platform is your main tool. It should be intuitive, stable and offer all the functions you need.'
+                },
+                mt4: {
+                    title: 'MetaTrader 4 (MT4) - The Most Popular Platform',
+                    description: 'MT4 is the most used trading platform in the world, especially for Forex:',
+                    advantages: '✅ Advantages',
+                    advantage1: 'Intuitive interface',
+                    advantage2: 'Thousands of indicators',
+                    advantage3: 'Expert Advisors (EAs)',
+                    advantage4: 'Advanced technical analysis',
+                    advantage5: 'Huge community',
+                    limitations: '⚠️ Limitations',
+                    limitation1: 'Only 4 timeframes',
+                    limitation2: 'Limited to Forex and CFDs',
+                    limitation3: 'Somewhat outdated interface',
+                    limitation4: 'Doesn\'t include stocks',
+                    ideal: '💡 Ideal for: Forex traders looking for a stable platform with many technical analysis tools.'
+                },
+                mt5: {
+                    title: 'MetaTrader 5 (MT5) - The Evolution',
+                    description: 'MT5 is the improved version of MT4 with more functions and markets:',
+                    advantages: '✅ Advantages',
+                    advantage1: '21 timeframes',
+                    advantage2: 'Multiple markets',
+                    advantage3: 'Better backtesting',
+                    advantage4: 'More indicators',
+                    advantage5: 'Economic calendar',
+                    advantage6: 'Modern interface',
+                    considerations: '⚠️ Considerations',
+                    consideration1: 'Fewer EAs available',
+                    consideration2: 'Learning curve',
+                    consideration3: 'Not all brokers offer it',
+                    ideal: '💡 Ideal for: Traders who trade multiple markets (Forex, stocks, commodities) and need advanced analysis.'
+                },
+                comparison: {
+                    title: 'MT4 vs MT5: Quick Comparison',
+                    feature: 'Feature',
+                    timeframes: 'Timeframes',
+                    markets: 'Markets',
+                    indicators: 'Indicators',
+                    eas: 'Expert Advisors',
+                    orders: 'Pending Orders',
+                    mt4Timeframes: '4',
+                    mt5Timeframes: '21',
+                    mt4Markets: 'Forex, CFDs',
+                    mt5Markets: 'Forex, Stocks, CFDs, Futures',
+                    mt4Indicators: '30+',
+                    mt5Indicators: '38+',
+                    mt4EAs: 'Thousands available',
+                    mt5EAs: 'Fewer available',
+                    mt4Orders: '4 types',
+                    mt5Orders: '6 types'
+                },
+                webMobile: {
+                    title: 'Web and Mobile Platforms',
+                    description: 'Many brokers offer their own web and mobile platforms:',
+                    feature1: 'Web Platforms: Trading from any browser without downloads',
+                    feature2: 'Mobile Apps: Trading from your iOS or Android smartphone',
+                    feature3: 'MT4/MT5 Mobile: Official mobile versions of MetaTrader',
+                    feature4: 'Proprietary Platforms: Some brokers have their own advanced platforms'
+                },
+                choosing: {
+                    title: 'How to Choose Your Platform?',
+                    tip1: '✓ Beginner: MT4 is easier to learn',
+                    tip2: '✓ Forex Traders: MT4 has more resources',
+                    tip3: '✓ Multi-Market: MT5 is better option',
+                    tip4: '✓ Mobile Trading: Check available apps',
+                    tip5: '✓ EAs/Robots: MT4 has more options',
+                    tip6: '✓ Advanced Analysis: MT5 offers more tools'
+                },
+                cta: {
+                    title: 'Find Brokers with Your Preferred Platform',
+                    text: 'Filter brokers by platform: MT4, MT5 or proprietary platforms.',
+                    button: 'Search Brokers'
+                }
             }
         },
         
