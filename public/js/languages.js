@@ -3043,9 +3043,16 @@ const languages = {
         
         // Commodities page
         commodities: {
+            meta: {
+                title: 'Commodities Trading en América Latina - Guía Completa 2024',
+                description: 'Aprende todo sobre trading de commodities en América Latina. Oro, petróleo, plata, cobre y más. Estrategias y brokers especializados en materias primas.'
+            },
             hero: {
                 title: 'Commodities Trading en América Latina',
-                subtitle: 'Invierte en materias primas como oro, petróleo, plata y cobre. Diversifica tu portafolio con commodities y protege tu capital contra la inflación.'
+                subtitle: 'Invierte en materias primas como oro, petróleo, plata y cobre. Diversifica tu portafolio con commodities y protege tu capital contra la inflación.',
+                market: 'Mercado Global',
+                tradingHours: 'Horario de Trading',
+                commodities: 'Commodities'
             },
             whatAre: {
                 title: '¿Qué son las Commodities?',
@@ -5462,9 +5469,16 @@ const languages = {
         
         // Commodities page
         commodities: {
+            meta: {
+                title: 'Commodities Trading in Latin America - Complete Guide 2024',
+                description: 'Learn everything about commodity trading in Latin America. Gold, oil, silver, copper and more. Strategies and brokers specialized in raw materials.'
+            },
             hero: {
                 title: 'Commodities Trading in Latin America',
-                subtitle: 'Invest in commodities like gold, oil, silver and copper. Diversify your portfolio with commodities and protect your capital against inflation.'
+                subtitle: 'Invest in commodities like gold, oil, silver and copper. Diversify your portfolio with commodities and protect your capital against inflation.',
+                market: 'Global Market',
+                tradingHours: 'Trading Hours',
+                commodities: 'Commodities'
             },
             whatAre: {
                 title: 'What are Commodities?',

@@ -1158,6 +1158,354 @@
     font-size: 1rem;
 }
 
+/* Factors Section */
+.factors-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+    position: relative;
+}
+
+.factors-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.factors-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+    border-radius: 2px;
+}
+
+.factors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.factor-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.factor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.factor-card:hover::before {
+    transform: scaleX(1);
+}
+
+.factor-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+    border-color: rgba(139, 92, 246, 0.6);
+}
+
+.factor-card i {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.factor-card:hover i {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.factor-card h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #1e293b;
+    transition: color 0.3s ease;
+}
+
+.factor-card:hover h3 {
+    color: #6366f1;
+}
+
+.factor-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Risk Management Section */
+.risk-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+    position: relative;
+}
+
+.risk-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.risk-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+    border-radius: 2px;
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.risk-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.risk-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.risk-card:hover::before {
+    transform: scaleX(1);
+}
+
+.risk-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+    border-color: rgba(139, 92, 246, 0.6);
+}
+
+.risk-card i {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.risk-card:hover i {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.risk-card h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #1e293b;
+    transition: color 0.3s ease;
+}
+
+.risk-card:hover h3 {
+    color: #6366f1;
+}
+
+.risk-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* FAQ Section - Enhanced for Category Pages */
+.faq-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 50%, #a5b4fc 100%);
+    position: relative;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.faq-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+    border-radius: 2px;
+}
+
+.faq-section .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(99, 102, 241, 0.25);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.1);
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+.faq-item:nth-child(5) { animation-delay: 0.5s; }
+.faq-item:nth-child(n+6) { animation-delay: 0.6s; }
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.faq-item.active {
+    border-color: #6366f1;
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+}
+
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.faq-question:hover {
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+    flex: 1;
+    padding-right: 20px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.faq-item:hover .faq-question h3,
+.faq-item.active .faq-question h3 {
+    color: #6366f1;
+}
+
+.faq-question i {
+    font-size: 1rem;
+    color: #6366f1;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 30px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 0 30px 25px 30px;
+}
+
+.faq-answer p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 15px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .category-hero {
@@ -1264,16 +1612,36 @@
     .brokers-section,
     .analysis-section,
     .tips-section,
-    .advantages-section {
+    .advantages-section,
+    .risk-section,
+    .factors-section,
+    .faq-section {
         padding: 60px 0;
     }
     
-    .advantages-section h2 {
+    .advantages-section h2,
+    .risk-section h2,
+    .factors-section h2,
+    .faq-section h2 {
         font-size: 2rem;
     }
     
-    .advantage-card {
+    .advantage-card,
+    .risk-card,
+    .factor-card {
         padding: 30px 20px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px 20px;
     }
 }
 
