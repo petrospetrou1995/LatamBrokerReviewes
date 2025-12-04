@@ -1048,11 +1048,13 @@ section {
         text-align: left;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 20px 0;
+        padding: 0;
         z-index: 999;
         max-height: calc(100vh - 70px);
         overflow-y: auto;
+        overflow-x: hidden;
         display: flex;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {
@@ -1711,10 +1713,13 @@ section {
         text-align: left;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 20px 0;
+        padding: 0;
         z-index: 999;
         max-height: calc(100vh - 70px);
         overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {
