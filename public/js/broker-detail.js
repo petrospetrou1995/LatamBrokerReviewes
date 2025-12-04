@@ -352,16 +352,26 @@
 
         try {
             console.log('Loading broker reviews. Page:', currentPage);
+            console.log('Current broker:', currentBroker);
+            console.log('Broker _id:', currentBroker._id);
+            console.log('Broker slug:', currentBroker.slug);
             
             // Use static data loader or JSON file
             let data;
             if (window.loadReviews) {
+                // Try both slug and _id for matching
+                const brokerIdentifier = currentBroker.slug || currentBroker._id;
+                console.log('Loading reviews for broker identifier:', brokerIdentifier);
+                
                 // Load ALL reviews for this broker (no pagination limit)
                 data = await window.loadReviews({ 
-                    broker: currentBroker._id || currentBroker.slug,
+                    broker: brokerIdentifier,
                     page: 1,
                     limit: 1000 // Load all reviews (we have 30 per broker, so 1000 is safe)
                 });
+                
+                console.log('Reviews loaded:', data);
+                console.log('Number of reviews:', data.reviews?.length || 0);
             } else {
                 // Fallback to direct JSON fetch with multiple path attempts
                 const paths = [

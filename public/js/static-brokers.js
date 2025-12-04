@@ -212,13 +212,24 @@
             
             // Filter by broker
             if (filters.broker) {
+                console.log(`🔍 Filtering reviews for broker: ${filters.broker}`);
+                console.log(`📊 Total reviews before filter: ${filtered.length}`);
                 filtered = filtered.filter(r => {
-                    if (!r.broker) return false;
-                    // Check both _id and slug
-                    const brokerId = r.broker._id || r.broker.id;
-                    const brokerSlug = r.broker.slug;
-                    return brokerId === filters.broker || brokerSlug === filters.broker;
+                    if (!r.broker) {
+                        console.log('⚠️ Review missing broker object:', r);
+                        return false;
+                    }
+                    // Check both _id and slug (case-insensitive)
+                    const brokerId = (r.broker._id || r.broker.id || '').toString().toLowerCase();
+                    const brokerSlug = (r.broker.slug || '').toString().toLowerCase();
+                    const filterBroker = filters.broker.toString().toLowerCase();
+                    const matches = brokerId === filterBroker || brokerSlug === filterBroker;
+                    if (matches) {
+                        console.log(`✅ Review matches broker: ${r.broker.slug || r.broker._id}`);
+                    }
+                    return matches;
                 });
+                console.log(`📊 Total reviews after filter: ${filtered.length}`);
             }
             
             // Sort by date (newest first)
