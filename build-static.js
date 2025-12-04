@@ -38,6 +38,13 @@ async function buildStatic() {
   console.log('📁 Copying public assets...');
   copyDirectory(PUBLIC_DIR, path.join(OUTPUT_DIR, 'public'));
   console.log('✅ Public assets copied\n');
+  
+  // Copy _redirects file for Cloudflare Pages
+  const redirectsFile = path.join(__dirname, '_redirects');
+  if (fs.existsSync(redirectsFile)) {
+    fs.copyFileSync(redirectsFile, path.join(OUTPUT_DIR, '_redirects'));
+    console.log('✅ Copied _redirects file for Cloudflare Pages\n');
+  }
 
   // Copy all HTML files from views (excluding admin/login pages)
   console.log('📄 Copying HTML pages...');

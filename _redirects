@@ -1,0 +1,10 @@
+# Cloudflare Pages redirects
+# Redirect all non-html requests to .html
+/*.html /$1.html 200
+# Redirect root to index.html
+/ /index.html 200
+# Redirect /broker/:slug to /broker/:slug.html
+/broker/* /broker/$1.html 200
+# Redirect /blog/:slug to /blog/:slug.html
+/blog/* /blog/$1.html 200
+
