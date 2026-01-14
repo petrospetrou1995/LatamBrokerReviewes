@@ -885,6 +885,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    text-align: center;
 }
 
 .broker-card::after {
@@ -931,15 +932,25 @@
 
 .broker-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .broker-header h3 {
     font-size: 1.5rem;
     font-weight: 600;
     color: #333;
+    margin: 0 0 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.broker-header .rating {
+    justify-content: center;
+    width: 100%;
 }
 
 .rating {
@@ -960,6 +971,12 @@
 
 .broker-features {
     margin-bottom: 25px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.broker-features .feature {
+    text-align: left;
 }
 
 .feature {
@@ -1025,11 +1042,12 @@
     display: flex !important;
     gap: 10px;
     margin-top: auto;
-    padding-top: 15px;
+    padding-top: 20px;
     visibility: visible !important;
     opacity: 1 !important;
     align-items: stretch;
     width: 100%;
+    flex-wrap: nowrap;
 }
 
 .broker-actions .btn {
@@ -1045,6 +1063,33 @@
     box-sizing: border-box;
     font-size: 14px;
     line-height: 1.4;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.broker-actions .btn span,
+.broker-actions .btn i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Ensure text visibility and clarity - additional styles */
+.broker-card h3 {
+    color: #333 !important;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.broker-card p,
+.broker-card .feature {
+    color: #666;
+    line-height: 1.6;
+}
+
+.broker-card .rating-text {
+    color: #666;
+    font-weight: 500;
 }
 
 /* Analysis Section */
