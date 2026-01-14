@@ -111,6 +111,14 @@ function setupDropdowns() {
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     
     dropdownToggles.forEach(toggle => {
+        // Skip if already initialized (check for data attribute)
+        if (toggle.dataset.dropdownInitialized === 'true') {
+            return;
+        }
+        
+        // Mark as initialized
+        toggle.dataset.dropdownInitialized = 'true';
+        
         // Find dropdown - try nextElementSibling first, then parent's dropdown-menu
         let dropdown = toggle.nextElementSibling;
         if (!dropdown || !dropdown.classList.contains('dropdown-menu')) {
@@ -125,13 +133,16 @@ function setupDropdowns() {
             return;
         }
         
+        // Ensure dropdown is initially hidden
+        dropdown.classList.remove('show');
+        
         // Toggle dropdown on click
         toggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
             // Close other dropdowns
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            document.querySelectorAll('.nav-dropdown .dropdown-menu').forEach(menu => {
                 if (menu !== dropdown) {
                     menu.classList.remove('show');
                 }
@@ -147,14 +158,17 @@ function setupDropdowns() {
         });
     });
     
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.nav-dropdown')) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.classList.remove('show');
-            });
-        }
-    });
+    // Close dropdowns when clicking outside (use a single delegated listener)
+    if (!document.dropdownClickHandler) {
+        document.dropdownClickHandler = function(e) {
+            if (!e.target.closest('.nav-dropdown')) {
+                document.querySelectorAll('.nav-dropdown .dropdown-menu').forEach(menu => {
+                    menu.classList.remove('show');
+                });
+            }
+        };
+        document.addEventListener('click', document.dropdownClickHandler);
+    }
 }
 
 // Load featured brokers
@@ -998,12 +1012,13 @@ function populateBrokerDropdowns(brokers) {
                     if (logoUrl) {
                         // Try to load logo and replace icon if successful
                         const logoImg = document.createElement('img');
-                        logoImg.alt = `${broker.name} logo - ${broker.name} broker logo image for trading platform`;
+                        logoImg.alt = `${broker.name} logo`;
                         logoImg.style.width = '100%';
                         logoImg.style.height = '100%';
                         logoImg.style.objectFit = 'contain';
                         logoImg.style.padding = '4px';
                         logoImg.loading = 'lazy';
+                        logoImg.crossOrigin = 'anonymous'; // Allow CORS for external logos
                         
                         // Function to replace icon with logo
                         const replaceIconWithLogo = function() {
@@ -1014,6 +1029,7 @@ function populateBrokerDropdowns(brokers) {
                             if (logoImg.parentNode !== logoContainer) {
                                 logoContainer.appendChild(logoImg);
                             }
+                            logoImg.style.display = 'block';
                         };
                         
                         // Show logo when loaded successfully - replace icon
@@ -1025,6 +1041,10 @@ function populateBrokerDropdowns(brokers) {
                             if (this.parentNode === logoContainer) {
                                 this.remove();
                             }
+                            // Keep icon visible as fallback
+                            if (iconElement.parentNode !== logoContainer) {
+                                logoContainer.appendChild(iconElement);
+                            }
                         };
                         
                         // Set src after handlers are attached - this triggers the load
@@ -1033,6 +1053,13 @@ function populateBrokerDropdowns(brokers) {
                         // Check if image is already loaded (cached images)
                         if (logoImg.complete && logoImg.naturalHeight !== 0) {
                             replaceIconWithLogo();
+                        } else {
+                            // If not complete, try loading with a timeout
+                            setTimeout(() => {
+                                if (logoImg.complete && logoImg.naturalHeight !== 0 && logoImg.parentNode !== logoContainer) {
+                                    replaceIconWithLogo();
+                                }
+                            }, 100);
                         }
                     }
                     

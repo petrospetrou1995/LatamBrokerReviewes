@@ -393,8 +393,69 @@
             }
         }
         
+        // Get broker logo URL
+        const getLogoUrl = window.getBrokerLogoUrl || function(broker) {
+            if (broker.logo && broker.logo.trim() !== '') {
+                if (broker.logo.startsWith('http://') || broker.logo.startsWith('https://')) {
+                    return broker.logo;
+                } else if (broker.logo.startsWith('/')) {
+                    return broker.logo;
+                } else {
+                    return `/images/brokers/${broker.logo}`;
+                }
+            }
+            const logoCdnMap = {
+                'libertex': 'https://logo.clearbit.com/libertex.com',
+                'xm-group': 'https://logo.clearbit.com/xm.com',
+                'xm': 'https://logo.clearbit.com/xm.com',
+                'etoro': 'https://logo.clearbit.com/etoro.com',
+                'plus500': 'https://logo.clearbit.com/plus500.com',
+                'avatrade': 'https://logo.clearbit.com/avatrade.com',
+                'ig-markets': 'https://logo.clearbit.com/ig.com',
+                'ig': 'https://logo.clearbit.com/ig.com'
+            };
+            const slug = broker.slug ? broker.slug.toLowerCase() : '';
+            if (logoCdnMap[slug]) {
+                return logoCdnMap[slug];
+            }
+            if (broker.website) {
+                try {
+                    const url = new URL(broker.website);
+                    return `https://logo.clearbit.com/${url.hostname}`;
+                } catch (e) {}
+            }
+            return null;
+        };
+        
+        const getIcon = window.getBrokerIcon || function(broker) {
+            const iconMap = {
+                'libertex': 'fas fa-chart-line',
+                'xm-group': 'fas fa-exchange-alt',
+                'xm': 'fas fa-exchange-alt',
+                'etoro': 'fas fa-coins',
+                'plus500': 'fas fa-chart-bar',
+                'avatrade': 'fas fa-briefcase',
+                'ig-markets': 'fas fa-building',
+                'ig': 'fas fa-building'
+            };
+            const slug = broker.slug ? broker.slug.toLowerCase() : '';
+            return iconMap[slug] || 'fas fa-building';
+        };
+        
+        const logoUrl = getLogoUrl(broker);
+        const iconClass = getIcon(broker);
+        const logoHtml = logoUrl ? 
+            `<div class="broker-logo" style="width: 80px; height: 80px; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; overflow: hidden; border: 1px solid #e9ecef;">
+                <img src="${logoUrl}" alt="${broker.name} logo" style="width: 100%; height: 100%; object-fit: contain; padding: 8px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" crossorigin="anonymous">
+                <i class="${iconClass}" style="display: none; font-size: 32px; color: #007bff; align-items: center; justify-content: center; width: 100%; height: 100%;"></i>
+            </div>` :
+            `<div class="broker-logo" style="width: 80px; height: 80px; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                <i class="${iconClass}" style="font-size: 32px; color: #007bff;"></i>
+            </div>`;
+        
         return `
             <div class="broker-card ${currentView === 'list' ? 'list-view' : ''} ${isFeatured}" ${isFeatured ? `data-featured-text="${getTranslation('brokers.features.Destacado')}"` : ''}>
+                ${logoHtml}
                 <div class="broker-header">
                     <div class="broker-info">
                         <h3>${broker.name}</h3>

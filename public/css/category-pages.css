@@ -986,11 +986,46 @@
 .btn-primary {
     background: #007bff;
     color: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
 }
 
 .btn-primary:hover {
     background: #0056b3;
     color: white;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+    border: 2px solid #6c757d;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    border-color: #5a6268;
+    color: white;
+}
+
+.broker-actions {
+    display: flex !important;
+    gap: 10px;
+    margin-top: 15px;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.broker-actions .btn {
+    width: auto;
+    flex: 1;
+    min-width: 120px;
 }
 
 /* Analysis Section */
