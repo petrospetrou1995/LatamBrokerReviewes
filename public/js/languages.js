@@ -2570,6 +2570,61 @@ const languages = {
                     volatility: 'Volatilidad: Baja'
                 }
             },
+            marketHours: {
+                title: 'Horarios del Mercado Forex',
+                subtitle: 'El mercado Forex está abierto 24 horas al día, 5 días a la semana, pero diferentes sesiones tienen diferentes características de volatilidad y liquidez.',
+                sessions: {
+                    asian: {
+                        title: 'Sesión Asiática',
+                        hours: 'Horario: 00:00 - 09:00 GMT',
+                        description: 'Caracterizada por menor volatilidad. Pares como USD/JPY y AUD/USD son populares durante esta sesión. Ideal para traders que prefieren movimientos más suaves.'
+                    },
+                    european: {
+                        title: 'Sesión Europea',
+                        hours: 'Horario: 08:00 - 17:00 GMT',
+                        description: 'Alta liquidez y volatilidad. EUR/USD, GBP/USD y EUR/GBP son muy activos. Esta sesión se superpone con la sesión asiática y la estadounidense, creando oportunidades de trading.'
+                    },
+                    us: {
+                        title: 'Sesión Estadounidense',
+                        hours: 'Horario: 13:00 - 22:00 GMT',
+                        description: 'La sesión más volátil del día. USD/JPY, EUR/USD y GBP/USD experimentan los mayores movimientos. La superposición con la sesión europea (13:00-17:00 GMT) es el período más activo.'
+                    }
+                }
+            },
+            advancedStrategies: {
+                title: 'Estrategias Avanzadas de Forex Trading',
+                subtitle: 'Descubre estrategias probadas utilizadas por traders profesionales en el mercado de divisas',
+                scalping: {
+                    title: '1. Scalping',
+                    description: 'El scalping es una estrategia de trading de muy corto plazo donde los traders abren y cierran múltiples posiciones durante el día, buscando pequeños movimientos de precio. Esta estrategia requiere:',
+                    items: [
+                        'Brokers con spreads muy bajos (0.1-0.5 pips)',
+                        'Ejecución rápida de órdenes',
+                        'Análisis técnico en tiempo real',
+                        'Disciplina estricta y gestión de riesgo'
+                    ]
+                },
+                dayTrading: {
+                    title: '2. Day Trading',
+                    description: 'El day trading implica abrir y cerrar posiciones dentro del mismo día de trading. Los day traders se enfocan en:',
+                    items: [
+                        'Movimientos de precio intradiarios',
+                        'Análisis de gráficos de 15 minutos a 4 horas',
+                        'Noticias económicas y eventos del día',
+                        'Gestión de riesgo con stop loss ajustado'
+                    ]
+                },
+                swingTrading: {
+                    title: '3. Swing Trading',
+                    description: 'El swing trading mantiene posiciones durante varios días o semanas para capturar movimientos de tendencia más grandes. Características:',
+                    items: [
+                        'Análisis de gráficos diarios y semanales',
+                        'Identificación de tendencias a largo plazo',
+                        'Menos tiempo requerido frente a la pantalla',
+                        'Mayor potencial de ganancias por operación'
+                    ]
+                }
+            },
             strategies: {
                 title: 'Estrategias de Trading Forex',
                 technicalAnalysis: {
@@ -5003,6 +5058,61 @@ const languages = {
                     description: 'Considered a "safe haven", popular during economic uncertainty.',
                     spread: 'Spread: 1.0-2.0 pips',
                     volatility: 'Volatility: Low'
+                }
+            },
+            marketHours: {
+                title: 'Forex Market Hours',
+                subtitle: 'The Forex market is open 24 hours a day, 5 days a week, but different sessions have different volatility and liquidity characteristics.',
+                sessions: {
+                    asian: {
+                        title: 'Asian Session',
+                        hours: 'Hours: 00:00 - 09:00 GMT',
+                        description: 'Characterized by lower volatility. Pairs like USD/JPY and AUD/USD are popular during this session. Ideal for traders who prefer smoother moves.'
+                    },
+                    european: {
+                        title: 'European Session',
+                        hours: 'Hours: 08:00 - 17:00 GMT',
+                        description: 'High liquidity and volatility. EUR/USD, GBP/USD and EUR/GBP are very active. This session overlaps with the Asian and US sessions, creating trading opportunities.'
+                    },
+                    us: {
+                        title: 'US Session',
+                        hours: 'Hours: 13:00 - 22:00 GMT',
+                        description: 'The most volatile session of the day. USD/JPY, EUR/USD and GBP/USD see the biggest moves. The overlap with the European session (13:00-17:00 GMT) is the most active period.'
+                    }
+                }
+            },
+            advancedStrategies: {
+                title: 'Advanced Forex Trading Strategies',
+                subtitle: 'Discover proven strategies used by professional traders in the currency market',
+                scalping: {
+                    title: '1. Scalping',
+                    description: 'Scalping is a very short-term trading strategy where traders open and close multiple positions during the day, seeking small price movements. This strategy requires:',
+                    items: [
+                        'Brokers with very low spreads (0.1-0.5 pips)',
+                        'Fast order execution',
+                        'Real-time technical analysis',
+                        'Strict discipline and risk management'
+                    ]
+                },
+                dayTrading: {
+                    title: '2. Day Trading',
+                    description: 'Day trading involves opening and closing positions within the same trading day. Day traders focus on:',
+                    items: [
+                        'Intraday price movements',
+                        'Chart analysis from 15 minutes to 4 hours',
+                        'Economic news and events of the day',
+                        'Risk management with tight stop loss'
+                    ]
+                },
+                swingTrading: {
+                    title: '3. Swing Trading',
+                    description: 'Swing trading holds positions for several days or weeks to capture larger trend moves. Characteristics:',
+                    items: [
+                        'Daily and weekly chart analysis',
+                        'Identifying long-term trends',
+                        'Less screen time required',
+                        'Greater profit potential per trade'
+                    ]
                 }
             },
             strategies: {

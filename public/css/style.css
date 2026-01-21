@@ -605,6 +605,22 @@ section {
     position: relative;
 }
 
+/* Global responsive helpers */
+html, body {
+    overflow-x: hidden;
+}
+
+img, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
 section:first-of-type {
     padding-top: 120px;
 }
@@ -1306,6 +1322,15 @@ section:first-of-type {
         gap: 40px;
     }
 
+    .hero-image {
+        width: 100%;
+    }
+
+    .trading-chart {
+        width: 220px;
+        height: 220px;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -1474,6 +1499,11 @@ section:first-of-type {
         padding: 12px 20px;
         font-size: 0.9rem;
         width: 100%;
+    }
+
+    .trading-chart {
+        width: 180px;
+        height: 180px;
     }
 
     .broker-card,
