@@ -547,14 +547,15 @@ body {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: #6c757d;
     color: white;
-    border-color: white;
+    border-color: #6c757d;
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #007bff;
+    background: #5a6268;
+    color: white;
+    border-color: #5a6268;
 }
 
 .btn-outline {
