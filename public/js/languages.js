@@ -266,6 +266,7 @@ const languages = {
         brokerComparison: {
             title: 'Comparación de Brokers',
             subtitle: 'Compara las características principales de los mejores brokers para traders latinoamericanos',
+            loading: 'Cargando comparación de brokers...',
             tableHeaders: {
                 broker: 'Broker',
                 regulation: 'Regulación',
@@ -3872,6 +3873,7 @@ const languages = {
         brokerComparison: {
             title: 'Broker Comparison',
             subtitle: 'Compare the main features of the best brokers for Latin American traders',
+            loading: 'Loading broker comparison...',
             tableHeaders: {
                 broker: 'Broker',
                 regulation: 'Regulation',
