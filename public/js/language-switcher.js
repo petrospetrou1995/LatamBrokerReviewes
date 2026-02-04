@@ -215,6 +215,9 @@
                 console.log('No translation found for key:', key);
             }
         });
+
+        // Fallback: translate elements without data-translate using value maps
+        applyFallbackTranslations(lang);
         
         // Specifically handle dropdown menu items that might be hidden
         const dropdownItems = document.querySelectorAll('.dropdown-item[data-translate]');
@@ -235,6 +238,87 @@
         if (missingTranslations.length > 0) {
             console.warn('Missing translations for keys:', missingTranslations);
         }
+    }
+
+    function applyFallbackTranslations(lang) {
+        const fallbackMap = buildFallbackMap(lang);
+        if (!fallbackMap) {
+            return;
+        }
+
+        const candidates = document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,a,li,span,button,label');
+        candidates.forEach(element => {
+            if (element.hasAttribute('data-translate')) {
+                return;
+            }
+
+            const originalText = element.textContent.trim();
+            if (!originalText) {
+                return;
+            }
+
+            const mapped = fallbackMap.get(originalText);
+            if (!mapped || mapped === originalText) {
+                return;
+            }
+
+            // Preserve icons/child elements while updating text
+            if (element.children.length > 0) {
+                const allNodes = Array.from(element.childNodes);
+                const textNodes = allNodes.filter(node => node.nodeType === Node.TEXT_NODE);
+                textNodes.forEach(node => node.remove());
+
+                const firstElement = element.firstElementChild;
+                if (firstElement) {
+                    const textNode = document.createTextNode(' ' + mapped);
+                    if (firstElement.nextSibling) {
+                        element.insertBefore(textNode, firstElement.nextSibling);
+                    } else {
+                        element.appendChild(textNode);
+                    }
+                } else {
+                    element.insertBefore(document.createTextNode(mapped + ' '), element.firstChild);
+                }
+            } else {
+                element.textContent = mapped;
+            }
+        });
+    }
+
+    function buildFallbackMap(targetLang) {
+        if (typeof languages === 'undefined' || !languages.es || !languages.en) {
+            return null;
+        }
+
+        const source = targetLang === 'en' ? languages.es : languages.en;
+        const target = targetLang === 'en' ? languages.en : languages.es;
+        const map = new Map();
+
+        function walk(src, tgt) {
+            if (!src || !tgt) {
+                return;
+            }
+            if (typeof src === 'string' && typeof tgt === 'string') {
+                map.set(src, tgt);
+                return;
+            }
+            if (Array.isArray(src) && Array.isArray(tgt)) {
+                for (let i = 0; i < src.length && i < tgt.length; i += 1) {
+                    walk(src[i], tgt[i]);
+                }
+                return;
+            }
+            if (typeof src === 'object' && typeof tgt === 'object') {
+                Object.keys(src).forEach(key => {
+                    if (Object.prototype.hasOwnProperty.call(tgt, key)) {
+                        walk(src[key], tgt[key]);
+                    }
+                });
+            }
+        }
+
+        walk(source, target);
+        return map;
     }
     
     function getNestedValue(obj, path) {

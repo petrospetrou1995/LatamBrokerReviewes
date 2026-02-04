@@ -9844,6 +9844,105 @@ const languages = {
                 }
             }
         }
+        ,
+        'trading-ia-2026': {
+            slug: 'trading-ia-2026',
+            date: '12 Ene 2026',
+            imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=600&fit=crop',
+            category: 'analysis',
+            translated: {
+                es: {
+                    title: 'Trading con IA en 2026: Tendencias y Estrategias',
+                    description: 'Qué cambia en 2026 con la IA aplicada al trading: datos, automatización, gestión de riesgo y buenas prácticas.',
+                    category: 'Análisis',
+                    content: {
+                        introduction: {
+                            title: 'Panorama 2026',
+                            paragraphs: [
+                                'En 2026, la IA ya no es solo una ventaja competitiva: se convirtió en una herramienta estándar para análisis, ejecución y control de riesgo.',
+                                'La clave para traders latinoamericanos es combinar señales automatizadas con criterios claros de gestión y validación de datos.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Datos y calidad de señales',
+                                paragraphs: [
+                                    'La performance de los modelos depende de la calidad de datos y de evitar el sobreajuste.'
+                                ],
+                                list: [
+                                    'Usa fuentes confiables y actualizadas',
+                                    'Valida señales con backtesting realista',
+                                    'Evita estrategias sin control de drawdown'
+                                ]
+                            },
+                            {
+                                title: '2. Automatización responsable',
+                                paragraphs: [
+                                    'La automatización ayuda a ejecutar con disciplina, pero necesita límites claros.'
+                                ],
+                                list: [
+                                    'Define stop loss y take profit por sistema',
+                                    'Limita el tamaño de posición por riesgo',
+                                    'Monitorea el rendimiento y ajusta'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusión',
+                            paragraphs: [
+                                'La IA en 2026 es poderosa cuando se usa con reglas de riesgo y procesos de validación.',
+                                'Empieza con automatización parcial, mide resultados y escala solo lo que sea consistente.'
+                            ]
+                        }
+                    }
+                },
+                en: {
+                    title: 'AI Trading in 2026: Trends and Strategies',
+                    description: 'What changes in 2026 with AI trading: data quality, automation, risk management and best practices.',
+                    category: 'Analysis',
+                    content: {
+                        introduction: {
+                            title: '2026 Landscape',
+                            paragraphs: [
+                                'In 2026, AI is no longer just an edge; it is a standard tool for analysis, execution, and risk control.',
+                                'For Latin American traders, the key is combining automated signals with clear risk and data validation rules.'
+                            ]
+                        },
+                        sections: [
+                            {
+                                title: '1. Data and signal quality',
+                                paragraphs: [
+                                    'Model performance depends on data quality and avoiding overfitting.'
+                                ],
+                                list: [
+                                    'Use reliable, updated data sources',
+                                    'Validate signals with realistic backtests',
+                                    'Avoid strategies without drawdown control'
+                                ]
+                            },
+                            {
+                                title: '2. Responsible automation',
+                                paragraphs: [
+                                    'Automation helps discipline, but it needs clear limits.'
+                                ],
+                                list: [
+                                    'Define stop loss and take profit per system',
+                                    'Limit position size by risk',
+                                    'Monitor performance and adjust'
+                                ]
+                            }
+                        ],
+                        conclusion: {
+                            title: 'Conclusion',
+                            paragraphs: [
+                                'AI in 2026 is powerful when paired with risk rules and validation processes.',
+                                'Start with partial automation, measure results, and scale only what is consistent.'
+                            ]
+                        }
+                    }
+                }
+            }
+        }
         // Note: Additional blog posts will be loaded from the existing languages.es.blog.posts structure
         // via the fallback mechanism in blog-post.js and blog-list.js
     }
